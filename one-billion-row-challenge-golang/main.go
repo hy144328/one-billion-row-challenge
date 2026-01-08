@@ -12,7 +12,7 @@ import (
 const maxCities = 10000
 
 func main() {
-	f, err := os.Open("measurements_6.txt")
+	f, err := os.Open(os.Args[1])
 	if err != nil {
 		panic(err)
 	}
