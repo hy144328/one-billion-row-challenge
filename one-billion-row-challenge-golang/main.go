@@ -51,7 +51,7 @@ func main() {
 			"%s=%.1f/%.1f/%.1f",
 			cityIt,
 			mins[cityIt],
-			sums[cityIt] / float64(counts[cityIt]),
+			sums[cityIt]/float64(counts[cityIt]),
 			maxs[cityIt],
 		)
 	}
