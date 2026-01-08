@@ -9,6 +9,8 @@ import (
 	"strings"
 )
 
+const maxCities = 10000
+
 func main() {
 	f, err := os.Open("measurements_6.txt")
 	if err != nil {
@@ -16,10 +18,10 @@ func main() {
 	}
 
 	scanner := bufio.NewScanner(f)
-	counts := make(map[string]int, 10000)
-	maxs := make(map[string]float64, 10000)
-	mins := make(map[string]float64, 10000)
-	sums := make(map[string]float64, 10000)
+	counts := make(map[string]int, maxCities)
+	maxs := make(map[string]float64, maxCities)
+	mins := make(map[string]float64, maxCities)
+	sums := make(map[string]float64, maxCities)
 
 	for scanner.Scan() {
 		line_it := scanner.Text()
