@@ -2,23 +2,16 @@ package main
 
 import (
 	"bufio"
-	"fmt"
-	"os"
-	"slices"
+	"io"
 	"strconv"
 	"strings"
 )
 
 const maxCities = 10000
 
-func main() {
-	f, err := os.Open(os.Args[1])
-	if err != nil {
-		panic(err)
-	}
-	defer f.Close()
+func run(r io.Reader) map[string]Statistics[float64] {
+	scanner := bufio.NewScanner(r)
 
-	scanner := bufio.NewScanner(f)
 	counts := make(map[string]int, maxCities)
 	maxs := make(map[string]float64, maxCities)
 	mins := make(map[string]float64, maxCities)
@@ -46,29 +39,16 @@ func main() {
 		}
 	}
 
-	cities := sortedKeys(counts)
-	res0 := make([]string, len(cities))
+	res := make(map[string]Statistics[float64], len(counts))
 
-	for cityCt, cityIt := range cities {
-		res0[cityCt] = fmt.Sprintf(
-			"%s=%.1f/%.1f/%.1f",
-			cityIt,
-			mins[cityIt],
-			sums[cityIt]/float64(counts[cityIt]),
-			maxs[cityIt],
-		)
+	for cityIt, countIt := range counts {
+		res[cityIt] = Statistics[float64]{
+			cnt: countIt,
+			max: maxs[cityIt],
+			min: mins[cityIt],
+			sum: sums[cityIt],
+		}
 	}
 
-	fmt.Println("{" + strings.Join(res0, ", ") + "}")
-}
-
-func sortedKeys[T any](m map[string]T) []string {
-	res := make([]string, 0, len(m))
-
-	for k := range m {
-		res = append(res, k)
-	}
-
-	slices.Sort(res)
 	return res
 }
