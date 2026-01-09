@@ -1,0 +1,3 @@
+cpu_*.prof
+cpu_*_prof.txt
+one-billion-row-challenge-golang.test
