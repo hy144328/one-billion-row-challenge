@@ -43,10 +43,10 @@ func run(r io.Reader) map[string]*Statistics[float64] {
 
 	for cityIt, countIt := range counts {
 		res[cityIt] = &Statistics[float64]{
-			cnt: countIt,
-			max: maxs[cityIt],
-			min: mins[cityIt],
-			sum: sums[cityIt],
+			Cnt: countIt,
+			Max: maxs[cityIt],
+			Min: mins[cityIt],
+			Sum: sums[cityIt],
 		}
 	}
 
@@ -70,17 +70,17 @@ func run1(r io.Reader) map[string]*Statistics[float64] {
 		resIt, ok := res[city]
 		if !ok {
 			resIt = &Statistics[float64]{
-				cnt: 1,
-				max: temperature,
-				min: temperature,
-				sum: temperature,
+				Cnt: 1,
+				Max: temperature,
+				Min: temperature,
+				Sum: temperature,
 			}
 			res[city] = resIt
 		} else {
-			resIt.cnt += 1
-			resIt.max = max(resIt.max, temperature)
-			resIt.min = max(resIt.min, temperature)
-			resIt.sum += temperature
+			resIt.Cnt += 1
+			resIt.Max = max(resIt.Max, temperature)
+			resIt.Min = max(resIt.Min, temperature)
+			resIt.Sum += temperature
 		}
 	}
 

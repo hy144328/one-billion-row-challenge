@@ -1,8 +1,8 @@
 package main
 
 type Statistics[T any] struct {
-	cnt int
-	max T
-	min T
-	sum T
+	Cnt int
+	Max T
+	Min T
+	Sum T
 }

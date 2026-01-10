@@ -51,9 +51,9 @@ func writeStatistics[T constraints.Float](
 ) {
 	fmt.Fprint(w, city)
 	fmt.Fprint(w, "=")
-	fmt.Fprintf(w, "%.1f", stats.min)
+	fmt.Fprintf(w, "%.1f", stats.Min)
 	fmt.Fprint(w, "/")
-	fmt.Fprintf(w, "%.1f", stats.sum / T(stats.cnt))
+	fmt.Fprintf(w, "%.1f", stats.Sum / T(stats.Cnt))
 	fmt.Fprint(w, "/")
-	fmt.Fprintf(w, "%.1f", stats.max)
+	fmt.Fprintf(w, "%.1f", stats.Max)
 }
