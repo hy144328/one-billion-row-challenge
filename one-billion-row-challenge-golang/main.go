@@ -79,7 +79,7 @@ func run1(r io.Reader) map[string]*Statistics[float64] {
 		} else {
 			resIt.Cnt += 1
 			resIt.Max = max(resIt.Max, temperature)
-			resIt.Min = max(resIt.Min, temperature)
+			resIt.Min = min(resIt.Min, temperature)
 			resIt.Sum += temperature
 		}
 	}
@@ -117,7 +117,7 @@ func run2(r io.Reader) map[string]*Statistics[int] {
 		} else {
 			resIt.Cnt += 1
 			resIt.Max = max(resIt.Max, temperature)
-			resIt.Min = max(resIt.Min, temperature)
+			resIt.Min = min(resIt.Min, temperature)
 			resIt.Sum += temperature
 		}
 	}
@@ -154,7 +154,7 @@ func run3(r io.Reader) map[string]*Statistics[int] {
 		} else {
 			resIt.Cnt += 1
 			resIt.Max = max(resIt.Max, temperature)
-			resIt.Min = max(resIt.Min, temperature)
+			resIt.Min = min(resIt.Min, temperature)
 			resIt.Sum += temperature
 		}
 	}
