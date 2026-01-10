@@ -18,8 +18,8 @@ func run(r io.Reader) map[string]*Statistics[float64] {
 	sums := make(map[string]float64, maxCities)
 
 	for scanner.Scan() {
-		line_it := scanner.Text()
-		words := strings.Split(line_it, ";")
+		lineIt := scanner.Text()
+		words := strings.Split(lineIt, ";")
 
 		city := words[0]
 		temperature, err := strconv.ParseFloat(words[1], 64)
@@ -58,8 +58,8 @@ func run1(r io.Reader) map[string]*Statistics[float64] {
 	scanner := bufio.NewScanner(r)
 
 	for scanner.Scan() {
-		line_it := scanner.Text()
-		words := strings.Split(line_it, ";")
+		lineIt := scanner.Text()
+		words := strings.Split(lineIt, ";")
 
 		city := words[0]
 		temperature, err := strconv.ParseFloat(words[1], 64)
@@ -92,8 +92,8 @@ func run2(r io.Reader) map[string]*Statistics[int] {
 	scanner := bufio.NewScanner(r)
 
 	for scanner.Scan() {
-		line_it := scanner.Text()
-		words := strings.Split(line_it, ";")
+		lineIt := scanner.Text()
+		words := strings.Split(lineIt, ";")
 
 		city := words[0]
 		word1 := words[1]
