@@ -1,3 +1,6 @@
+averages_*.txt
 cpu_*.prof
-cpu_*_prof.txt
+cpu_*.svg
+cpu_*.txt
+measurements_*.txt
 one-billion-row-challenge-golang.test
