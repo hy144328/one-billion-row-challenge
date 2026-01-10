@@ -124,3 +124,40 @@ func run2(r io.Reader) map[string]*Statistics[int] {
 
 	return res
 }
+
+func run3(r io.Reader) map[string]*Statistics[int] {
+	res := make(map[string]*Statistics[int], maxCities)
+	scanner := bufio.NewScanner(r)
+
+	for scanner.Scan() {
+		lineIt := scanner.Text()
+		lineItLen := len(lineIt)
+		sepIdx := strings.IndexByte(lineIt, ';')
+
+		city := lineIt[:sepIdx]
+		temperature10, err := strconv.Atoi(lineIt[sepIdx+1:lineItLen-2])
+		if err != nil {
+			panic(err)
+		}
+		temperature1 := lineIt[lineItLen-1] - '0'
+		temperature := 10 * temperature10 + int(temperature1)
+
+		resIt, ok := res[city]
+		if !ok {
+			resIt = &Statistics[int]{
+				Cnt: 1,
+				Max: temperature,
+				Min: temperature,
+				Sum: temperature,
+			}
+			res[city] = resIt
+		} else {
+			resIt.Cnt += 1
+			resIt.Max = max(resIt.Max, temperature)
+			resIt.Min = max(resIt.Min, temperature)
+			resIt.Sum += temperature
+		}
+	}
+
+	return res
+}
