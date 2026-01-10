@@ -6,18 +6,18 @@ import (
 	"testing"
 )
 
-var measurementsPath = flag.String("measurements", "measurements_7.txt", "Input file with measurements.")
+var inPath = flag.String("in", "measurements.txt", "Input file with measurements.")
 
 func BenchmarkRun(b *testing.B) {
+	f, err := os.Open(*inPath)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
 	for b.Loop() {
-		f, err := os.Open(*measurementsPath)
-		if err != nil {
-			panic(err)
-		}
-
+		f.Seek(0, 0)
 		res := run(f)
-
-		f.Close()
 		write(os.Stdout, res)
 	}
 }
