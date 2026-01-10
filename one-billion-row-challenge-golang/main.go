@@ -9,7 +9,7 @@ import (
 
 const maxCities = 10000
 
-func run(r io.Reader) map[string]Statistics[float64] {
+func run(r io.Reader) map[string]*Statistics[float64] {
 	scanner := bufio.NewScanner(r)
 
 	counts := make(map[string]int, maxCities)
@@ -39,10 +39,10 @@ func run(r io.Reader) map[string]Statistics[float64] {
 		}
 	}
 
-	res := make(map[string]Statistics[float64], len(counts))
+	res := make(map[string]*Statistics[float64], len(counts))
 
 	for cityIt, countIt := range counts {
-		res[cityIt] = Statistics[float64]{
+		res[cityIt] = &Statistics[float64]{
 			cnt: countIt,
 			max: maxs[cityIt],
 			min: mins[cityIt],

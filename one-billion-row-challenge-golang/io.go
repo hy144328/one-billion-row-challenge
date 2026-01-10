@@ -10,7 +10,7 @@ import (
 
 func write[T constraints.Float](
 	w io.Writer,
-	stats map[string]Statistics[T],
+	stats map[string]*Statistics[T],
 ) {
 	cities := sortedKeys(stats)
 
@@ -47,7 +47,7 @@ func sortedKeys[T any](m map[string]T) []string {
 func writeStatistics[T constraints.Float](
 	w io.Writer,
 	city string,
-	stats Statistics[T],
+	stats *Statistics[T],
 ) {
 	fmt.Fprint(w, city)
 	fmt.Fprint(w, "=")
