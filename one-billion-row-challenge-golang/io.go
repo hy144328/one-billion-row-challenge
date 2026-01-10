@@ -8,14 +8,14 @@ import (
 	"golang.org/x/exp/constraints"
 )
 
-func write[T constraints.Float](
+func writeFloat[T constraints.Float](
 	w io.Writer,
 	stats map[string]*Statistics[T],
 ) {
 	cities := sortedKeys(stats)
 
 	fmt.Fprint(w, "{")
-	writeStatistics(
+	writeFloatStatistics(
 		w,
 		cities[0],
 		stats[cities[0]],
@@ -23,7 +23,32 @@ func write[T constraints.Float](
 
 	for _, cityIt := range cities[1:] {
 		fmt.Fprint(w, ", ")
-		writeStatistics(
+		writeFloatStatistics(
+			w,
+			cityIt,
+			stats[cityIt],
+		)
+	}
+
+	fmt.Fprint(w, "}\n")
+}
+
+func writeInt[T constraints.Integer](
+	w io.Writer,
+	stats map[string]*Statistics[T],
+) {
+	cities := sortedKeys(stats)
+
+	fmt.Fprint(w, "{")
+	writeIntStatistics(
+		w,
+		cities[0],
+		stats[cities[0]],
+	)
+
+	for _, cityIt := range cities[1:] {
+		fmt.Fprint(w, ", ")
+		writeIntStatistics(
 			w,
 			cityIt,
 			stats[cityIt],
@@ -44,7 +69,7 @@ func sortedKeys[T any](m map[string]T) []string {
 	return res
 }
 
-func writeStatistics[T constraints.Float](
+func writeFloatStatistics[T constraints.Float](
 	w io.Writer,
 	city string,
 	stats *Statistics[T],
@@ -56,4 +81,18 @@ func writeStatistics[T constraints.Float](
 	fmt.Fprintf(w, "%.1f", stats.Sum / T(stats.Cnt))
 	fmt.Fprint(w, "/")
 	fmt.Fprintf(w, "%.1f", stats.Max)
+}
+
+func writeIntStatistics[T constraints.Integer](
+	w io.Writer,
+	city string,
+	stats *Statistics[T],
+) {
+	fmt.Fprint(w, city)
+	fmt.Fprint(w, "=")
+	fmt.Fprintf(w, "%.1f", 0.1 * float64(stats.Min))
+	fmt.Fprint(w, "/")
+	fmt.Fprintf(w, "%.1f", 0.1 * float64(stats.Sum) / float64(stats.Cnt))
+	fmt.Fprint(w, "/")
+	fmt.Fprintf(w, "%.1f", 0.1 * float64(stats.Max))
 }
