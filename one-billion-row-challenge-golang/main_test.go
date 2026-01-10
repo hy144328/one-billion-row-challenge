@@ -21,3 +21,17 @@ func BenchmarkRun(b *testing.B) {
 		write(os.Stdout, res)
 	}
 }
+
+func BenchmarkRun1(b *testing.B) {
+	f, err := os.Open(*inPath)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	for b.Loop() {
+		f.Seek(0, 0)
+		res := run1(f)
+		write(os.Stdout, res)
+	}
+}
