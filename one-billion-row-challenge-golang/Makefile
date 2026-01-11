@@ -2,9 +2,13 @@
 test:
 	go test .
 
-.PHONY: all
-all:
-	for i in $$(seq 6 9); do for j in "" $$(seq 1 5); do make cpu_run$${j}_$${i}; done; done
+.PHONY: full_all
+full_all:
+	for j in "" $$(seq 1 5); do make cpu_run$${j}_9; done
+
+.PHONY: cpu_all
+cpu_all:
+	for i in $$(seq 6 8); do for j in "" $$(seq 1 5); do make cpu_run$${j}_$${i}; done; done
 
 .PRECIOUS: cpu_run_%.prof cpu_run_%.log
 cpu_run_%.prof cpu_run_%.log: io.go main.go main_test.go types.go
