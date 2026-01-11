@@ -18,6 +18,10 @@ cpu_run3_%.prof: io.go main.go main_test.go types.go
 cpu_run4_%.prof: io.go main.go main_test.go types.go
 	go test -cpuprofile=$@ -bench=^BenchmarkRun4$$ -in=measurements_$*.txt
 
+.PRECIOUS: cpu_run5_%.prof
+cpu_run5_%.prof: io.go main.go main_test.go types.go
+	go test -cpuprofile=$@ -bench=^BenchmarkRun5$$ -in=measurements_$*.txt
+
 .PRECIOUS: cpu_%.svg
 cpu_%.svg: cpu_%.prof
 	go tool pprof -svg -output=$@ $<

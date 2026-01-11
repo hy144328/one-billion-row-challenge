@@ -9,6 +9,7 @@ import (
 )
 
 const maxCities = 10000
+const infTemperature = 1000
 
 func run(r io.Reader) map[string]*Statistics[float64] {
 	scanner := bufio.NewScanner(r)
@@ -195,6 +196,57 @@ func run4(r io.Reader) map[string]*Statistics[int] {
 			resIt.Min = min(resIt.Min, temperature)
 			resIt.Sum += temperature
 		}
+	}
+
+	return res
+}
+
+func run5(r io.Reader) map[string]*Statistics[int] {
+	res := make(map[string]*Statistics[int], maxCities)
+	reader := bufio.NewReader(r)
+
+	for {
+		city, err := reader.ReadSlice(';')
+		if err == io.EOF {
+			break
+		} else if err != nil {
+			panic(err)
+		}
+
+		city = city[:len(city)-1]
+		resIt, ok := res[string(city)]
+		if !ok {
+			resIt = &Statistics[int]{
+				Max: -infTemperature,
+				Min: infTemperature,
+			}
+			res[string(city)] = resIt
+		}
+
+		temperature := 0
+		sgn := 1
+
+		for {
+			b, err := reader.ReadByte()
+			if err != nil {
+				panic(err)
+			}
+
+			if b >= '0' && b <= '9' {
+				temperature *= 10
+				temperature += int(b - '0')
+			} else if b == '\n' {
+				break
+			} else if b == '-' {
+				sgn = -1
+			}
+		}
+
+		temperature *= sgn
+		resIt.Cnt += 1
+		resIt.Max = max(resIt.Max, temperature)
+		resIt.Min = min(resIt.Min, temperature)
+		resIt.Sum += temperature
 	}
 
 	return res
