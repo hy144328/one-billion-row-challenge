@@ -8,8 +8,9 @@ import (
 	"strings"
 )
 
-const maxCities = 10000
 const infTemperature = 1000
+const maxCities = 10000
+const maxLine = 128
 
 func run(r io.Reader) map[string]*Statistics[float64] {
 	scanner := bufio.NewScanner(r)
@@ -264,6 +265,66 @@ func run5(r io.Reader) map[string]*Statistics[int] {
 		}
 
 		temperature *= sgn
+		resIt.Cnt += 1
+		resIt.Max = max(resIt.Max, temperature)
+		resIt.Min = min(resIt.Min, temperature)
+		resIt.Sum += temperature
+	}
+
+	return res
+}
+
+func run6(r io.Reader) map[string]*Statistics[int] {
+	var city []byte
+	var temperature int
+
+	res := make(map[string]*Statistics[int], maxCities)
+	scanner := bufio.NewScanner(r)
+	scanner.Split(func(data []byte, atEOF bool) (advance int, token []byte, err error) {
+		if atEOF && len(data) == 0 {
+			return 0, nil, nil
+		}
+
+		if !atEOF && len(data) < maxLine {
+			return 0, nil, nil
+		}
+
+		sepIdx := bytes.IndexByte(data, ';')
+		city = data[0:sepIdx]
+		temp := 0
+		sgn := 1
+
+		for i := sepIdx + 1; i < len(data); i++ {
+			b := data[i]
+
+			if b >= '0' && b <= '9' {
+				temp *= 10
+				temp += int(b - '0')
+			} else if b == '\n' {
+				temperature = sgn * temp
+				return i + 1, data[sepIdx+1:i], nil
+			} else if b == '-' {
+				sgn = -1
+			}
+		}
+
+		if atEOF {
+			return len(data), data, nil
+		}
+
+		return 0, nil, nil
+	})
+
+	for scanner.Scan() {
+		resIt, ok := res[string(city)]
+		if !ok {
+			resIt = &Statistics[int]{
+				Max: -infTemperature,
+				Min: infTemperature,
+			}
+			res[string(city)] = resIt
+		}
+
 		resIt.Cnt += 1
 		resIt.Max = max(resIt.Max, temperature)
 		resIt.Min = min(resIt.Min, temperature)

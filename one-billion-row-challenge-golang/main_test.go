@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"io"
 	"os"
 	"strings"
@@ -110,8 +109,6 @@ func TestRun2(t *testing.T) {
 	g.WriteTo(&sol)
 
 	if out.String() != sol.String() {
-		fmt.Println(out.String())
-		fmt.Println(sol.String())
 		t.Fail()
 	}
 }
@@ -243,6 +240,45 @@ func BenchmarkRun5(b *testing.B) {
 	for b.Loop() {
 		f.Seek(0, 0)
 		res := run5(f)
+		writeInt(io.Discard, res)
+	}
+}
+
+func TestRun6(t *testing.T) {
+	f, err := os.Open("measurements_6.txt")
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	res := run6(f)
+	var out strings.Builder
+	writeInt(&out, res)
+
+	g, err := os.Open("averages_6.txt")
+	if err != nil {
+		panic(err)
+	}
+	defer g.Close()
+
+	var sol strings.Builder
+	g.WriteTo(&sol)
+
+	if out.String() != sol.String() {
+		t.Fail()
+	}
+}
+
+func BenchmarkRun6(b *testing.B) {
+	f, err := os.Open(*inPath)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	for b.Loop() {
+		f.Seek(0, 0)
+		res := run6(f)
 		writeInt(io.Discard, res)
 	}
 }

@@ -4,11 +4,11 @@ test:
 
 .PHONY: full_all
 full_all:
-	for j in "" $$(seq 1 5); do make cpu_run$${j}_9; done
+	for j in "" $$(seq 1 6); do go test -cpuprofile=cpu_run$${j}_9.prof -bench=^BenchmarkRun$${j}$$ -run=^$$ -in=measurements_9.txt > cpu_run$${j}_9.log; done
 
 .PHONY: cpu_all
 cpu_all:
-	for i in $$(seq 6 8); do for j in "" $$(seq 1 5); do make cpu_run$${j}_$${i}; done; done
+	for i in $$(seq 6 8); do for j in "" $$(seq 1 6); do make cpu_run$${j}_$${i}; done; done
 
 .PRECIOUS: cpu_run_%.prof cpu_run_%.log
 cpu_run_%.prof cpu_run_%.log: io.go main.go main_test.go types.go
@@ -33,6 +33,10 @@ cpu_run4_%.prof cpu_run4_%.log: io.go main.go main_test.go types.go
 .PRECIOUS: cpu_run5_%.prof cpu_run5_%.log
 cpu_run5_%.prof cpu_run5_%.log: io.go main.go main_test.go types.go
 	go test -cpuprofile=cpu_run5_$*.prof -bench=^BenchmarkRun5$$ -run=^$$ -count=10 -in=measurements_$*.txt > cpu_run5_$*.log
+
+.PRECIOUS: cpu_run6_%.prof cpu_run6_%.log
+cpu_run6_%.prof cpu_run6_%.log: io.go main.go main_test.go types.go
+	go test -cpuprofile=cpu_run6_$*.prof -bench=^BenchmarkRun6$$ -run=^$$ -count=10 -in=measurements_$*.txt > cpu_run6_$*.log
 
 .PRECIOUS: cpu_%.svg
 cpu_%.svg: cpu_%.prof
