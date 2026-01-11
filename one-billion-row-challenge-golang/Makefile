@@ -1,3 +1,7 @@
+.PHONY: test
+test:
+	go test .
+
 .PRECIOUS: cpu_run_%.prof
 cpu_run_%.prof: io.go main.go main_test.go types.go
 	go test -cpuprofile=$@ -bench=^BenchmarkRun$$ -in=measurements_$*.txt
