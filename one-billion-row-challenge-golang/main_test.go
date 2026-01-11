@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io"
 	"os"
 	"strings"
 	"testing"
@@ -45,7 +46,7 @@ func BenchmarkRun(b *testing.B) {
 	for b.Loop() {
 		f.Seek(0, 0)
 		res := run(f)
-		writeFloat(os.Stdout, res)
+		writeFloat(io.Discard, res)
 	}
 }
 
@@ -84,7 +85,7 @@ func BenchmarkRun1(b *testing.B) {
 	for b.Loop() {
 		f.Seek(0, 0)
 		res := run1(f)
-		writeFloat(os.Stdout, res)
+		writeFloat(io.Discard, res)
 	}
 }
 
@@ -125,7 +126,7 @@ func BenchmarkRun2(b *testing.B) {
 	for b.Loop() {
 		f.Seek(0, 0)
 		res := run2(f)
-		writeInt(os.Stdout, res)
+		writeInt(io.Discard, res)
 	}
 }
 
@@ -164,7 +165,7 @@ func BenchmarkRun3(b *testing.B) {
 	for b.Loop() {
 		f.Seek(0, 0)
 		res := run3(f)
-		writeInt(os.Stdout, res)
+		writeInt(io.Discard, res)
 	}
 }
 
@@ -203,7 +204,7 @@ func BenchmarkRun4(b *testing.B) {
 	for b.Loop() {
 		f.Seek(0, 0)
 		res := run4(f)
-		writeInt(os.Stdout, res)
+		writeInt(io.Discard, res)
 	}
 }
 
@@ -242,6 +243,6 @@ func BenchmarkRun5(b *testing.B) {
 	for b.Loop() {
 		f.Seek(0, 0)
 		res := run5(f)
-		writeInt(os.Stdout, res)
+		writeInt(io.Discard, res)
 	}
 }

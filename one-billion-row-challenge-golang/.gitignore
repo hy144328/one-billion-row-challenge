@@ -1,5 +1,7 @@
 averages_*.txt
+cpu_*.log
 cpu_*.prof
+cpu_*.stat
 cpu_*.svg
 cpu_*.txt
 measurements_*.txt
