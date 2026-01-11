@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"io"
 	"strconv"
 	"strings"
@@ -151,6 +152,43 @@ func run3(r io.Reader) map[string]*Statistics[int] {
 				Sum: temperature,
 			}
 			res[city] = resIt
+		} else {
+			resIt.Cnt += 1
+			resIt.Max = max(resIt.Max, temperature)
+			resIt.Min = min(resIt.Min, temperature)
+			resIt.Sum += temperature
+		}
+	}
+
+	return res
+}
+
+func run4(r io.Reader) map[string]*Statistics[int] {
+	res := make(map[string]*Statistics[int], maxCities)
+	scanner := bufio.NewScanner(r)
+
+	for scanner.Scan() {
+		lineIt := scanner.Bytes()
+		lineItLen := len(lineIt)
+		sepIdx := bytes.IndexByte(lineIt, ';')
+
+		city := lineIt[:sepIdx]
+		temperature10, err := strconv.Atoi(string(lineIt[sepIdx+1:lineItLen-2]))
+		if err != nil {
+			panic(err)
+		}
+		temperature1 := lineIt[lineItLen-1] - '0'
+		temperature := 10 * temperature10 + int(temperature1)
+
+		resIt, ok := res[string(city)]
+		if !ok {
+			resIt = &Statistics[int]{
+				Cnt: 1,
+				Max: temperature,
+				Min: temperature,
+				Sum: temperature,
+			}
+			res[string(city)] = resIt
 		} else {
 			resIt.Cnt += 1
 			resIt.Max = max(resIt.Max, temperature)
