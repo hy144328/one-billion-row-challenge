@@ -112,7 +112,7 @@ func run2(r io.Reader) map[string]*Statistics[int] {
 		}
 
 		temperature1 := word1[word1len-1] - '0'
-		temperature := 10 * temperature10 + sgn * int(temperature1)
+		temperature := 10*temperature10 + sgn*int(temperature1)
 
 		resIt, ok := res[city]
 		if !ok {
@@ -148,13 +148,13 @@ func run3(r io.Reader) map[string]*Statistics[int] {
 			sgn = -1
 		}
 
-		temperature10, err := strconv.Atoi(lineIt[sepIdx+1:len(lineIt)-2])
+		temperature10, err := strconv.Atoi(lineIt[sepIdx+1 : len(lineIt)-2])
 		if err != nil {
 			panic(err)
 		}
 
 		temperature1 := lineIt[len(lineIt)-1] - '0'
-		temperature := 10 * temperature10 + sgn * int(temperature1)
+		temperature := 10*temperature10 + sgn*int(temperature1)
 
 		resIt, ok := res[city]
 		if !ok {
@@ -190,13 +190,13 @@ func run4(r io.Reader) map[string]*Statistics[int] {
 			sgn = -1
 		}
 
-		temperature10, err := strconv.Atoi(string(lineIt[sepIdx+1:len(lineIt)-2]))
+		temperature10, err := strconv.Atoi(string(lineIt[sepIdx+1 : len(lineIt)-2]))
 		if err != nil {
 			panic(err)
 		}
 
 		temperature1 := lineIt[len(lineIt)-1] - '0'
-		temperature := 10 * temperature10 + sgn * int(temperature1)
+		temperature := 10*temperature10 + sgn*int(temperature1)
 
 		resIt, ok := res[string(city)]
 		if !ok {
@@ -234,9 +234,9 @@ func run5(r io.Reader) map[string]*Statistics[int] {
 
 		var temperature int
 		if lineIt[sepIdx+1] == '-' {
-			temperature = -parseDigits(lineIt[sepIdx+2:len(lineIt)-1])
+			temperature = -parseDigits(lineIt[sepIdx+2 : len(lineIt)-1])
 		} else {
-			temperature = parseDigits(lineIt[sepIdx+1:len(lineIt)-1])
+			temperature = parseDigits(lineIt[sepIdx+1 : len(lineIt)-1])
 		}
 
 		resIt, ok := res[string(city)]
@@ -275,9 +275,9 @@ func run6(r io.Reader) *BytesMap[Statistics[int]] {
 
 		var temperature int
 		if lineIt[sepIdx+1] == '-' {
-			temperature = -parseDigits(lineIt[sepIdx+2:len(lineIt)-1])
+			temperature = -parseDigits(lineIt[sepIdx+2 : len(lineIt)-1])
 		} else {
-			temperature = parseDigits(lineIt[sepIdx+1:len(lineIt)-1])
+			temperature = parseDigits(lineIt[sepIdx+1 : len(lineIt)-1])
 		}
 
 		resIt, ok := res.GetOrCreate(city)

@@ -6,30 +6,30 @@ import (
 
 type Register[T any] struct {
 	KeyLen int
-	Key [100]byte
-	Value T
+	Key    [100]byte
+	Value  T
 }
 
 type BytesMap[T any] struct {
 	noRegisters uint32
-	registers []Register[T]
+	registers   []Register[T]
 }
 
 func NewBytesMap[T any](noRegisters int) *BytesMap[T] {
-	if noRegisters & (noRegisters - 1) != 0 {
+	if noRegisters&(noRegisters-1) != 0 {
 		panic("not power of 2")
 	}
 
 	return &BytesMap[T]{
 		noRegisters: uint32(noRegisters),
-		registers: make([]Register[T], noRegisters),
+		registers:   make([]Register[T], noRegisters),
 	}
 }
 
 func (m *BytesMap[T]) GetOrCreate(k []byte) (*T, bool) {
 	h := calculateHash(k)
 
-	for i := h; i < h + m.noRegisters; i++ {
+	for i := h; i < h+m.noRegisters; i++ {
 		idx := i & (m.noRegisters - 1)
 
 		if klen := m.registers[idx].KeyLen; klen == 0 {
