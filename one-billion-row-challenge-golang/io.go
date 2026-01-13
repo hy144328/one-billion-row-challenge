@@ -15,6 +15,11 @@ func writeFloat[T constraints.Float](
 	cities := sortedKeys(stats)
 
 	fmt.Fprint(w, "{")
+	if len(stats) == 0 {
+		fmt.Fprint(w, "}\n")
+		return
+	}
+
 	writeFloatStatistics(
 		w,
 		cities[0],
@@ -40,6 +45,11 @@ func writeInt[T constraints.Integer](
 	cities := sortedKeys(stats)
 
 	fmt.Fprint(w, "{")
+	if len(stats) == 0 {
+		fmt.Fprint(w, "}\n")
+		return
+	}
+
 	writeIntStatistics(
 		w,
 		cities[0],
