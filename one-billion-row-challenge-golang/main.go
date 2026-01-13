@@ -103,14 +103,14 @@ func run2(r io.Reader) map[string]*Statistics[int] {
 		word1 := words[1]
 		word1len := len(word1)
 
-		temperature10, err := strconv.Atoi(word1[:word1len-2])
-		if err != nil {
-			panic(err)
-		}
-
 		sgn := 1
 		if word1[0] == '-' {
 			sgn = -1
+		}
+
+		temperature10, err := strconv.Atoi(word1[:word1len-2])
+		if err != nil {
+			panic(err)
 		}
 
 		temperature1 := word1[word1len-1] - '0'
@@ -147,14 +147,14 @@ func run3(r io.Reader) map[string]*Statistics[int] {
 
 		city := lineIt[:sepIdx]
 
-		temperature10, err := strconv.Atoi(lineIt[sepIdx+1:lineItLen-2])
-		if err != nil {
-			panic(err)
-		}
-
 		sgn := 1
 		if lineIt[sepIdx+1] == '-' {
 			sgn = -1
+		}
+
+		temperature10, err := strconv.Atoi(lineIt[sepIdx+1:lineItLen-2])
+		if err != nil {
+			panic(err)
 		}
 
 		temperature1 := lineIt[lineItLen-1] - '0'
@@ -191,14 +191,14 @@ func run4(r io.Reader) map[string]*Statistics[int] {
 
 		city := lineIt[:sepIdx]
 
-		temperature10, err := strconv.Atoi(string(lineIt[sepIdx+1:lineItLen-2]))
-		if err != nil {
-			panic(err)
-		}
-
 		sgn := 1
 		if lineIt[sepIdx+1] == '-' {
 			sgn = -1
+		}
+
+		temperature10, err := strconv.Atoi(string(lineIt[sepIdx+1:lineItLen-2]))
+		if err != nil {
+			panic(err)
 		}
 
 		temperature1 := lineIt[lineItLen-1] - '0'
@@ -246,26 +246,14 @@ func run5(r io.Reader) map[string]*Statistics[int] {
 			res[string(city)] = resIt
 		}
 
-		temperature := 0
-		sgn := 1
-
-		for {
-			b, err := reader.ReadByte()
-			if err != nil {
-				panic(err)
-			}
-
-			if b >= '0' && b <= '9' {
-				temperature *= 10
-				temperature += int(b - '0')
-			} else if b == '\n' {
-				break
-			} else if b == '-' {
-				sgn = -1
-			}
+		digits, err := reader.ReadSlice('\n')
+		if err == io.EOF {
+			break
+		} else if err != nil {
+			panic(err)
 		}
+		temperature := parseDigits(digits[:len(digits)-1])
 
-		temperature *= sgn
 		resIt.Cnt += 1
 		resIt.Max = max(resIt.Max, temperature)
 		resIt.Min = min(resIt.Min, temperature)
@@ -292,28 +280,11 @@ func run6(r io.Reader) map[string]*Statistics[int] {
 
 		sepIdx := bytes.IndexByte(data, ';')
 		city = data[0:sepIdx]
-		temp := 0
-		sgn := 1
 
-		for i := sepIdx + 1; i < len(data); i++ {
-			b := data[i]
+		endIdx := bytes.IndexByte(data, '\n')
+		temperature = parseDigits(data[sepIdx+1:endIdx])
 
-			if b >= '0' && b <= '9' {
-				temp *= 10
-				temp += int(b - '0')
-			} else if b == '\n' {
-				temperature = sgn * temp
-				return i + 1, data[sepIdx+1:i], nil
-			} else if b == '-' {
-				sgn = -1
-			}
-		}
-
-		if atEOF {
-			return len(data), data, nil
-		}
-
-		return 0, nil, nil
+		return endIdx + 1, data[:endIdx], nil
 	})
 
 	for scanner.Scan() {
@@ -351,43 +322,14 @@ func run7(r io.Reader) *BytesMap[Statistics[int]] {
 			return 0, nil, nil
 		}
 
-		var sepIdx int
-		var fnv uint32 = 2166136261
-
-		for i, b := range data {
-			if b == ';' {
-				sepIdx = i
-				h = fnv
-				break
-			}
-
-			fnv ^= uint32(b)
-			fnv *= 16777619
-		}
-
+		sepIdx := bytes.IndexByte(data, ';')
 		city = data[0:sepIdx]
-		temp := 0
-		sgn := 1
+		h = calculateHash(city)
 
-		for i := sepIdx + 1; i < len(data); i++ {
-			b := data[i]
+		endIdx := bytes.IndexByte(data, '\n')
+		temperature = parseDigits(data[sepIdx+1:endIdx])
 
-			if b >= '0' && b <= '9' {
-				temp *= 10
-				temp += int(b - '0')
-			} else if b == '\n' {
-				temperature = sgn * temp
-				return i + 1, data[sepIdx+1:i], nil
-			} else if b == '-' {
-				sgn = -1
-			}
-		}
-
-		if atEOF {
-			return len(data), data, nil
-		}
-
-		return 0, nil, nil
+		return endIdx + 1, data[:endIdx], nil
 	})
 
 	for scanner.Scan() {

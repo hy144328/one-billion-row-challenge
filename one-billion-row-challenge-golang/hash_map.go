@@ -54,3 +54,14 @@ func (m *BytesMap[T]) ToMap() map[string]*T {
 
 	return res
 }
+
+func calculateHash(bs []byte) uint32 {
+	var res uint32 = 2166136261
+
+	for _, b := range bs {
+		res ^= uint32(b)
+		res *= 16777619
+	}
+
+	return res
+}
