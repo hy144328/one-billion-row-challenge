@@ -233,7 +233,13 @@ func run5(r io.Reader) map[string]*Statistics[int] {
 
 		sepIdx := bytes.IndexByte(lineIt, ';')
 		city := lineIt[:sepIdx]
-		temperature := parseDigits(lineIt[sepIdx+1:len(lineIt)-1])
+
+		var temperature int
+		if lineIt[sepIdx+1] == '-' {
+			temperature = -parseDigits(lineIt[sepIdx+2:len(lineIt)-1])
+		} else {
+			temperature = parseDigits(lineIt[sepIdx+1:len(lineIt)-1])
+		}
 
 		resIt, ok := res[string(city)]
 		if !ok {
@@ -268,7 +274,13 @@ func run6(r io.Reader) *BytesMap[Statistics[int]] {
 
 		sepIdx := bytes.IndexByte(lineIt, ';')
 		city := lineIt[:sepIdx]
-		temperature := parseDigits(lineIt[sepIdx+1:len(lineIt)-1])
+
+		var temperature int
+		if lineIt[sepIdx+1] == '-' {
+			temperature = -parseDigits(lineIt[sepIdx+2:len(lineIt)-1])
+		} else {
+			temperature = parseDigits(lineIt[sepIdx+1:len(lineIt)-1])
+		}
 
 		resIt, ok := res.GetOrCreate(city)
 		if !ok {
