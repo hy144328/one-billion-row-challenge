@@ -282,3 +282,42 @@ func BenchmarkRun6(b *testing.B) {
 		writeInt(io.Discard, res)
 	}
 }
+
+func TestRun7(t *testing.T) {
+	f, err := os.Open("measurements_6.txt")
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	res := run7(f)
+	var out strings.Builder
+	writeInt(&out, res.ToMap())
+
+	g, err := os.Open("averages_6.txt")
+	if err != nil {
+		panic(err)
+	}
+	defer g.Close()
+
+	var sol strings.Builder
+	g.WriteTo(&sol)
+
+	if out.String() != sol.String() {
+		t.Fail()
+	}
+}
+
+func BenchmarkRun7(b *testing.B) {
+	f, err := os.Open(*inPath)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	for b.Loop() {
+		f.Seek(0, 0)
+		res := run7(f)
+		writeInt(io.Discard, res.ToMap())
+	}
+}

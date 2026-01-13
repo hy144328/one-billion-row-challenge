@@ -4,13 +4,14 @@ import (
 	"bufio"
 	"bytes"
 	"io"
+	"math"
 	"strconv"
 	"strings"
 )
 
-const infTemperature = 1000
 const maxCities = 10000
 const maxLine = 128
+const noRegisters = 1048576
 
 func run(r io.Reader) map[string]*Statistics[float64] {
 	scanner := bufio.NewScanner(r)
@@ -239,8 +240,8 @@ func run5(r io.Reader) map[string]*Statistics[int] {
 		resIt, ok := res[string(city)]
 		if !ok {
 			resIt = &Statistics[int]{
-				Max: -infTemperature,
-				Min: infTemperature,
+				Max: math.MinInt,
+				Min: math.MaxInt,
 			}
 			res[string(city)] = resIt
 		}
@@ -319,8 +320,8 @@ func run6(r io.Reader) map[string]*Statistics[int] {
 		resIt, ok := res[string(city)]
 		if !ok {
 			resIt = &Statistics[int]{
-				Max: -infTemperature,
-				Min: infTemperature,
+				Max: math.MinInt,
+				Min: math.MaxInt,
 			}
 			res[string(city)] = resIt
 		}
@@ -329,6 +330,80 @@ func run6(r io.Reader) map[string]*Statistics[int] {
 		resIt.Max = max(resIt.Max, temperature)
 		resIt.Min = min(resIt.Min, temperature)
 		resIt.Sum += temperature
+	}
+
+	return res
+}
+
+func run7(r io.Reader) *BytesMap[Statistics[int]] {
+	var city []byte
+	var temperature int
+	var h uint32
+
+	res := NewBytesMap[Statistics[int]](noRegisters)
+	scanner := bufio.NewScanner(r)
+	scanner.Split(func(data []byte, atEOF bool) (advance int, token []byte, err error) {
+		if atEOF && len(data) == 0 {
+			return 0, nil, nil
+		}
+
+		if !atEOF && len(data) < maxLine {
+			return 0, nil, nil
+		}
+
+		var sepIdx int
+		var fnv uint32 = 2166136261
+
+		for i, b := range data {
+			if b == ';' {
+				sepIdx = i
+				h = fnv
+				break
+			}
+
+			fnv ^= uint32(b)
+			fnv *= 16777619
+		}
+
+		city = data[0:sepIdx]
+		temp := 0
+		sgn := 1
+
+		for i := sepIdx + 1; i < len(data); i++ {
+			b := data[i]
+
+			if b >= '0' && b <= '9' {
+				temp *= 10
+				temp += int(b - '0')
+			} else if b == '\n' {
+				temperature = sgn * temp
+				return i + 1, data[sepIdx+1:i], nil
+			} else if b == '-' {
+				sgn = -1
+			}
+		}
+
+		if atEOF {
+			return len(data), data, nil
+		}
+
+		return 0, nil, nil
+	})
+
+	for scanner.Scan() {
+		resIt, ok := res.GetOrCreate(city, h)
+
+		if !ok {
+			resIt.Cnt = 1
+			resIt.Max = temperature
+			resIt.Min = temperature
+			resIt.Sum = temperature
+		} else {
+			resIt.Cnt += 1
+			resIt.Max = max(resIt.Max, temperature)
+			resIt.Min = min(resIt.Min, temperature)
+			resIt.Sum += temperature
+		}
 	}
 
 	return res

@@ -4,39 +4,43 @@ test:
 
 .PHONY: full_all
 full_all:
-	for j in "" $$(seq 1 6); do go test -cpuprofile=cpu_run$${j}_9.prof -bench=^BenchmarkRun$${j}$$ -run=^$$ -in=measurements_9.txt > cpu_run$${j}_9.log; done
+	for j in "" $$(seq 1 7); do echo cpu_run$${j}_9; go test -cpuprofile=cpu_run$${j}_9.prof -bench=^BenchmarkRun$${j}$$ -run=^$$ -in=measurements_9.txt > cpu_run$${j}_9.log; done
 
 .PHONY: cpu_all
 cpu_all:
-	for i in $$(seq 6 8); do for j in "" $$(seq 1 6); do make cpu_run$${j}_$${i}; done; done
+	for i in $$(seq 6 8); do for j in "" $$(seq 1 7); do echo cpu_run$${j}_$${i}; make cpu_run$${j}_$${i}; done; done
 
 .PRECIOUS: cpu_run_%.prof cpu_run_%.log
-cpu_run_%.prof cpu_run_%.log: io.go main.go main_test.go types.go
+cpu_run_%.prof cpu_run_%.log: io.go main.go main_test.go types.go hash_map.go
 	go test -cpuprofile=cpu_run_$*.prof -bench=^BenchmarkRun$$ -run=^$$ -count=10 -in=measurements_$*.txt > cpu_run_$*.log
 
 .PRECIOUS: cpu_run1_%.prof cpu_run1_%.log
-cpu_run1_%.prof cpu_run1_%.log: io.go main.go main_test.go types.go
+cpu_run1_%.prof cpu_run1_%.log: io.go main.go main_test.go types.go hash_map.go
 	go test -cpuprofile=cpu_run1_$*.prof -bench=^BenchmarkRun1$$ -run=^$$ -count=10 -in=measurements_$*.txt > cpu_run1_$*.log
 
 .PRECIOUS: cpu_run2_%.prof cpu_run2_%.log
-cpu_run2_%.prof cpu_run2_%.log: io.go main.go main_test.go types.go
+cpu_run2_%.prof cpu_run2_%.log: io.go main.go main_test.go types.go hash_map.go
 	go test -cpuprofile=cpu_run2_$*.prof -bench=^BenchmarkRun2$$ -run=^$$ -count=10 -in=measurements_$*.txt > cpu_run2_$*.log
 
 .PRECIOUS: cpu_run3_%.prof cpu_run3_%.log
-cpu_run3_%.prof cpu_run3_%.log: io.go main.go main_test.go types.go
+cpu_run3_%.prof cpu_run3_%.log: io.go main.go main_test.go types.go hash_map.go
 	go test -cpuprofile=cpu_run3_$*.prof -bench=^BenchmarkRun3$$ -run=^$$ -count=10 -in=measurements_$*.txt > cpu_run3_$*.log
 
 .PRECIOUS: cpu_run4_%.prof cpu_run4_%.log
-cpu_run4_%.prof cpu_run4_%.log: io.go main.go main_test.go types.go
+cpu_run4_%.prof cpu_run4_%.log: io.go main.go main_test.go types.go hash_map.go
 	go test -cpuprofile=cpu_run4_$*.prof -bench=^BenchmarkRun4$$ -run=^$$ -count=10 -in=measurements_$*.txt > cpu_run4_$*.log
 
 .PRECIOUS: cpu_run5_%.prof cpu_run5_%.log
-cpu_run5_%.prof cpu_run5_%.log: io.go main.go main_test.go types.go
+cpu_run5_%.prof cpu_run5_%.log: io.go main.go main_test.go types.go hash_map.go
 	go test -cpuprofile=cpu_run5_$*.prof -bench=^BenchmarkRun5$$ -run=^$$ -count=10 -in=measurements_$*.txt > cpu_run5_$*.log
 
 .PRECIOUS: cpu_run6_%.prof cpu_run6_%.log
-cpu_run6_%.prof cpu_run6_%.log: io.go main.go main_test.go types.go
+cpu_run6_%.prof cpu_run6_%.log: io.go main.go main_test.go types.go hash_map.go
 	go test -cpuprofile=cpu_run6_$*.prof -bench=^BenchmarkRun6$$ -run=^$$ -count=10 -in=measurements_$*.txt > cpu_run6_$*.log
+
+.PRECIOUS: cpu_run7_%.prof cpu_run7_%.log
+cpu_run7_%.prof cpu_run7_%.log: io.go main.go main_test.go types.go hash_map.go
+	go test -cpuprofile=cpu_run7_$*.prof -bench=^BenchmarkRun7$$ -run=^$$ -count=10 -in=measurements_$*.txt > cpu_run7_$*.log
 
 .PRECIOUS: cpu_%.svg
 cpu_%.svg: cpu_%.prof
