@@ -5,7 +5,8 @@ import (
 )
 
 type Register[T any] struct {
-	Key []byte
+	KeyLen int
+	Key [100]byte
 	Value T
 }
 
@@ -31,13 +32,11 @@ func (m *BytesMap[T]) GetOrCreate(k []byte) (*T, bool) {
 	for i := h; i < h + m.noRegisters; i++ {
 		idx := i & (m.noRegisters - 1)
 
-		if m.registers[idx].Key == nil {
-			m.registers[idx].Key = make([]byte, len(k))
-			copy(m.registers[idx].Key, k)
+		if klen := m.registers[idx].KeyLen; klen == 0 {
+			m.registers[idx].KeyLen = len(k)
+			copy(m.registers[idx].Key[:], k)
 			return &m.registers[idx].Value, false
-		}
-
-		if bytes.Equal(m.registers[idx].Key, k) {
+		} else if bytes.Equal(m.registers[idx].Key[:klen], k) {
 			return &m.registers[idx].Value, true
 		}
 	}
@@ -49,8 +48,8 @@ func (m *BytesMap[T]) ToMap() map[string]*T {
 	res := make(map[string]*T, maxCities)
 
 	for i := range m.registers {
-		if m.registers[i].Key != nil {
-			res[string(m.registers[i].Key)] = &m.registers[i].Value
+		if klen := m.registers[i].KeyLen; klen > 0 {
+			res[string(m.registers[i].Key[:klen])] = &m.registers[i].Value
 		}
 	}
 
