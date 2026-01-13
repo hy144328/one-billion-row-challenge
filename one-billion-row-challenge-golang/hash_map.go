@@ -41,7 +41,7 @@ func (m *BytesMap[T]) GetOrCreate(k []byte) (*T, bool) {
 		}
 	}
 
-	return nil, false
+	panic("registers full")
 }
 
 func (m *BytesMap[T]) ToMap() map[string]*T {
