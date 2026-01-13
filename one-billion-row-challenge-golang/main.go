@@ -224,24 +224,18 @@ func run5(r io.Reader) map[string]*Statistics[int] {
 	reader := bufio.NewReader(r)
 
 	for {
-		city, err := reader.ReadSlice(';')
+		lineIt, err := reader.ReadSlice('\n')
 		if err == io.EOF {
 			break
 		} else if err != nil {
 			panic(err)
 		}
 
-		city = city[:len(city)-1]
+		sepIdx := bytes.IndexByte(lineIt, ';')
+		city := lineIt[:sepIdx]
+		temperature := parseDigits(lineIt[sepIdx+1:len(lineIt)-1])
+
 		resIt, ok := res[string(city)]
-
-		digits, err := reader.ReadSlice('\n')
-		if err == io.EOF {
-			break
-		} else if err != nil {
-			panic(err)
-		}
-		temperature := parseDigits(digits[:len(digits)-1])
-
 		if !ok {
 			res[string(city)] = &Statistics[int]{
 				Cnt: 1,
@@ -265,25 +259,19 @@ func run6(r io.Reader) *BytesMap[Statistics[int]] {
 	reader := bufio.NewReader(r)
 
 	for {
-		city, err := reader.ReadSlice(';')
+		lineIt, err := reader.ReadSlice('\n')
 		if err == io.EOF {
 			break
 		} else if err != nil {
 			panic(err)
 		}
 
-		city = city[:len(city)-1]
+		sepIdx := bytes.IndexByte(lineIt, ';')
+		city := lineIt[:sepIdx]
+		temperature := parseDigits(lineIt[sepIdx+1:len(lineIt)-1])
+
 		h := calculateHash(city)
 		resIt, ok := res.GetOrCreate(city, h)
-
-		digits, err := reader.ReadSlice('\n')
-		if err == io.EOF {
-			break
-		} else if err != nil {
-			panic(err)
-		}
-		temperature := parseDigits(digits[:len(digits)-1])
-
 		if !ok {
 			resIt.Cnt = 1
 			resIt.Max = temperature
