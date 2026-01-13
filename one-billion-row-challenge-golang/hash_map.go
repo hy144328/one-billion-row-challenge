@@ -25,7 +25,9 @@ func NewBytesMap[T any](noRegisters int) *BytesMap[T] {
 	}
 }
 
-func (m *BytesMap[T]) GetOrCreate(k []byte, h uint32) (*T, bool) {
+func (m *BytesMap[T]) GetOrCreate(k []byte) (*T, bool) {
+	h := calculateHash(k)
+
 	for i := h; i < h + m.noRegisters; i++ {
 		idx := i & (m.noRegisters - 1)
 

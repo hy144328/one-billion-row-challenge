@@ -270,8 +270,7 @@ func run6(r io.Reader) *BytesMap[Statistics[int]] {
 		city := lineIt[:sepIdx]
 		temperature := parseDigits(lineIt[sepIdx+1:len(lineIt)-1])
 
-		h := calculateHash(city)
-		resIt, ok := res.GetOrCreate(city, h)
+		resIt, ok := res.GetOrCreate(city)
 		if !ok {
 			resIt.Cnt = 1
 			resIt.Max = temperature
