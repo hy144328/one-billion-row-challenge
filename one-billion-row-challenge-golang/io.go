@@ -100,9 +100,9 @@ func writeIntStatistics[T constraints.Integer](
 ) {
 	fmt.Fprint(w, city)
 	fmt.Fprint(w, "=")
-	fmt.Fprintf(w, "%.1f", 0.1 * float64(stats.Min))
+	fmt.Fprintf(w, "%.1f", 0.1 * float32(stats.Min))
 	fmt.Fprint(w, "/")
 	fmt.Fprintf(w, "%.1f", 0.1 * float64(stats.Sum) / float64(stats.Cnt))
 	fmt.Fprint(w, "/")
-	fmt.Fprintf(w, "%.1f", 0.1 * float64(stats.Max))
+	fmt.Fprintf(w, "%.1f", 0.1 * float32(stats.Max))
 }
