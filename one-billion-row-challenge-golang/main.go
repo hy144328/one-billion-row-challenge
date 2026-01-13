@@ -139,9 +139,8 @@ func run3(r io.Reader) map[string]*Statistics[int] {
 
 	for scanner.Scan() {
 		lineIt := scanner.Text()
-		lineItLen := len(lineIt)
-		sepIdx := strings.IndexByte(lineIt, ';')
 
+		sepIdx := strings.IndexByte(lineIt, ';')
 		city := lineIt[:sepIdx]
 
 		sgn := 1
@@ -149,12 +148,12 @@ func run3(r io.Reader) map[string]*Statistics[int] {
 			sgn = -1
 		}
 
-		temperature10, err := strconv.Atoi(lineIt[sepIdx+1:lineItLen-2])
+		temperature10, err := strconv.Atoi(lineIt[sepIdx+1:len(lineIt)-2])
 		if err != nil {
 			panic(err)
 		}
 
-		temperature1 := lineIt[lineItLen-1] - '0'
+		temperature1 := lineIt[len(lineIt)-1] - '0'
 		temperature := 10 * temperature10 + sgn * int(temperature1)
 
 		resIt, ok := res[city]
@@ -182,9 +181,8 @@ func run4(r io.Reader) map[string]*Statistics[int] {
 
 	for scanner.Scan() {
 		lineIt := scanner.Bytes()
-		lineItLen := len(lineIt)
-		sepIdx := bytes.IndexByte(lineIt, ';')
 
+		sepIdx := bytes.IndexByte(lineIt, ';')
 		city := lineIt[:sepIdx]
 
 		sgn := 1
@@ -192,12 +190,12 @@ func run4(r io.Reader) map[string]*Statistics[int] {
 			sgn = -1
 		}
 
-		temperature10, err := strconv.Atoi(string(lineIt[sepIdx+1:lineItLen-2]))
+		temperature10, err := strconv.Atoi(string(lineIt[sepIdx+1:len(lineIt)-2]))
 		if err != nil {
 			panic(err)
 		}
 
-		temperature1 := lineIt[lineItLen-1] - '0'
+		temperature1 := lineIt[len(lineIt)-1] - '0'
 		temperature := 10 * temperature10 + sgn * int(temperature1)
 
 		resIt, ok := res[string(city)]
