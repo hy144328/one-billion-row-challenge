@@ -15,7 +15,7 @@ type BytesMap[T any] struct {
 }
 
 func NewBytesMap[T any](noRegisters int) *BytesMap[T] {
-	if noRegisters ^ (noRegisters - 1) == 0 {
+	if noRegisters & (noRegisters - 1) != 0 {
 		panic("not power of 2")
 	}
 
