@@ -139,9 +139,7 @@ func run3(r io.Reader) map[string]*Statistics[int] {
 
 	for scanner.Scan() {
 		lineIt := scanner.Text()
-
 		sepIdx := strings.IndexByte(lineIt, ';')
-		city := lineIt[:sepIdx]
 
 		sgn := 1
 		if lineIt[sepIdx+1] == '-' {
@@ -156,9 +154,9 @@ func run3(r io.Reader) map[string]*Statistics[int] {
 		temperature1 := lineIt[len(lineIt)-1] - '0'
 		temperature := 10*temperature10 + sgn*int(temperature1)
 
-		resIt, ok := res[city]
+		resIt, ok := res[lineIt[:sepIdx]]
 		if !ok {
-			res[city] = &Statistics[int]{
+			res[lineIt[:sepIdx]] = &Statistics[int]{
 				Cnt: 1,
 				Max: temperature,
 				Min: temperature,
@@ -181,9 +179,7 @@ func run4(r io.Reader) map[string]*Statistics[int] {
 
 	for scanner.Scan() {
 		lineIt := scanner.Bytes()
-
 		sepIdx := bytes.IndexByte(lineIt, ';')
-		city := lineIt[:sepIdx]
 
 		sgn := 1
 		if lineIt[sepIdx+1] == '-' {
@@ -198,9 +194,9 @@ func run4(r io.Reader) map[string]*Statistics[int] {
 		temperature1 := lineIt[len(lineIt)-1] - '0'
 		temperature := 10*temperature10 + sgn*int(temperature1)
 
-		resIt, ok := res[string(city)]
+		resIt, ok := res[string(lineIt[:sepIdx])]
 		if !ok {
-			res[string(city)] = &Statistics[int]{
+			res[string(lineIt[:sepIdx])] = &Statistics[int]{
 				Cnt: 1,
 				Max: temperature,
 				Min: temperature,
@@ -230,7 +226,6 @@ func run5(r io.Reader) map[string]*Statistics[int] {
 		}
 
 		sepIdx := bytes.IndexByte(lineIt, ';')
-		city := lineIt[:sepIdx]
 
 		var temperature int
 		if lineIt[sepIdx+1] == '-' {
@@ -239,9 +234,9 @@ func run5(r io.Reader) map[string]*Statistics[int] {
 			temperature = parseDigits(lineIt[sepIdx+1 : len(lineIt)-1])
 		}
 
-		resIt, ok := res[string(city)]
+		resIt, ok := res[string(lineIt[:sepIdx])]
 		if !ok {
-			res[string(city)] = &Statistics[int]{
+			res[string(lineIt[:sepIdx])] = &Statistics[int]{
 				Cnt: 1,
 				Max: temperature,
 				Min: temperature,
