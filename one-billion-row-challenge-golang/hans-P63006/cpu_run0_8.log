@@ -1,0 +1,16 @@
+goos: linux
+goarch: amd64
+pkg: github.com/hy144328/one-billion-row-challenge-golang
+cpu: Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+BenchmarkRun-12    	       1	25516377795 ns/op
+BenchmarkRun-12    	       1	24896104390 ns/op
+BenchmarkRun-12    	       1	24607584757 ns/op
+BenchmarkRun-12    	       1	24621516006 ns/op
+BenchmarkRun-12    	       1	24461720715 ns/op
+BenchmarkRun-12    	       1	24509346594 ns/op
+BenchmarkRun-12    	       1	24444038233 ns/op
+BenchmarkRun-12    	       1	24613069288 ns/op
+BenchmarkRun-12    	       1	24736844535 ns/op
+BenchmarkRun-12    	       1	24693037526 ns/op
+PASS
+ok  	github.com/hy144328/one-billion-row-challenge-golang	247.325s

@@ -1,0 +1,32 @@
+File: one-billion-row-challenge-golang.test
+Build ID: d5df05dd99e5d2dcd493355c59cdbeec02a734c2
+Type: cpu
+Time: 2026-01-14 14:53:33 CET
+Duration: 44.33s, Total samples = 42.30s (95.41%)
+Showing nodes accounting for 41.90s, 99.05% of 42.30s total
+Dropped 30 nodes (cum <= 0.21s)
+      flat  flat%   sum%        cum   cum%
+     8.98s 21.23% 21.23%     17.13s 40.50%  github.com/hy144328/one-billion-row-challenge-golang.(*BytesMap[go.shape.struct { Cnt int; Max int; Min int; Sum int }]).GetOrCreate
+     5.97s 14.11% 35.34%     42.29s   100%  github.com/hy144328/one-billion-row-challenge-golang.run6
+     5.49s 12.98% 48.32%      5.49s 12.98%  github.com/hy144328/one-billion-row-challenge-golang.calculateHash (inline)
+     4.97s 11.75% 60.07%      4.97s 11.75%  indexbytebody
+     4.73s 11.18% 71.25%      4.73s 11.18%  internal/runtime/syscall.Syscall6
+     4.70s 11.11% 82.36%     13.36s 31.58%  bufio.(*Reader).ReadSlice
+     2.46s  5.82% 88.18%      2.46s  5.82%  github.com/hy144328/one-billion-row-challenge-golang.parseDigits (inline)
+     1.89s  4.47% 92.65%      1.89s  4.47%  memeqbody
+     0.97s  2.29% 94.94%      0.97s  2.29%  internal/bytealg.IndexByte
+     0.69s  1.63% 96.57%      6.63s 15.67%  bytes.IndexByte (inline)
+     0.48s  1.13% 97.71%      2.66s  6.29%  bytes.Equal (inline)
+     0.29s  0.69% 98.39%      0.29s  0.69%  runtime.memequal
+     0.11s  0.26% 98.65%      5.27s 12.46%  os.(*File).Read
+     0.06s  0.14% 98.79%      5.36s 12.67%  bufio.(*Reader).fill
+     0.05s  0.12% 98.91%      5.15s 12.17%  os.(*File).read (inline)
+     0.03s 0.071% 98.98%         5s 11.82%  syscall.Read (inline)
+     0.02s 0.047% 99.03%      5.10s 12.06%  internal/poll.(*FD).Read
+     0.01s 0.024% 99.05%      4.97s 11.75%  syscall.read
+         0     0% 99.05%     42.29s   100%  github.com/hy144328/one-billion-row-challenge-golang.BenchmarkRun6
+         0     0% 99.05%         5s 11.82%  internal/poll.ignoringEINTRIO (inline)
+         0     0% 99.05%      4.73s 11.18%  syscall.RawSyscall6
+         0     0% 99.05%      4.96s 11.73%  syscall.Syscall
+         0     0% 99.05%     42.29s   100%  testing.(*B).run1.func1
+         0     0% 99.05%     42.29s   100%  testing.(*B).runN

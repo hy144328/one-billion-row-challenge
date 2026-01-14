@@ -1,0 +1,43 @@
+File: one-billion-row-challenge-golang.test
+Build ID: d5df05dd99e5d2dcd493355c59cdbeec02a734c2
+Type: cpu
+Time: 2026-01-14 18:12:19 CET
+Duration: 12.03s, Total samples = 11.85s (98.53%)
+Showing nodes accounting for 11.64s, 98.23% of 11.85s total
+Dropped 28 nodes (cum <= 0.06s)
+      flat  flat%   sum%        cum   cum%
+     1.45s 12.24% 12.24%      4.85s 40.93%  runtime.mapaccess2_faststr
+     1.37s 11.56% 23.80%     11.82s 99.75%  github.com/hy144328/one-billion-row-challenge-golang.run4
+     1.11s  9.37% 33.16%      1.11s  9.37%  indexbytebody
+        1s  8.44% 41.60%         1s  8.44%  internal/runtime/maps.ctrlGroup.matchH2 (inline)
+     0.93s  7.85% 49.45%      0.93s  7.85%  aeshashbody
+     0.92s  7.76% 57.22%      3.13s 26.41%  bufio.(*Scanner).Scan
+     0.89s  7.51% 64.73%      0.89s  7.51%  strconv.Atoi
+     0.59s  4.98% 69.70%      0.71s  5.99%  runtime.slicebytetostring
+     0.53s  4.47% 74.18%      1.47s 12.41%  bufio.ScanLines
+     0.53s  4.47% 78.65%      0.53s  4.47%  internal/runtime/syscall.Syscall6
+     0.48s  4.05% 82.70%      0.48s  4.05%  memeqbody
+     0.27s  2.28% 84.98%      1.58s 13.33%  bytes.IndexByte (inline)
+     0.22s  1.86% 86.84%      0.22s  1.86%  internal/runtime/maps.(*Map).directoryAt (inline)
+     0.20s  1.69% 88.52%      0.20s  1.69%  internal/bytealg.IndexByte
+     0.19s  1.60% 90.13%      0.19s  1.60%  internal/runtime/maps.(*groupReference).key (inline)
+     0.15s  1.27% 91.39%      0.15s  1.27%  bufio.(*Scanner).Bytes (inline)
+     0.13s  1.10% 92.49%      0.13s  1.10%  runtime.memmove
+     0.13s  1.10% 93.59%      0.13s  1.10%  runtime.strhash
+     0.12s  1.01% 94.60%      0.12s  1.01%  internal/runtime/maps.h1 (inline)
+     0.10s  0.84% 95.44%      0.10s  0.84%  bufio.(*Scanner).advance (inline)
+     0.09s  0.76% 96.20%      0.09s  0.76%  internal/runtime/maps.(*Map).directoryIndex (inline)
+     0.08s  0.68% 96.88%      0.08s  0.68%  bufio.dropCR (inline)
+     0.07s  0.59% 97.47%      0.07s  0.59%  internal/runtime/maps.(*groupsReference).group (inline)
+     0.06s  0.51% 97.97%      0.06s  0.51%  runtime.memequal
+     0.02s  0.17% 98.14%      0.63s  5.32%  os.(*File).Read
+     0.01s 0.084% 98.23%      0.61s  5.15%  internal/poll.(*FD).Read
+         0     0% 98.23%     11.83s 99.83%  github.com/hy144328/one-billion-row-challenge-golang.BenchmarkRun4
+         0     0% 98.23%      0.57s  4.81%  internal/poll.ignoringEINTRIO (inline)
+         0     0% 98.23%      0.61s  5.15%  os.(*File).read (inline)
+         0     0% 98.23%      0.52s  4.39%  syscall.RawSyscall6
+         0     0% 98.23%      0.57s  4.81%  syscall.Read (inline)
+         0     0% 98.23%      0.57s  4.81%  syscall.Syscall
+         0     0% 98.23%      0.57s  4.81%  syscall.read
+         0     0% 98.23%     11.83s 99.83%  testing.(*B).run1.func1
+         0     0% 98.23%     11.83s 99.83%  testing.(*B).runN

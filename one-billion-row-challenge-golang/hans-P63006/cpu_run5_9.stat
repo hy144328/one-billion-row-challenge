@@ -1,0 +1,8 @@
+goos: linux
+goarch: amd64
+pkg: github.com/hy144328/one-billion-row-challenge-golang
+cpu: Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+       │ cpu_run5_9.log │
+       │     sec/op     │
+Run-12      46.17 ± ∞ ¹
+¹ need >= 6 samples for confidence interval at level 0.95

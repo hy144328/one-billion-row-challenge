@@ -6,3 +6,5 @@ cpu_*.svg
 cpu_*.txt
 measurements_*.txt
 one-billion-row-challenge-golang.test
+
+!hans-P63006/cpu_*.*
