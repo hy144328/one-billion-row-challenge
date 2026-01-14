@@ -6,6 +6,7 @@ import (
 
 type Register[T any] struct {
 	KeyLen int
+	Hash   uint32
 	Key    [100]byte
 	Value  T
 }
@@ -34,9 +35,10 @@ func (m *BytesMap[T]) GetOrCreate(k []byte) (*T, bool) {
 
 		if klen := m.registers[idx].KeyLen; klen == 0 {
 			m.registers[idx].KeyLen = len(k)
+			m.registers[idx].Hash = h
 			copy(m.registers[idx].Key[:], k)
 			return &m.registers[idx].Value, false
-		} else if bytes.Equal(m.registers[idx].Key[:klen], k) {
+		} else if h == m.registers[idx].Hash && bytes.Equal(m.registers[idx].Key[:klen], k) {
 			return &m.registers[idx].Value, true
 		}
 	}
