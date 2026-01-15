@@ -40,7 +40,7 @@ cpu_%.svg: cpu_%.prof
 
 .PRECIOUS: cpu_%.txt
 cpu_%.txt: cpu_%.prof
-	go tool pprof -top -output=$@ $<
+	go tool pprof -top -cum -output=$@ $<
 
 .PRECIOUS: cpu_%.stat
 cpu_%.stat: cpu_%.log
