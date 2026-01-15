@@ -1,0 +1,16 @@
+goos: linux
+goarch: amd64
+pkg: github.com/hy144328/one-billion-row-challenge-golang
+cpu: AMD Ryzen 7 8845HS w/ Radeon 780M Graphics
+BenchmarkRun-16    	       1	9423211120 ns/op
+BenchmarkRun-16    	       1	9335147982 ns/op
+BenchmarkRun-16    	       1	9160884820 ns/op
+BenchmarkRun-16    	       1	9245018210 ns/op
+BenchmarkRun-16    	       1	9186936573 ns/op
+BenchmarkRun-16    	       1	9151307497 ns/op
+BenchmarkRun-16    	       1	9272107505 ns/op
+BenchmarkRun-16    	       1	9291427689 ns/op
+BenchmarkRun-16    	       1	9283447134 ns/op
+BenchmarkRun-16    	       1	9196825007 ns/op
+PASS
+ok  	github.com/hy144328/one-billion-row-challenge-golang	92.751s

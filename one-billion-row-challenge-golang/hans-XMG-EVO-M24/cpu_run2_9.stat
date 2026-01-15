@@ -1,0 +1,8 @@
+goos: linux
+goarch: amd64
+pkg: github.com/hy144328/one-billion-row-challenge-golang
+cpu: AMD Ryzen 7 8845HS w/ Radeon 780M Graphics
+       │ cpu_run2_9.log │
+       │     sec/op     │
+Run-16      81.25 ± ∞ ¹
+¹ need >= 6 samples for confidence interval at level 0.95
