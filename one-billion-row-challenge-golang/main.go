@@ -9,7 +9,6 @@ import (
 )
 
 const maxCities = 10000
-const maxLine = 128
 const noRegisters = 1048576
 
 func run0(r io.Reader) map[string]*Statistics[float64] {
@@ -97,6 +96,7 @@ func run2(r io.Reader) map[string]*Statistics[int] {
 		lineIt := scanner.Text()
 		words := strings.Split(lineIt, ";")
 
+		city := words[0]
 		var temperature int
 		if words[1][0] == '-' {
 			temperature = -parseDigitsFromString(words[1][1:])
@@ -104,9 +104,9 @@ func run2(r io.Reader) map[string]*Statistics[int] {
 			temperature = parseDigitsFromString(words[1])
 		}
 
-		resIt, ok := res[words[0]]
+		resIt, ok := res[city]
 		if !ok {
-			res[words[0]] = &Statistics[int]{
+			res[city] = &Statistics[int]{
 				Cnt: 1,
 				Max: temperature,
 				Min: temperature,
