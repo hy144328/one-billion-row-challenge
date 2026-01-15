@@ -2,18 +2,20 @@ package main
 
 import (
 	"bytes"
+	"hash/maphash"
 )
 
 type Register[T any] struct {
 	KeyLen int
-	Hash   uint32
+	Hash   uint64
 	Key    [100]byte
 	Value  T
 }
 
 type BytesMap[T any] struct {
-	noRegisters uint32
+	noRegisters uint64
 	registers   []Register[T]
+	seed        maphash.Seed
 }
 
 func NewBytesMap[T any](noRegisters int) *BytesMap[T] {
@@ -22,13 +24,14 @@ func NewBytesMap[T any](noRegisters int) *BytesMap[T] {
 	}
 
 	return &BytesMap[T]{
-		noRegisters: uint32(noRegisters),
+		noRegisters: uint64(noRegisters),
 		registers:   make([]Register[T], noRegisters),
+		seed:        maphash.MakeSeed(),
 	}
 }
 
 func (m *BytesMap[T]) GetOrCreate(k []byte) (*T, bool) {
-	h := calculateHash(k)
+	h := maphash.Bytes(m.seed, k)
 
 	for i := h; i < h+m.noRegisters; i++ {
 		idx := i & (m.noRegisters - 1)
@@ -53,17 +56,6 @@ func (m *BytesMap[T]) ToMap() map[string]*T {
 		if klen := m.registers[i].KeyLen; klen > 0 {
 			res[string(m.registers[i].Key[:klen])] = &m.registers[i].Value
 		}
-	}
-
-	return res
-}
-
-func calculateHash(bs []byte) uint32 {
-	var res uint32 = 2166136261
-
-	for _, b := range bs {
-		res ^= uint32(b)
-		res *= 16777619
 	}
 
 	return res
