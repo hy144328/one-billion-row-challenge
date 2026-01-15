@@ -1,0 +1,89 @@
+File: one-billion-row-challenge-golang.test
+Build ID: 72bca091f466609dc907466886cde8910df298d4
+Type: cpu
+Time: 2026-01-15 21:20:22 CET
+Duration: 143.67s, Total samples = 154.48s (107.52%)
+Showing nodes accounting for 145s, 93.86% of 154.48s total
+Dropped 298 nodes (cum <= 0.77s)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%    144.31s 93.42%  github.com/hy144328/one-billion-row-challenge-golang.BenchmarkRun0
+     2.67s  1.73%  1.73%    144.31s 93.42%  github.com/hy144328/one-billion-row-challenge-golang.run0
+         0     0%  1.73%    144.31s 93.42%  testing.(*B).run1.func1
+         0     0%  1.73%    144.31s 93.42%  testing.(*B).runN
+    18.34s 11.87% 13.60%     45.30s 29.32%  runtime.mapassign_faststr
+    12.61s  8.16% 21.76%     31.56s 20.43%  runtime.mapaccess1_faststr
+     0.08s 0.052% 21.82%     30.35s 19.65%  strings.Split (inline)
+     3.91s  2.53% 24.35%     30.27s 19.59%  strings.genSplit
+     2.03s  1.31% 25.66%     21.95s 14.21%  runtime.mallocgc
+     0.50s  0.32% 25.98%     15.77s 10.21%  strconv.ParseFloat
+    15.73s 10.18% 36.17%     15.73s 10.18%  internal/runtime/maps.ctrlGroup.matchH2 (inline)
+     0.55s  0.36% 36.52%     15.27s  9.88%  strconv.parseFloatPrefix
+     1.37s  0.89% 37.41%     14.72s  9.53%  strconv.atof64
+     0.95s  0.61% 38.02%     14.36s  9.30%  runtime.makeslice
+     2.43s  1.57% 39.60%     12.08s  7.82%  runtime.mallocgcSmallScanNoHeader
+         0     0% 39.60%     10.62s  6.87%  bufio.(*Scanner).Text (inline)
+     1.03s  0.67% 40.26%     10.62s  6.87%  runtime.slicebytetostring
+     9.07s  5.87% 46.14%      9.07s  5.87%  memeqbody
+     0.04s 0.026% 46.16%      9.06s  5.86%  runtime.systemstack
+     1.65s  1.07% 47.23%      8.04s  5.20%  bufio.(*Scanner).Scan
+     7.70s  4.98% 52.21%      7.76s  5.02%  strconv.readFloat
+     0.02s 0.013% 52.23%      6.66s  4.31%  runtime.gcBgMarkWorker
+     1.55s  1.00% 53.23%      6.30s  4.08%  strings.Count
+     6.12s  3.96% 57.19%      6.12s  3.96%  aeshashbody
+     6.11s  3.96% 61.15%      6.11s  3.96%  runtime.nextFreeFast (inline)
+     0.02s 0.013% 61.16%      5.92s  3.83%  runtime.gcBgMarkWorker.func2
+     0.10s 0.065% 61.22%      5.89s  3.81%  runtime.gcDrain
+         0     0% 61.22%      5.74s  3.72%  runtime.gcDrainMarkWorkerDedicated (inline)
+     2.97s  1.92% 63.15%      5.65s  3.66%  runtime.mallocgcTiny
+     0.02s 0.013% 63.16%      5.64s  3.65%  strings.Index (inline)
+     1.20s  0.78% 63.94%      5.62s  3.64%  internal/stringslite.Index
+     1.97s  1.28% 65.21%      4.95s  3.20%  runtime.scanobject
+     4.56s  2.95% 68.16%      4.56s  2.95%  strconv.atof64exact
+     0.07s 0.045% 68.21%      4.41s  2.85%  internal/stringslite.IndexByte (inline)
+     4.20s  2.72% 70.93%      4.20s  2.72%  indexbytebody
+     4.12s  2.67% 73.60%      4.12s  2.67%  internal/runtime/maps.(*groupReference).key (inline)
+     0.04s 0.026% 73.62%      3.53s  2.29%  os.(*File).Read
+         0     0% 73.62%      3.48s  2.25%  internal/poll.(*FD).Read
+         0     0% 73.62%      3.48s  2.25%  os.(*File).read (inline)
+     3.47s  2.25% 75.87%      3.47s  2.25%  countbody
+     0.01s 0.0065% 75.87%      3.47s  2.25%  internal/poll.ignoringEINTRIO (inline)
+     0.01s 0.0065% 75.88%      3.46s  2.24%  syscall.Read (inline)
+     0.02s 0.013% 75.89%      3.45s  2.23%  syscall.read
+     0.01s 0.0065% 75.90%      3.43s  2.22%  syscall.Syscall
+     3.28s  2.12% 78.02%      3.28s  2.12%  internal/runtime/syscall.Syscall6
+     0.03s 0.019% 78.04%      3.26s  2.11%  syscall.RawSyscall6
+     0.77s   0.5% 78.54%      2.61s  1.69%  bufio.ScanLines
+     2.12s  1.37% 79.91%      2.12s  1.37%  internal/runtime/maps.(*Map).directoryAt (inline)
+     0.07s 0.045% 79.96%      2.09s  1.35%  runtime.heapSetTypeNoHeader (inline)
+     1.99s  1.29% 81.25%      2.02s  1.31%  runtime.(*mspan).writeHeapBitsSmall
+     0.03s 0.019% 81.27%      1.78s  1.15%  runtime.bgsweep
+     0.18s  0.12% 81.38%      1.75s  1.13%  runtime.sweepone
+     1.73s  1.12% 82.50%      1.73s  1.12%  runtime.memequal
+     0.55s  0.36% 82.86%      1.70s  1.10%  runtime.mallocgcSmallNoscan
+     1.58s  1.02% 83.88%      1.58s  1.02%  runtime.memclrNoHeapPointers
+     1.57s  1.02% 84.90%      1.57s  1.02%  internal/runtime/maps.h2 (inline)
+     0.14s 0.091% 84.99%      1.55s  1.00%  runtime.(*mcache).nextFree
+     0.25s  0.16% 85.15%      1.44s  0.93%  bytes.IndexByte (inline)
+     0.23s  0.15% 85.30%      1.35s  0.87%  runtime.(*sweepLocked).sweep
+     0.02s 0.013% 85.31%      1.34s  0.87%  runtime.schedule
+     0.07s 0.045% 85.36%      1.29s  0.84%  runtime.(*mcache).refill
+     1.28s  0.83% 86.19%      1.28s  0.83%  internal/bytealg.CountString
+     0.84s  0.54% 86.73%      1.25s  0.81%  runtime.findObject
+     1.23s   0.8% 87.53%      1.23s   0.8%  internal/bytealg.IndexByteString
+     1.09s  0.71% 88.23%      1.09s  0.71%  internal/runtime/maps.(*groupReference).elem (inline)
+     1.09s  0.71% 88.94%      1.09s  0.71%  internal/runtime/maps.makeProbeSeq (inline)
+     1.09s  0.71% 89.64%      1.09s  0.71%  runtime.strhash
+     1.07s  0.69% 90.34%      1.07s  0.69%  runtime.memmove
+     1.05s  0.68% 91.02%      1.05s  0.68%  runtime.futex
+     1.04s  0.67% 91.69%      1.04s  0.67%  internal/runtime/maps.(*groupsReference).group (inline)
+     0.94s  0.61% 92.30%      1.03s  0.67%  strconv.special
+         0     0% 92.30%         1s  0.65%  runtime.mcall
+         0     0% 92.30%      0.99s  0.64%  runtime.park_m
+     0.01s 0.0065% 92.30%      0.96s  0.62%  runtime.markroot
+     0.03s 0.019% 92.32%      0.91s  0.59%  runtime.(*mheap).freeSpan (inline)
+         0     0% 92.32%      0.88s  0.57%  runtime.(*sweepLocked).sweep.(*mheap).freeSpan.func2
+     0.86s  0.56% 92.88%      0.86s  0.56%  runtime.typePointers.nextFast (inline)
+     0.03s 0.019% 92.90%      0.84s  0.54%  runtime.(*mcentral).cacheSpan
+     0.67s  0.43% 93.33%      0.83s  0.54%  runtime.typePointers.next
+     0.03s 0.019% 93.35%      0.82s  0.53%  runtime.findRunnable
+     0.79s  0.51% 93.86%      0.79s  0.51%  internal/runtime/maps.(*Map).directoryIndex (inline)

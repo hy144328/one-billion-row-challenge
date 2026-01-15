@@ -1,0 +1,41 @@
+File: one-billion-row-challenge-golang.test
+Build ID: 72bca091f466609dc907466886cde8910df298d4
+Type: cpu
+Time: 2026-01-15 21:12:32 CET
+Duration: 11.13s, Total samples = 11.04s (99.18%)
+Showing nodes accounting for 10.88s, 98.55% of 11.04s total
+Dropped 43 nodes (cum <= 0.06s)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     10.98s 99.46%  github.com/hy144328/one-billion-row-challenge-golang.BenchmarkRun6
+         0     0%     0%     10.98s 99.46%  testing.(*B).run1.func1
+         0     0%     0%     10.98s 99.46%  testing.(*B).runN
+     1.03s  9.33%  9.33%     10.75s 97.37%  github.com/hy144328/one-billion-row-challenge-golang.run6
+     2.32s 21.01% 30.34%      4.65s 42.12%  github.com/hy144328/one-billion-row-challenge-golang.(*BytesMap[go.shape.struct { Cnt int; Max int; Min int; Sum int }]).GetOrCreate
+     0.99s  8.97% 39.31%      3.05s 27.63%  bufio.(*Reader).ReadSlice
+     0.12s  1.09% 40.40%      1.80s 16.30%  bytes.IndexByte (inline)
+     1.49s 13.50% 53.89%      1.49s 13.50%  indexbytebody
+     0.20s  1.81% 55.71%      1.25s 11.32%  hash/maphash.Bytes
+     0.03s  0.27% 55.98%      1.10s  9.96%  bufio.(*Reader).fill
+     0.10s  0.91% 56.88%      1.08s  9.78%  bytes.Equal (inline)
+     0.01s 0.091% 56.97%      1.07s  9.69%  os.(*File).Read
+     0.02s  0.18% 57.16%      1.06s  9.60%  internal/poll.(*FD).Read
+         0     0% 57.16%      1.06s  9.60%  os.(*File).read (inline)
+     0.08s  0.72% 57.88%      1.05s  9.51%  hash/maphash.rthash (inline)
+         0     0% 57.88%      1.03s  9.33%  internal/poll.ignoringEINTRIO (inline)
+     0.01s 0.091% 57.97%      1.03s  9.33%  syscall.Read (inline)
+     0.01s 0.091% 58.06%      1.02s  9.24%  syscall.read
+     0.02s  0.18% 58.24%      1.01s  9.15%  syscall.Syscall
+     0.94s  8.51% 66.76%      0.94s  8.51%  memeqbody
+     0.01s 0.091% 66.85%      0.94s  8.51%  syscall.RawSyscall6
+     0.93s  8.42% 75.27%      0.93s  8.42%  internal/runtime/syscall.Syscall6
+     0.91s  8.24% 83.51%      0.91s  8.24%  aeshashbody
+     0.80s  7.25% 90.76%      0.80s  7.25%  github.com/hy144328/one-billion-row-challenge-golang.parseDigitsFromBytes (inline)
+         0     0% 90.76%      0.38s  3.44%  github.com/hy144328/one-billion-row-challenge-golang.NewBytesMap[go.shape.struct { Cnt int; Max int; Min int; Sum int }]
+         0     0% 90.76%      0.38s  3.44%  runtime.makeslice
+         0     0% 90.76%      0.38s  3.44%  runtime.mallocgc
+         0     0% 90.76%      0.38s  3.44%  runtime.mallocgcLarge
+     0.38s  3.44% 94.20%      0.38s  3.44%  runtime.memclrNoHeapPointers
+         0     0% 94.20%      0.38s  3.44%  runtime.memclrNoHeapPointersChunked
+     0.23s  2.08% 96.29%      0.23s  2.08%  github.com/hy144328/one-billion-row-challenge-golang.(*BytesMap[go.shape.struct { Cnt int; Max int; Min int; Sum int }]).ToMap
+     0.19s  1.72% 98.01%      0.19s  1.72%  internal/bytealg.IndexByte
+     0.06s  0.54% 98.55%      0.06s  0.54%  runtime.memhash

@@ -1,0 +1,114 @@
+File: one-billion-row-challenge-golang.test
+Build ID: 72bca091f466609dc907466886cde8910df298d4
+Type: cpu
+Time: 2026-01-15 21:11:18 CET
+Duration: 18.65s, Total samples = 21.06s (112.94%)
+Showing nodes accounting for 18.71s, 88.84% of 21.06s total
+Dropped 191 nodes (cum <= 0.11s)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     18.80s 89.27%  github.com/hy144328/one-billion-row-challenge-golang.BenchmarkRun1
+     0.81s  3.85%  3.85%     18.80s 89.27%  github.com/hy144328/one-billion-row-challenge-golang.run1
+         0     0%  3.85%     18.80s 89.27%  testing.(*B).run1.func1
+         0     0%  3.85%     18.80s 89.27%  testing.(*B).runN
+         0     0%  3.85%      6.85s 32.53%  strings.Split (inline)
+     0.70s  3.32%  7.17%      6.85s 32.53%  strings.genSplit
+     1.19s  5.65% 12.82%      4.62s 21.94%  runtime.mapaccess2_faststr
+     0.36s  1.71% 14.53%      4.44s 21.08%  runtime.mallocgc
+     0.17s  0.81% 15.34%      3.49s 16.57%  runtime.makeslice
+     0.04s  0.19% 15.53%      3.28s 15.57%  strconv.ParseFloat
+     0.09s  0.43% 15.95%      3.24s 15.38%  strconv.parseFloatPrefix
+     0.32s  1.52% 17.47%      3.15s 14.96%  strconv.atof64
+     0.72s  3.42% 20.89%      2.86s 13.58%  runtime.mallocgcSmallScanNoHeader
+     0.01s 0.047% 20.94%      2.23s 10.59%  runtime.systemstack
+     0.32s  1.52% 22.46%      1.73s  8.21%  bufio.(*Scanner).Scan
+     1.58s  7.50% 29.96%      1.59s  7.55%  strconv.readFloat
+     0.19s   0.9% 30.86%      1.59s  7.55%  strings.Count
+     0.01s 0.047% 30.91%      1.50s  7.12%  bufio.(*Scanner).Text (inline)
+     0.24s  1.14% 32.05%      1.49s  7.08%  runtime.slicebytetostring
+         0     0% 32.05%      1.42s  6.74%  runtime.gcBgMarkWorker
+         0     0% 32.05%      1.26s  5.98%  runtime.gcBgMarkWorker.func2
+         0     0% 32.05%      1.26s  5.98%  runtime.gcDrain
+         0     0% 32.05%      1.25s  5.94%  runtime.gcDrainMarkWorkerDedicated (inline)
+     1.22s  5.79% 37.84%      1.22s  5.79%  countbody
+     0.45s  2.14% 39.98%      1.12s  5.32%  runtime.scanobject
+     1.04s  4.94% 44.92%      1.04s  4.94%  strconv.atof64exact
+     0.22s  1.04% 45.96%      1.03s  4.89%  internal/stringslite.Index
+         0     0% 45.96%      1.03s  4.89%  strings.Index (inline)
+     0.99s  4.70% 50.66%      0.99s  4.70%  internal/runtime/maps.ctrlGroup.matchH2 (inline)
+     0.99s  4.70% 55.37%      0.99s  4.70%  runtime.nextFreeFast (inline)
+     0.02s 0.095% 55.46%      0.89s  4.23%  os.(*File).Read
+         0     0% 55.46%      0.87s  4.13%  internal/poll.(*FD).Read
+         0     0% 55.46%      0.87s  4.13%  internal/poll.ignoringEINTRIO (inline)
+         0     0% 55.46%      0.87s  4.13%  os.(*File).read (inline)
+         0     0% 55.46%      0.87s  4.13%  syscall.Read (inline)
+     0.03s  0.14% 55.60%      0.87s  4.13%  syscall.Syscall
+         0     0% 55.60%      0.87s  4.13%  syscall.read
+     0.02s 0.095% 55.70%      0.81s  3.85%  internal/stringslite.IndexByte (inline)
+     0.77s  3.66% 59.35%      0.77s  3.66%  internal/runtime/syscall.Syscall6
+         0     0% 59.35%      0.77s  3.66%  syscall.RawSyscall6
+     0.74s  3.51% 62.87%      0.74s  3.51%  memeqbody
+     0.40s  1.90% 64.77%      0.74s  3.51%  runtime.mallocgcTiny
+     0.71s  3.37% 68.14%      0.71s  3.37%  indexbytebody
+     0.58s  2.75% 70.89%      0.58s  2.75%  aeshashbody
+     0.04s  0.19% 71.08%      0.50s  2.37%  runtime.heapSetTypeNoHeader (inline)
+     0.46s  2.18% 73.27%      0.46s  2.18%  runtime.(*mspan).writeHeapBitsSmall
+     0.45s  2.14% 75.40%      0.45s  2.14%  internal/runtime/maps.(*Map).directoryAt (inline)
+         0     0% 75.40%      0.40s  1.90%  runtime.bgsweep
+     0.15s  0.71% 76.12%      0.39s  1.85%  bufio.ScanLines
+     0.03s  0.14% 76.26%      0.39s  1.85%  runtime.sweepone
+     0.36s  1.71% 77.97%      0.36s  1.71%  runtime.memclrNoHeapPointers
+         0     0% 77.97%      0.34s  1.61%  runtime.(*mcache).nextFree
+         0     0% 77.97%      0.33s  1.57%  runtime.deductAssistCredit
+     0.01s 0.047% 78.02%      0.33s  1.57%  runtime.gcAssistAlloc
+         0     0% 78.02%      0.33s  1.57%  runtime.schedule
+     0.09s  0.43% 78.44%      0.32s  1.52%  runtime.(*sweepLocked).sweep
+         0     0% 78.44%      0.32s  1.52%  runtime.gcAssistAlloc.func2
+         0     0% 78.44%      0.32s  1.52%  runtime.gcAssistAlloc1
+     0.02s 0.095% 78.54%      0.31s  1.47%  runtime.(*mcache).refill
+         0     0% 78.54%      0.31s  1.47%  runtime.gcDrainN
+         0     0% 78.54%      0.28s  1.33%  runtime.markroot
+     0.02s 0.095% 78.63%      0.27s  1.28%  runtime.findRunnable
+     0.19s   0.9% 79.53%      0.25s  1.19%  runtime.typePointers.next
+     0.23s  1.09% 80.63%      0.23s  1.09%  internal/bytealg.IndexByteString
+         0     0% 80.63%      0.23s  1.09%  runtime.(*mcentral).cacheSpan
+         0     0% 80.63%      0.23s  1.09%  runtime.mcall
+         0     0% 80.63%      0.23s  1.09%  runtime.park_m
+     0.22s  1.04% 81.67%      0.22s  1.04%  internal/runtime/maps.h2 (inline)
+         0     0% 81.67%      0.21s     1%  bytes.IndexByte (inline)
+         0     0% 81.67%      0.21s     1%  runtime.(*mcentral).grow
+     0.11s  0.52% 82.19%      0.20s  0.95%  runtime.findObject
+     0.20s  0.95% 83.14%      0.20s  0.95%  runtime.futex
+     0.20s  0.95% 84.09%      0.20s  0.95%  runtime.typePointers.nextFast (inline)
+     0.18s  0.85% 84.95%      0.20s  0.95%  strconv.special
+         0     0% 84.95%      0.19s   0.9%  runtime.(*mheap).freeSpan (inline)
+         0     0% 84.95%      0.19s   0.9%  runtime.(*sweepLocked).sweep.(*mheap).freeSpan.func2
+     0.18s  0.85% 85.80%      0.18s  0.85%  internal/bytealg.CountString
+     0.17s  0.81% 86.61%      0.17s  0.81%  internal/runtime/maps.(*groupReference).key (inline)
+         0     0% 86.61%      0.17s  0.81%  runtime.(*mheap).freeSpanLocked
+         0     0% 86.61%      0.17s  0.81%  runtime.newstack
+         0     0% 86.61%      0.16s  0.76%  runtime.(*mheap).alloc
+         0     0% 86.61%      0.16s  0.76%  runtime.(*mheap).alloc.func1
+     0.02s 0.095% 86.70%      0.16s  0.76%  runtime.(*mheap).allocSpan
+         0     0% 86.70%      0.16s  0.76%  runtime.markroot.func1
+         0     0% 86.70%      0.16s  0.76%  runtime.morestack
+         0     0% 86.70%      0.15s  0.71%  runtime.(*pageAlloc).free
+         0     0% 86.70%      0.15s  0.71%  runtime.gopreempt_m (inline)
+         0     0% 86.70%      0.15s  0.71%  runtime.goschedImpl
+     0.01s 0.047% 86.75%      0.15s  0.71%  runtime.scanstack
+         0     0% 86.75%      0.14s  0.66%  runtime.greyobject
+     0.14s  0.66% 87.42%      0.14s  0.66%  runtime.memmove
+         0     0% 87.42%      0.13s  0.62%  runtime.gcMarkDone
+         0     0% 87.42%      0.13s  0.62%  runtime.preemptM (inline)
+     0.07s  0.33% 87.75%      0.13s  0.62%  runtime.scanblock
+         0     0% 87.75%      0.13s  0.62%  runtime.signalM
+         0     0% 87.75%      0.12s  0.57%  runtime.(*gcWork).balance
+         0     0% 87.75%      0.12s  0.57%  runtime.futexwakeup
+         0     0% 87.75%      0.12s  0.57%  runtime.preemptone
+     0.11s  0.52% 88.27%      0.11s  0.52%  bufio.(*Scanner).advance (inline)
+         0     0% 88.27%      0.11s  0.52%  runtime.(*gcControllerState).enlistWorker
+     0.01s 0.047% 88.32%      0.11s  0.52%  runtime.(*pageAlloc).update
+         0     0% 88.32%      0.11s  0.52%  runtime.forEachP (inline)
+         0     0% 88.32%      0.11s  0.52%  runtime.forEachPInternal
+         0     0% 88.32%      0.11s  0.52%  runtime.markrootBlock
+         0     0% 88.32%      0.11s  0.52%  runtime.notewakeup
+     0.11s  0.52% 88.84%      0.11s  0.52%  runtime.tgkill

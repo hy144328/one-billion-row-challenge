@@ -1,0 +1,83 @@
+File: one-billion-row-challenge-golang.test
+Build ID: 72bca091f466609dc907466886cde8910df298d4
+Type: cpu
+Time: 2026-01-15 21:11:03 CET
+Duration: 14.64s, Total samples = 15.58s (106.44%)
+Showing nodes accounting for 14.56s, 93.45% of 15.58s total
+Dropped 151 nodes (cum <= 0.08s)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     14.70s 94.35%  github.com/hy144328/one-billion-row-challenge-golang.BenchmarkRun0
+         0     0%     0%     14.70s 94.35%  testing.(*B).run1.func1
+         0     0%     0%     14.70s 94.35%  testing.(*B).runN
+     0.30s  1.93%  1.93%     14.69s 94.29%  github.com/hy144328/one-billion-row-challenge-golang.run0
+     1.67s 10.72% 12.64%      4.52s 29.01%  runtime.mapassign_faststr
+         0     0% 12.64%      3.28s 21.05%  strings.Split (inline)
+     0.42s  2.70% 15.34%      3.28s 21.05%  strings.genSplit
+     1.16s  7.45% 22.79%      3.13s 20.09%  runtime.mapaccess1_faststr
+     0.23s  1.48% 24.26%      2.22s 14.25%  runtime.mallocgc
+     0.07s  0.45% 24.71%      1.64s 10.53%  strconv.ParseFloat
+     1.57s 10.08% 34.79%      1.57s 10.08%  internal/runtime/maps.ctrlGroup.matchH2 (inline)
+     0.04s  0.26% 35.04%      1.57s 10.08%  strconv.parseFloatPrefix
+     0.15s  0.96% 36.01%      1.53s  9.82%  strconv.atof64
+     0.12s  0.77% 36.78%      1.48s  9.50%  runtime.makeslice
+     0.31s  1.99% 38.77%      1.21s  7.77%  runtime.mallocgcSmallScanNoHeader
+         0     0% 38.77%      1.06s  6.80%  bufio.(*Scanner).Text (inline)
+     0.12s  0.77% 39.54%      1.06s  6.80%  runtime.slicebytetostring
+     1.04s  6.68% 46.21%      1.04s  6.68%  memeqbody
+     0.83s  5.33% 51.54%      0.83s  5.33%  strconv.readFloat
+     0.01s 0.064% 51.60%      0.79s  5.07%  runtime.systemstack
+     0.25s  1.60% 53.21%      0.76s  4.88%  bufio.(*Scanner).Scan
+     0.21s  1.35% 54.56%      0.70s  4.49%  strings.Count
+     0.68s  4.36% 58.92%      0.68s  4.36%  aeshashbody
+     0.19s  1.22% 60.14%      0.66s  4.24%  internal/stringslite.Index
+         0     0% 60.14%      0.66s  4.24%  strings.Index (inline)
+         0     0% 60.14%      0.55s  3.53%  runtime.gcBgMarkWorker
+     0.36s  2.31% 62.45%      0.53s  3.40%  runtime.mallocgcTiny
+     0.52s  3.34% 65.79%      0.52s  3.34%  internal/runtime/maps.(*groupReference).key (inline)
+         0     0% 65.79%      0.49s  3.15%  runtime.gcBgMarkWorker.func2
+         0     0% 65.79%      0.49s  3.15%  runtime.gcDrain
+         0     0% 65.79%      0.49s  3.15%  runtime.gcDrainMarkWorkerDedicated (inline)
+     0.49s  3.15% 68.93%      0.49s  3.15%  runtime.nextFreeFast (inline)
+     0.47s  3.02% 71.95%      0.47s  3.02%  indexbytebody
+         0     0% 71.95%      0.47s  3.02%  internal/stringslite.IndexByte (inline)
+     0.46s  2.95% 74.90%      0.46s  2.95%  strconv.atof64exact
+     0.17s  1.09% 75.99%      0.41s  2.63%  runtime.scanobject
+     0.35s  2.25% 78.24%      0.35s  2.25%  countbody
+     0.01s 0.064% 78.31%      0.26s  1.67%  runtime.heapSetTypeNoHeader (inline)
+     0.25s  1.60% 79.91%      0.25s  1.60%  runtime.(*mspan).writeHeapBitsSmall
+         0     0% 79.91%      0.24s  1.54%  internal/poll.(*FD).Read
+         0     0% 79.91%      0.24s  1.54%  internal/poll.ignoringEINTRIO (inline)
+         0     0% 79.91%      0.24s  1.54%  os.(*File).Read
+         0     0% 79.91%      0.24s  1.54%  os.(*File).read (inline)
+         0     0% 79.91%      0.24s  1.54%  syscall.Read (inline)
+         0     0% 79.91%      0.24s  1.54%  syscall.Syscall
+         0     0% 79.91%      0.24s  1.54%  syscall.read
+     0.03s  0.19% 80.10%      0.23s  1.48%  bufio.ScanLines
+     0.23s  1.48% 81.58%      0.23s  1.48%  internal/runtime/syscall.Syscall6
+         0     0% 81.58%      0.23s  1.48%  syscall.RawSyscall6
+     0.19s  1.22% 82.80%      0.19s  1.22%  internal/runtime/maps.h2 (inline)
+     0.18s  1.16% 83.95%      0.18s  1.16%  internal/runtime/maps.(*Map).directoryAt (inline)
+     0.17s  1.09% 85.04%      0.17s  1.09%  runtime.memequal
+     0.03s  0.19% 85.24%      0.15s  0.96%  bytes.IndexByte (inline)
+     0.01s 0.064% 85.30%      0.15s  0.96%  runtime.bgsweep
+     0.05s  0.32% 85.62%      0.15s  0.96%  runtime.mallocgcSmallNoscan
+     0.14s   0.9% 86.52%      0.14s   0.9%  internal/bytealg.CountString
+     0.03s  0.19% 86.71%      0.14s   0.9%  runtime.sweepone
+     0.09s  0.58% 87.29%      0.13s  0.83%  runtime.findObject
+     0.13s  0.83% 88.13%      0.13s  0.83%  runtime.strhash
+     0.12s  0.77% 88.90%      0.12s  0.77%  runtime.memclrNoHeapPointers
+     0.02s  0.13% 89.02%      0.12s  0.77%  runtime.schedule
+     0.11s  0.71% 89.73%      0.11s  0.71%  internal/bytealg.IndexByteString
+         0     0% 89.73%      0.10s  0.64%  runtime.markroot
+     0.09s  0.58% 90.31%      0.09s  0.58%  internal/runtime/maps.makeProbeSeq (inline)
+     0.09s  0.58% 90.89%      0.09s  0.58%  runtime.futex
+     0.09s  0.58% 91.46%      0.09s  0.58%  runtime.memmove
+     0.08s  0.51% 91.98%      0.09s  0.58%  strconv.special
+     0.08s  0.51% 92.49%      0.08s  0.51%  runtime.acquirem (inline)
+     0.01s 0.064% 92.55%      0.08s  0.51%  runtime.deductAssistCredit
+         0     0% 92.55%      0.08s  0.51%  runtime.gopreempt_m (inline)
+         0     0% 92.55%      0.08s  0.51%  runtime.goschedImpl
+         0     0% 92.55%      0.08s  0.51%  runtime.morestack
+         0     0% 92.55%      0.08s  0.51%  runtime.newstack
+     0.06s  0.39% 92.94%      0.08s  0.51%  runtime.typePointers.next
+     0.08s  0.51% 93.45%      0.08s  0.51%  runtime.typePointers.nextFast (inline)
