@@ -1,3 +1,7 @@
+GO := go1.23.12
+GO_TOOL_PPROF = $(GO) tool pprof
+GO_TOOL_BENCHSTAT = benchstat
+
 SRC_FILES := io.go main.go main_test.go types.go
 
 .PHONY: all
@@ -8,19 +12,19 @@ all:
 
 .PRECIOUS: cpu_run_%.prof cpu_run_%.log
 cpu_run_%.prof cpu_run_%.log: $(SRC_FILES)
-	go test -cpuprofile=cpu_run_$*.prof -bench=^BenchmarkRun$$ -run=^$$ -count=10 -in=measurements_$*.txt > cpu_run_$*.log
+	$(GO) test -cpuprofile=cpu_run_$*.prof -bench=^BenchmarkRun$$ -run=^$$ -count=10 -in=measurements_$*.txt > cpu_run_$*.log
 
 .PRECIOUS: cpu_%.svg
 cpu_%.svg: cpu_%.prof
-	go tool pprof -svg -output=$@ $<
+	$(GO_TOOL_PPROF) -svg -output=$@ $<
 
 .PRECIOUS: cpu_%.txt
 cpu_%.txt: cpu_%.prof
-	go tool pprof -top -cum -output=$@ $<
+	$(GO_TOOL_PPROF) -top -cum -output=$@ $<
 
 .PRECIOUS: cpu_%.stat
 cpu_%.stat: cpu_%.log
-	go tool benchstat $< > $@
+	$(GO_TOOL_BENCHSTAT) $< > $@
 
 cpu_%: cpu_%.txt cpu_%.svg cpu_%.stat
 	@:
