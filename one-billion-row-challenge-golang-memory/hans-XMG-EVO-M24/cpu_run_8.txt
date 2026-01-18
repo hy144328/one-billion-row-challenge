@@ -1,0 +1,38 @@
+File: one-billion-row-challenge-golang-memory.test
+Build ID: 60ad73715d1c8cbe817d843564f597fde56044d0
+Type: cpu
+Time: 2026-01-18 20:03:27 CET
+Duration: 24.96s, Total samples = 24.88s (99.69%)
+Showing nodes accounting for 24.61s, 98.91% of 24.88s total
+Dropped 39 nodes (cum <= 0.12s)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%     24.83s 99.80%  github.com/hy144328/one-billion-row-challenge-golang-memory.BenchmarkRun
+     2.67s 10.73% 10.73%     24.83s 99.80%  github.com/hy144328/one-billion-row-challenge-golang-memory.run
+         0     0% 10.73%     24.83s 99.80%  testing.(*B).run1.func1
+         0     0% 10.73%     24.83s 99.80%  testing.(*B).runN
+     4.32s 17.36% 28.09%     14.68s 59.00%  runtime.mapaccess2_faststr
+     1.97s  7.92% 36.01%      5.55s 22.31%  bufio.(*Reader).ReadSlice
+     3.74s 15.03% 51.05%      3.74s 15.03%  internal/runtime/maps.ctrlGroup.matchH2 (inline)
+     0.01s  0.04% 51.09%      2.39s  9.61%  bufio.(*Reader).fill
+     0.04s  0.16% 51.25%      2.37s  9.53%  os.(*File).Read
+     0.01s  0.04% 51.29%      2.33s  9.36%  internal/poll.(*FD).Read
+         0     0% 51.29%      2.33s  9.36%  os.(*File).read (inline)
+     0.32s  1.29% 52.57%      2.28s  9.16%  bytes.IndexByte (inline)
+     0.02s  0.08% 52.65%      2.28s  9.16%  internal/poll.ignoringEINTRIO (inline)
+     0.01s  0.04% 52.69%      2.26s  9.08%  syscall.Read (inline)
+     0.01s  0.04% 52.73%      2.25s  9.04%  syscall.read
+     0.02s  0.08% 52.81%      2.24s  9.00%  syscall.Syscall
+     0.01s  0.04% 52.85%      2.15s  8.64%  syscall.RawSyscall6
+     2.14s  8.60% 61.45%      2.14s  8.60%  internal/runtime/syscall.Syscall6
+     1.75s  7.03% 68.49%      1.75s  7.03%  memeqbody
+     1.72s  6.91% 75.40%      1.72s  6.91%  aeshashbody
+     1.64s  6.59% 81.99%      1.64s  6.59%  indexbytebody
+     0.95s  3.82% 85.81%      0.95s  3.82%  internal/runtime/maps.(*Map).directoryAt (inline)
+     0.84s  3.38% 89.19%      0.84s  3.38%  github.com/hy144328/one-billion-row-challenge-golang-memory.parseDigitsFromBytes (inline)
+     0.72s  2.89% 92.08%      0.72s  2.89%  internal/runtime/maps.(*groupReference).key (inline)
+     0.53s  2.13% 94.21%      0.53s  2.13%  internal/runtime/maps.h2 (inline)
+     0.32s  1.29% 95.50%      0.32s  1.29%  internal/bytealg.IndexByte
+     0.25s  1.00% 96.50%      0.25s  1.00%  runtime.strhash
+     0.24s  0.96% 97.47%      0.24s  0.96%  internal/runtime/maps.(*Map).directoryIndex (inline)
+     0.22s  0.88% 98.35%      0.22s  0.88%  internal/runtime/maps.(*groupsReference).group (inline)
+     0.14s  0.56% 98.91%      0.14s  0.56%  runtime.memequal
