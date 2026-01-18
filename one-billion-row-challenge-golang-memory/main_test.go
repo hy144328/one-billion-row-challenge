@@ -42,7 +42,7 @@ func BenchmarkRun(b *testing.B) {
 	}
 	defer f.Close()
 
-	for b.Loop() {
+	for range b.N {
 		f.Seek(0, 0)
 		res := run(f)
 		writeInt(io.Discard, res)
