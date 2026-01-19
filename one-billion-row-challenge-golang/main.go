@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"io"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -268,4 +269,98 @@ func run6(r io.Reader) *BytesMap[Statistics[int]] {
 	}
 
 	return res
+}
+
+func run15(f *os.File) map[string]*Statistics[int] {
+	fStat, err := f.Stat()
+	if err != nil {
+		panic(err)
+	}
+
+	var start int64
+	var buf [128]byte
+	ch := make(chan map[string]*Statistics[int])
+
+	for i := 1; i < 4; i++ {
+		finish := fStat.Size() / 4 * int64(i)
+		f.ReadAt(buf[:], finish)
+		finish += int64(bytes.IndexByte(buf[:], '\n')) + 1
+
+		go run15_worker(
+			io.NewSectionReader(f, start, finish-start),
+			ch,
+		)
+
+		start = finish
+	}
+
+	go run15_worker(
+		io.NewSectionReader(f, start, fStat.Size()-start),
+		ch,
+	)
+
+	res := make(map[string]*Statistics[int])
+	for range 4 {
+		foo := <-ch
+		for k, v := range foo {
+			if _, ok := res[k]; !ok {
+				res[k] = &Statistics[int]{
+					Cnt: v.Cnt,
+					Min: v.Min,
+					Max: v.Max,
+					Sum: v.Sum,
+				}
+			} else {
+				res[k].Cnt += v.Cnt
+				res[k].Min = min(res[k].Min, v.Min)
+				res[k].Max = max(res[k].Max, v.Max)
+				res[k].Sum += v.Sum
+			}
+		}
+	}
+
+	return res
+}
+
+func run15_worker(
+	r io.Reader,
+	ch chan<- map[string]*Statistics[int],
+) {
+	res := make(map[string]*Statistics[int], maxCities)
+	reader := bufio.NewReader(r)
+
+	for {
+		lineIt, err := reader.ReadSlice('\n')
+		if err == io.EOF {
+			break
+		} else if err != nil {
+			panic(err)
+		}
+
+		sepIdx := bytes.IndexByte(lineIt, ';')
+
+		var temperature int
+		if lineIt[sepIdx+1] == '-' {
+			temperature = -parseDigitsFromBytes(lineIt[sepIdx+2 : len(lineIt)-1])
+		} else {
+			temperature = parseDigitsFromBytes(lineIt[sepIdx+1 : len(lineIt)-1])
+		}
+
+		resIt, ok := res[string(lineIt[:sepIdx])]
+		if !ok {
+			res[string(lineIt[:sepIdx])] = &Statistics[int]{
+				Cnt: 1,
+				Max: temperature,
+				Min: temperature,
+				Sum: temperature,
+			}
+		} else {
+			resIt.Cnt += 1
+			resIt.Max = max(resIt.Max, temperature)
+			resIt.Min = min(resIt.Min, temperature)
+			resIt.Sum += temperature
+		}
+	}
+
+	ch<-res
 }
