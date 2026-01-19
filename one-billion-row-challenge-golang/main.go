@@ -5,10 +5,12 @@ import (
 	"bytes"
 	"io"
 	"os"
+	"runtime"
 	"strconv"
 	"strings"
 )
 
+const maxBytesPerLine = 128
 const maxCities = 10000
 const noRegisters = 1048576
 
@@ -272,35 +274,33 @@ func run6(r io.Reader) *BytesMap[Statistics[int]] {
 }
 
 func run15(f *os.File) map[string]*Statistics[int] {
+	noWorkers := runtime.NumCPU()
+
 	fStat, err := f.Stat()
 	if err != nil {
 		panic(err)
 	}
 
 	var start int64
-	var buf [128]byte
+	var buf [maxBytesPerLine]byte
 	ch := make(chan map[string]*Statistics[int])
 
-	for i := 1; i < 4; i++ {
-		finish := fStat.Size() / 4 * int64(i)
+	for i := 1; i < noWorkers; i++ {
+		finish := fStat.Size() * int64(i) / int64(noWorkers)
 		f.ReadAt(buf[:], finish)
 		finish += int64(bytes.IndexByte(buf[:], '\n')) + 1
 
-		go run15_worker(
-			io.NewSectionReader(f, start, finish-start),
-			ch,
-		)
+		rIt := io.NewSectionReader(f, start, finish-start)
+		go run15_worker(rIt, ch)
 
 		start = finish
 	}
 
-	go run15_worker(
-		io.NewSectionReader(f, start, fStat.Size()-start),
-		ch,
-	)
+	rIt := io.NewSectionReader(f, start, fStat.Size()-start)
+	go run15_worker(rIt, ch)
 
 	res := make(map[string]*Statistics[int])
-	for range 4 {
+	for range noWorkers {
 		foo := <-ch
 		for k, v := range foo {
 			if _, ok := res[k]; !ok {
