@@ -6,3 +6,6 @@ cpu_*.svg
 cpu_*.txt
 measurements_*.txt
 one-billion-row-challenge-golang-parallel.test
+
+!hans-P63006/cpu_*.*
+!hans-XMG-EVO-M24/cpu_*.*

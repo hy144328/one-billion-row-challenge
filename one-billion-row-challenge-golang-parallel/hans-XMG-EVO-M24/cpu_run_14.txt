@@ -1,0 +1,35 @@
+File: one-billion-row-challenge-golang-parallel.test
+Build ID: 85f5a6cbf23c29d519d0a1abd71ddd215dc7f8ef
+Type: cpu
+Time: 2026-01-21 02:28:40 CET
+Duration: 33.91s, Total samples = 459.64s (1355.53%)
+Showing nodes accounting for 454.54s, 98.89% of 459.64s total
+Dropped 70 nodes (cum <= 2.30s)
+      flat  flat%   sum%        cum   cum%
+    50.53s 10.99% 10.99%    459.56s   100%  github.com/hy144328/one-billion-row-challenge-golang-parallel.worker
+    66.70s 14.51% 25.50%    246.84s 53.70%  runtime.mapaccess2_faststr
+    31.73s  6.90% 32.41%     94.47s 20.55%  bufio.(*Reader).ReadSlice
+     5.04s  1.10% 33.50%     64.55s 14.04%  bytes.IndexByte (inline)
+    59.67s 12.98% 46.49%     59.67s 12.98%  internal/runtime/maps.ctrlGroup.matchH2 (inline)
+    49.12s 10.69% 57.17%     49.12s 10.69%  indexbytebody
+     0.32s  0.07% 57.24%     39.49s  8.59%  bufio.(*Reader).fill
+    39.42s  8.58% 65.82%     39.42s  8.58%  aeshashbody
+     0.70s  0.15% 65.97%     39.04s  8.49%  io.(*SectionReader).Read
+     0.11s 0.024% 66.00%     38.34s  8.34%  os.(*File).ReadAt
+        1s  0.22% 66.21%     38.22s  8.32%  os.(*File).pread (inline)
+     0.07s 0.015% 66.23%     37.21s  8.10%  internal/poll.(*FD).Pread
+     0.14s  0.03% 66.26%     36.11s  7.86%  syscall.Pread (inline)
+     0.15s 0.033% 66.29%     35.97s  7.83%  syscall.pread
+     0.33s 0.072% 66.36%     35.82s  7.79%  syscall.Syscall6
+     0.31s 0.067% 66.43%     33.10s  7.20%  syscall.RawSyscall6
+    32.79s  7.13% 73.56%     32.79s  7.13%  internal/runtime/syscall.Syscall6
+    26.36s  5.73% 79.30%     26.36s  5.73%  github.com/hy144328/one-billion-row-challenge-golang-parallel.parseDigitsFromBytes (inline)
+    25.48s  5.54% 84.84%     25.48s  5.54%  memeqbody
+    19.82s  4.31% 89.15%     19.82s  4.31%  internal/runtime/maps.(*Map).directoryAt (inline)
+    11.90s  2.59% 91.74%     11.90s  2.59%  internal/runtime/maps.(*groupReference).key (inline)
+    10.39s  2.26% 94.00%     10.39s  2.26%  internal/bytealg.IndexByte
+     7.53s  1.64% 95.64%      7.53s  1.64%  internal/runtime/maps.h2 (inline)
+     5.50s  1.20% 96.84%      5.50s  1.20%  runtime.strhash
+     3.31s  0.72% 97.56%      3.31s  0.72%  internal/runtime/maps.(*Map).directoryIndex (inline)
+     3.21s   0.7% 98.26%      3.21s   0.7%  runtime.memequal
+     2.91s  0.63% 98.89%      2.91s  0.63%  internal/runtime/maps.(*groupsReference).group (inline)
