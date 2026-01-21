@@ -4,6 +4,10 @@ SRC_FILES := io.go main.go main_test.go types.go
 test:
 	go test .
 
+.PHONY: all
+all:
+	for i in $$(seq 1 $$(nproc)); do make cpu_run_$${i}; done
+
 .PRECIOUS: cpu_run_%.prof cpu_run_%.log
 cpu_run_%.prof cpu_run_%.log: $(SRC_FILES)
 	go test -cpuprofile=cpu_run_$*.prof -bench=^BenchmarkRun$$ -run=^$$ -count=10 -in=measurements_9.txt -no-workers=$* > cpu_run_$*.log
