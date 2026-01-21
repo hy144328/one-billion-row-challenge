@@ -6,7 +6,7 @@ test:
 
 .PRECIOUS: cpu_run_%.prof cpu_run_%.log
 cpu_run_%.prof cpu_run_%.log: $(SRC_FILES)
-	go test -cpuprofile=cpu_run_$*.prof -bench=^BenchmarkRun$$ -run=^$$ -count=10 -in=measurements_9.txt > cpu_run_$*.log
+	go test -cpuprofile=cpu_run_$*.prof -bench=^BenchmarkRun$$ -run=^$$ -count=10 -in=measurements_9.txt -no-workers=$* > cpu_run_$*.log
 
 .PRECIOUS: cpu_run_%.svg
 cpu_run_%.svg: cpu_run_%.prof

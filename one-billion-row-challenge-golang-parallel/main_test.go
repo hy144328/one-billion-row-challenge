@@ -4,11 +4,13 @@ import (
 	"flag"
 	"io"
 	"os"
+	"runtime"
 	"strings"
 	"testing"
 )
 
 var inPath = flag.String("in", "measurements.txt", "Input file with measurements.")
+var noWorkers = flag.Int("no-workers", runtime.NumCPU(), "Input file with measurements.")
 
 func TestRun(t *testing.T) {
 	f, err := os.Open("measurements_6.txt")
@@ -17,7 +19,7 @@ func TestRun(t *testing.T) {
 	}
 	defer f.Close()
 
-	res := run(f)
+	res := run(f, runtime.NumCPU())
 	var out strings.Builder
 	writeInt(&out, res)
 
@@ -44,7 +46,7 @@ func BenchmarkRun(b *testing.B) {
 
 	for b.Loop() {
 		f.Seek(0, 0)
-		res := run(f)
+		res := run(f, *noWorkers)
 		writeInt(io.Discard, res)
 	}
 }

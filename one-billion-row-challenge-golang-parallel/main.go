@@ -5,16 +5,16 @@ import (
 	"bytes"
 	"io"
 	"os"
-	"runtime"
 )
 
 const maxBytesPerLine = 128
 const maxCities = 10000
 const noRegisters = 1048576
 
-func run(f *os.File) map[string]*Statistics {
-	noWorkers := runtime.NumCPU()
-
+func run(
+	f *os.File,
+	noWorkers int,
+) map[string]*Statistics {
 	fStat, err := f.Stat()
 	if err != nil {
 		panic(err)
