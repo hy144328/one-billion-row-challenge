@@ -4,4 +4,4 @@ pkg: github.com/hy144328/one-billion-row-challenge-golang-parallel
 cpu: AMD Ryzen 7 8845HS w/ Radeon 780M Graphics
        │ cpu_run_5.log │
        │    sec/op     │
-Run-16      6.708 ± 2%
+Run-16      5.500 ± 1%

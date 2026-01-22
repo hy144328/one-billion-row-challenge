@@ -266,706 +266,706 @@ function handleMouseUp(evt) {
 		state = '';
 	}
 }
-]]></script><g id="viewport" transform="scale(0.5,0.5) translate(0,0)"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1551)">
+]]></script><g id="viewport" transform="scale(0.5,0.5) translate(0,0)"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1546)">
 <title>one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.test</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-1551 2123,-1551 2123,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-1546 2126,-1546 2126,4 -4,4"/>
 <g id="clust1" class="cluster">
 <title>cluster_L</title>
-<polygon fill="none" stroke="black" points="496.5,-1352 496.5,-1539 1060.5,-1539 1060.5,-1352 496.5,-1352"/>
+<polygon fill="none" stroke="black" points="499.5,-1347 499.5,-1534 1063.5,-1534 1063.5,-1347 499.5,-1347"/>
 </g>
 <!-- File: one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.test -->
 <g id="node1" class="node">
 <title>File: one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.test</title>
 <g id="a_node1"><a xlink:title="one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.test">
-<polygon fill="#f8f8f8" stroke="black" points="1052,-1531 505,-1531 505,-1360 1052,-1360 1052,-1531"/>
-<text text-anchor="start" x="513" y="-1514.2" font-family="Times,serif" font-size="16.00">File: one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.test</text>
-<text text-anchor="start" x="513" y="-1496.2" font-family="Times,serif" font-size="16.00">Build ID: 85f5a6cbf23c29d519d0a1abd71ddd215dc7f8ef</text>
-<text text-anchor="start" x="513" y="-1478.2" font-family="Times,serif" font-size="16.00">Type: cpu</text>
-<text text-anchor="start" x="513" y="-1460.2" font-family="Times,serif" font-size="16.00">Time: 2026&#45;01&#45;21 02:22:36 CET</text>
-<text text-anchor="start" x="513" y="-1442.2" font-family="Times,serif" font-size="16.00">Duration: 59.05s, Total samples = 346.36s (586.58%)</text>
-<text text-anchor="start" x="513" y="-1424.2" font-family="Times,serif" font-size="16.00">Showing nodes accounting for 342.06s, 98.76% of 346.36s total</text>
-<text text-anchor="start" x="513" y="-1406.2" font-family="Times,serif" font-size="16.00">Dropped 61 nodes (cum &lt;= 1.73s)</text>
-<text text-anchor="start" x="513" y="-1369.2" font-family="Times,serif" font-size="16.00">See https://git.io/JfYMW for how to read the graph</text>
+<polygon fill="#f8f8f8" stroke="black" points="1055,-1526 508,-1526 508,-1355 1055,-1355 1055,-1526"/>
+<text text-anchor="start" x="516" y="-1509.2" font-family="Times,serif" font-size="16.00">File: one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.test</text>
+<text text-anchor="start" x="516" y="-1491.2" font-family="Times,serif" font-size="16.00">Build ID: 85f5a6cbf23c29d519d0a1abd71ddd215dc7f8ef</text>
+<text text-anchor="start" x="516" y="-1473.2" font-family="Times,serif" font-size="16.00">Type: cpu</text>
+<text text-anchor="start" x="516" y="-1455.2" font-family="Times,serif" font-size="16.00">Time: 2026&#45;01&#45;22 23:21:42 CET</text>
+<text text-anchor="start" x="516" y="-1437.2" font-family="Times,serif" font-size="16.00">Duration: 47.89s, Total samples = 280.72s (586.23%)</text>
+<text text-anchor="start" x="516" y="-1419.2" font-family="Times,serif" font-size="16.00">Showing nodes accounting for 277.50s, 98.85% of 280.72s total</text>
+<text text-anchor="start" x="516" y="-1401.2" font-family="Times,serif" font-size="16.00">Dropped 44 nodes (cum &lt;= 1.40s)</text>
+<text text-anchor="start" x="516" y="-1364.2" font-family="Times,serif" font-size="16.00">See https://git.io/JfYMW for how to read the graph</text>
 </a>
 </g>
 </g>
 <!-- N1 -->
 <g id="node1" class="node">
 <title>N1</title>
-<g id="a_node1"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker (346.22s)">
-<polygon fill="#edd5d5" stroke="#b20000" points="1525,-1495.5 1070,-1495.5 1070,-1395.5 1525,-1395.5 1525,-1495.5"/>
-<text text-anchor="middle" x="1297.5" y="-1474.7" font-family="Times,serif" font-size="21.00">one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel</text>
-<text text-anchor="middle" x="1297.5" y="-1451.7" font-family="Times,serif" font-size="21.00">worker</text>
-<text text-anchor="middle" x="1297.5" y="-1428.7" font-family="Times,serif" font-size="21.00">39.47s (11.40%)</text>
-<text text-anchor="middle" x="1297.5" y="-1405.7" font-family="Times,serif" font-size="21.00">of 346.22s (100%)</text>
+<g id="a_node1"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker (280.63s)">
+<polygon fill="#edd5d5" stroke="#b20000" points="1528,-1490.5 1073,-1490.5 1073,-1390.5 1528,-1390.5 1528,-1490.5"/>
+<text text-anchor="middle" x="1300.5" y="-1469.7" font-family="Times,serif" font-size="21.00">one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel</text>
+<text text-anchor="middle" x="1300.5" y="-1446.7" font-family="Times,serif" font-size="21.00">worker</text>
+<text text-anchor="middle" x="1300.5" y="-1423.7" font-family="Times,serif" font-size="21.00">29.18s (10.39%)</text>
+<text text-anchor="middle" x="1300.5" y="-1400.7" font-family="Times,serif" font-size="21.00">of 280.63s (100%)</text>
 </a>
 </g>
 </g>
 <!-- N2 -->
 <g id="node2" class="node">
 <title>N2</title>
-<g id="a_node2"><a xlink:title="runtime.mapaccess2_faststr (201.46s)">
-<polygon fill="#edd8d5" stroke="#b21a00" points="1426,-1293.5 1169,-1293.5 1169,-1181.5 1426,-1181.5 1426,-1293.5"/>
-<text text-anchor="middle" x="1297.5" y="-1270.3" font-family="Times,serif" font-size="24.00">runtime</text>
-<text text-anchor="middle" x="1297.5" y="-1244.3" font-family="Times,serif" font-size="24.00">mapaccess2_faststr</text>
-<text text-anchor="middle" x="1297.5" y="-1218.3" font-family="Times,serif" font-size="24.00">60.88s (17.58%)</text>
-<text text-anchor="middle" x="1297.5" y="-1192.3" font-family="Times,serif" font-size="24.00">of 201.46s (58.16%)</text>
+<g id="a_node2"><a xlink:title="runtime.mapaccess2_faststr (165.40s)">
+<polygon fill="#edd8d5" stroke="#b21a00" points="1429,-1288.5 1172,-1288.5 1172,-1176.5 1429,-1176.5 1429,-1288.5"/>
+<text text-anchor="middle" x="1300.5" y="-1265.3" font-family="Times,serif" font-size="24.00">runtime</text>
+<text text-anchor="middle" x="1300.5" y="-1239.3" font-family="Times,serif" font-size="24.00">mapaccess2_faststr</text>
+<text text-anchor="middle" x="1300.5" y="-1213.3" font-family="Times,serif" font-size="24.00">49.45s (17.62%)</text>
+<text text-anchor="middle" x="1300.5" y="-1187.3" font-family="Times,serif" font-size="24.00">of 165.40s (58.92%)</text>
 </a>
 </g>
 </g>
 <!-- N1&#45;&gt;N2 -->
 <g id="edge1" class="edge">
 <title>N1&#45;&gt;N2</title>
-<g id="a_edge1"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; runtime.mapaccess2_faststr (201.46s)">
-<path fill="none" stroke="#b21a00" stroke-width="3" d="M1297.5,-1395.42C1297.5,-1368.06 1297.5,-1333.63 1297.5,-1304"/>
-<polygon fill="#b21a00" stroke="#b21a00" stroke-width="3" points="1301,-1303.74 1297.5,-1293.74 1294,-1303.74 1301,-1303.74"/>
+<g id="a_edge1"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; runtime.mapaccess2_faststr (165.40s)">
+<path fill="none" stroke="#b21a00" stroke-width="3" d="M1300.5,-1390.42C1300.5,-1363.06 1300.5,-1328.63 1300.5,-1299"/>
+<polygon fill="#b21a00" stroke="#b21a00" stroke-width="3" points="1304,-1298.74 1300.5,-1288.74 1297,-1298.74 1304,-1298.74"/>
 </a>
 </g>
-<g id="a_edge1&#45;label"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; runtime.mapaccess2_faststr (201.46s)">
-<text text-anchor="middle" x="1328.5" y="-1323.3" font-family="Times,serif" font-size="14.00"> 201.46s</text>
+<g id="a_edge1&#45;label"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; runtime.mapaccess2_faststr (165.40s)">
+<text text-anchor="middle" x="1331.5" y="-1318.3" font-family="Times,serif" font-size="14.00"> 165.40s</text>
 </a>
 </g>
 </g>
 <!-- N3 -->
 <g id="node3" class="node">
 <title>N3</title>
-<g id="a_node3"><a xlink:title="bufio.(*Reader).ReadSlice (74.56s)">
-<polygon fill="#edded5" stroke="#b24100" points="1641,-1294 1444,-1294 1444,-1181 1641,-1181 1641,-1294"/>
-<text text-anchor="middle" x="1542.5" y="-1274.8" font-family="Times,serif" font-size="19.00">bufio</text>
-<text text-anchor="middle" x="1542.5" y="-1253.8" font-family="Times,serif" font-size="19.00">(*Reader)</text>
-<text text-anchor="middle" x="1542.5" y="-1232.8" font-family="Times,serif" font-size="19.00">ReadSlice</text>
-<text text-anchor="middle" x="1542.5" y="-1211.8" font-family="Times,serif" font-size="19.00">25.02s (7.22%)</text>
-<text text-anchor="middle" x="1542.5" y="-1190.8" font-family="Times,serif" font-size="19.00">of 74.56s (21.53%)</text>
+<g id="a_node3"><a xlink:title="bufio.(*Reader).ReadSlice (61.95s)">
+<polygon fill="#edded5" stroke="#b24100" points="1644,-1289 1447,-1289 1447,-1176 1644,-1176 1644,-1289"/>
+<text text-anchor="middle" x="1545.5" y="-1269.8" font-family="Times,serif" font-size="19.00">bufio</text>
+<text text-anchor="middle" x="1545.5" y="-1248.8" font-family="Times,serif" font-size="19.00">(*Reader)</text>
+<text text-anchor="middle" x="1545.5" y="-1227.8" font-family="Times,serif" font-size="19.00">ReadSlice</text>
+<text text-anchor="middle" x="1545.5" y="-1206.8" font-family="Times,serif" font-size="19.00">20.41s (7.27%)</text>
+<text text-anchor="middle" x="1545.5" y="-1185.8" font-family="Times,serif" font-size="19.00">of 61.95s (22.07%)</text>
 </a>
 </g>
 </g>
 <!-- N1&#45;&gt;N3 -->
 <g id="edge2" class="edge">
 <title>N1&#45;&gt;N3</title>
-<g id="a_edge2"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; bufio.(*Reader).ReadSlice (74.56s)">
-<path fill="none" stroke="#b24100" stroke-width="2" d="M1355.87,-1395.42C1389.56,-1367.1 1432.25,-1331.2 1468.3,-1300.89"/>
-<polygon fill="#b24100" stroke="#b24100" stroke-width="2" points="1470.96,-1303.23 1476.36,-1294.11 1466.45,-1297.87 1470.96,-1303.23"/>
+<g id="a_edge2"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; bufio.(*Reader).ReadSlice (61.95s)">
+<path fill="none" stroke="#b24100" stroke-width="2" d="M1358.87,-1390.42C1392.56,-1362.1 1435.25,-1326.2 1471.3,-1295.89"/>
+<polygon fill="#b24100" stroke="#b24100" stroke-width="2" points="1473.96,-1298.23 1479.36,-1289.11 1469.45,-1292.87 1473.96,-1298.23"/>
 </a>
 </g>
-<g id="a_edge2&#45;label"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; bufio.(*Reader).ReadSlice (74.56s)">
-<text text-anchor="middle" x="1476" y="-1323.3" font-family="Times,serif" font-size="14.00"> 74.56s</text>
+<g id="a_edge2&#45;label"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; bufio.(*Reader).ReadSlice (61.95s)">
+<text text-anchor="middle" x="1479" y="-1318.3" font-family="Times,serif" font-size="14.00"> 61.95s</text>
 </a>
 </g>
 </g>
 <!-- N5 -->
 <g id="node5" class="node">
 <title>N5</title>
-<g id="a_node5"><a xlink:title="bytes.IndexByte (35.20s)">
-<polygon fill="#ede7e1" stroke="#b28457" points="1822.5,-1093 1680.5,-1093 1680.5,-1029 1822.5,-1029 1822.5,-1093"/>
-<text text-anchor="middle" x="1751.5" y="-1078.6" font-family="Times,serif" font-size="13.00">bytes</text>
-<text text-anchor="middle" x="1751.5" y="-1064.6" font-family="Times,serif" font-size="13.00">IndexByte</text>
-<text text-anchor="middle" x="1751.5" y="-1050.6" font-family="Times,serif" font-size="13.00">5.05s (1.46%)</text>
-<text text-anchor="middle" x="1751.5" y="-1036.6" font-family="Times,serif" font-size="13.00">of 35.20s (10.16%)</text>
+<g id="a_node5"><a xlink:title="bytes.IndexByte (28.49s)">
+<polygon fill="#ede7e1" stroke="#b28457" points="1829.5,-1088 1687.5,-1088 1687.5,-1024 1829.5,-1024 1829.5,-1088"/>
+<text text-anchor="middle" x="1758.5" y="-1073.6" font-family="Times,serif" font-size="13.00">bytes</text>
+<text text-anchor="middle" x="1758.5" y="-1059.6" font-family="Times,serif" font-size="13.00">IndexByte</text>
+<text text-anchor="middle" x="1758.5" y="-1045.6" font-family="Times,serif" font-size="13.00">4.16s (1.48%)</text>
+<text text-anchor="middle" x="1758.5" y="-1031.6" font-family="Times,serif" font-size="13.00">of 28.49s (10.15%)</text>
 </a>
 </g>
 </g>
 <!-- N1&#45;&gt;N5 -->
 <g id="edge17" class="edge">
 <title>N1&#45;&gt;N5</title>
-<g id="a_edge17"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; bytes.IndexByte (19.05s)">
-<path fill="none" stroke="#b29d81" d="M1482.87,-1395.48C1542.2,-1372.49 1604.39,-1339.76 1650.5,-1294 1652.32,-1292.19 1705.54,-1168.85 1733.97,-1102.78"/>
-<polygon fill="#b29d81" stroke="#b29d81" points="1737.24,-1104.03 1737.98,-1093.46 1730.81,-1101.27 1737.24,-1104.03"/>
+<g id="a_edge17"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; bytes.IndexByte (14.63s)">
+<path fill="none" stroke="#b29f83" d="M1485.71,-1390.32C1545.04,-1367.32 1607.26,-1334.62 1653.5,-1289 1692.6,-1250.43 1680.87,-1226.04 1703.5,-1176 1715.37,-1149.75 1728.95,-1120.37 1739.64,-1097.37"/>
+<polygon fill="#b29f83" stroke="#b29f83" points="1742.84,-1098.8 1743.88,-1088.25 1736.49,-1095.84 1742.84,-1098.8"/>
 </a>
 </g>
-<g id="a_edge17&#45;label"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; bytes.IndexByte (19.05s)">
-<text text-anchor="middle" x="1726" y="-1241.3" font-family="Times,serif" font-size="14.00"> 19.05s</text>
-<text text-anchor="middle" x="1726" y="-1226.3" font-family="Times,serif" font-size="14.00"> (inline)</text>
-</a>
-</g>
-</g>
-<!-- N11 -->
-<g id="node11" class="node">
-<title>N11</title>
-<g id="a_node11"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.parseDigitsFromBytes (11.68s)">
-<polygon fill="#edebe9" stroke="#b2a794" points="2119,-1268.5 1764,-1268.5 1764,-1206.5 2119,-1206.5 2119,-1268.5"/>
-<text text-anchor="middle" x="1941.5" y="-1251.7" font-family="Times,serif" font-size="16.00">one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel</text>
-<text text-anchor="middle" x="1941.5" y="-1233.7" font-family="Times,serif" font-size="16.00">parseDigitsFromBytes</text>
-<text text-anchor="middle" x="1941.5" y="-1215.7" font-family="Times,serif" font-size="16.00">11.68s (3.37%)</text>
-</a>
-</g>
-</g>
-<!-- N1&#45;&gt;N11 -->
-<g id="edge20" class="edge">
-<title>N1&#45;&gt;N11</title>
-<g id="a_edge20"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.parseDigitsFromBytes (11.68s)">
-<path fill="none" stroke="#b2a794" d="M1520.18,-1395.47C1580.57,-1380.26 1645.55,-1362.14 1704.5,-1342 1761.86,-1322.4 1824.63,-1294.69 1871.15,-1272.88"/>
-<polygon fill="#b2a794" stroke="#b2a794" points="1872.68,-1276.02 1880.23,-1268.59 1869.7,-1269.69 1872.68,-1276.02"/>
-</a>
-</g>
-<g id="a_edge20&#45;label"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.parseDigitsFromBytes (11.68s)">
-<text text-anchor="middle" x="1805" y="-1330.8" font-family="Times,serif" font-size="14.00"> 11.68s</text>
-<text text-anchor="middle" x="1805" y="-1315.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
-</a>
-</g>
-</g>
-<!-- N4 -->
-<g id="node4" class="node">
-<title>N4</title>
-<g id="a_node4"><a xlink:title="internal/runtime/maps.ctrlGroup.matchH2 (50.52s)">
-<polygon fill="#ede3db" stroke="#b26930" points="1203,-1115 992,-1115 992,-1007 1203,-1007 1203,-1115"/>
-<text text-anchor="middle" x="1097.5" y="-1092.6" font-family="Times,serif" font-size="23.00">maps</text>
-<text text-anchor="middle" x="1097.5" y="-1067.6" font-family="Times,serif" font-size="23.00">ctrlGroup</text>
-<text text-anchor="middle" x="1097.5" y="-1042.6" font-family="Times,serif" font-size="23.00">matchH2</text>
-<text text-anchor="middle" x="1097.5" y="-1017.6" font-family="Times,serif" font-size="23.00">50.52s (14.59%)</text>
-</a>
-</g>
-</g>
-<!-- N2&#45;&gt;N4 -->
-<g id="edge3" class="edge">
-<title>N2&#45;&gt;N4</title>
-<g id="a_edge3"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.ctrlGroup.matchH2 (50.52s)">
-<path fill="none" stroke="#b26930" d="M1234.22,-1181.29C1212.52,-1162.35 1188.13,-1141.08 1166.03,-1121.8"/>
-<polygon fill="#b26930" stroke="#b26930" points="1168.16,-1119 1158.32,-1115.07 1163.56,-1124.28 1168.16,-1119"/>
-</a>
-</g>
-<g id="a_edge3&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.ctrlGroup.matchH2 (50.52s)">
-<text text-anchor="middle" x="1237" y="-1151.8" font-family="Times,serif" font-size="14.00"> 50.52s</text>
-<text text-anchor="middle" x="1237" y="-1136.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
-</a>
-</g>
-</g>
-<!-- N8 -->
-<g id="node8" class="node">
-<title>N8</title>
-<g id="a_node8"><a xlink:title="memeqbody (22.60s)">
-<polygon fill="#ede9e5" stroke="#b29878" points="1374,-1085 1221,-1085 1221,-1037 1374,-1037 1374,-1085"/>
-<text text-anchor="middle" x="1297.5" y="-1066.6" font-family="Times,serif" font-size="18.00">memeqbody</text>
-<text text-anchor="middle" x="1297.5" y="-1046.6" font-family="Times,serif" font-size="18.00">22.60s (6.53%)</text>
-</a>
-</g>
-</g>
-<!-- N2&#45;&gt;N8 -->
-<g id="edge15" class="edge">
-<title>N2&#45;&gt;N8</title>
-<g id="a_edge15"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; memeqbody (22.60s)">
-<path fill="none" stroke="#b29878" d="M1297.5,-1181.29C1297.5,-1153.11 1297.5,-1119.75 1297.5,-1095.48"/>
-<polygon fill="#b29878" stroke="#b29878" points="1301,-1095.35 1297.5,-1085.35 1294,-1095.35 1301,-1095.35"/>
-</a>
-</g>
-<g id="a_edge15&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; memeqbody (22.60s)">
-<text text-anchor="middle" x="1324" y="-1144.3" font-family="Times,serif" font-size="14.00"> 22.60s</text>
-</a>
-</g>
-</g>
-<!-- N9 -->
-<g id="node9" class="node">
-<title>N9</title>
-<g id="a_node9"><a xlink:title="aeshashbody (22.23s)">
-<polygon fill="#ede9e5" stroke="#b29979" points="1545,-1085 1392,-1085 1392,-1037 1545,-1037 1545,-1085"/>
-<text text-anchor="middle" x="1468.5" y="-1066.6" font-family="Times,serif" font-size="18.00">aeshashbody</text>
-<text text-anchor="middle" x="1468.5" y="-1046.6" font-family="Times,serif" font-size="18.00">22.23s (6.42%)</text>
-</a>
-</g>
-</g>
-<!-- N2&#45;&gt;N9 -->
-<g id="edge16" class="edge">
-<title>N2&#45;&gt;N9</title>
-<g id="a_edge16"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; aeshashbody (22.23s)">
-<path fill="none" stroke="#b29979" d="M1351.61,-1181.29C1380.34,-1151.97 1414.56,-1117.05 1438.52,-1092.59"/>
-<polygon fill="#b29979" stroke="#b29979" points="1441.12,-1094.94 1445.62,-1085.35 1436.12,-1090.05 1441.12,-1094.94"/>
-</a>
-</g>
-<g id="a_edge16&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; aeshashbody (22.23s)">
-<text text-anchor="middle" x="1425" y="-1144.3" font-family="Times,serif" font-size="14.00"> 22.23s</text>
-</a>
-</g>
-</g>
-<!-- N10 -->
-<g id="node10" class="node">
-<title>N10</title>
-<g id="a_node10"><a xlink:title="internal/runtime/maps.(*Map).directoryAt (13.83s)">
-<polygon fill="#edebe8" stroke="#b2a48e" points="141,-1101 0,-1101 0,-1021 141,-1021 141,-1101"/>
-<text text-anchor="middle" x="70.5" y="-1084.2" font-family="Times,serif" font-size="16.00">maps</text>
-<text text-anchor="middle" x="70.5" y="-1066.2" font-family="Times,serif" font-size="16.00">(*Map)</text>
-<text text-anchor="middle" x="70.5" y="-1048.2" font-family="Times,serif" font-size="16.00">directoryAt</text>
-<text text-anchor="middle" x="70.5" y="-1030.2" font-family="Times,serif" font-size="16.00">13.83s (3.99%)</text>
-</a>
-</g>
-</g>
-<!-- N2&#45;&gt;N10 -->
-<g id="edge19" class="edge">
-<title>N2&#45;&gt;N10</title>
-<g id="a_edge19"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*Map).directoryAt (13.83s)">
-<path fill="none" stroke="#b2a48e" d="M1168.89,-1236.57C977.9,-1234.53 608.79,-1222.33 301.5,-1163 232.36,-1149.65 214.02,-1145.4 150.5,-1115 145.11,-1112.42 139.66,-1109.52 134.27,-1106.45"/>
-<polygon fill="#b2a48e" stroke="#b2a48e" points="135.67,-1103.21 125.28,-1101.13 132.1,-1109.23 135.67,-1103.21"/>
-</a>
-</g>
-<g id="a_edge19&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*Map).directoryAt (13.83s)">
-<text text-anchor="middle" x="329" y="-1151.8" font-family="Times,serif" font-size="14.00"> 13.83s</text>
-<text text-anchor="middle" x="329" y="-1136.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
+<g id="a_edge17&#45;label"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; bytes.IndexByte (14.63s)">
+<text text-anchor="middle" x="1731" y="-1236.3" font-family="Times,serif" font-size="14.00"> 14.63s</text>
+<text text-anchor="middle" x="1731" y="-1221.3" font-family="Times,serif" font-size="14.00"> (inline)</text>
 </a>
 </g>
 </g>
 <!-- N12 -->
 <g id="node12" class="node">
 <title>N12</title>
-<g id="a_node12"><a xlink:title="internal/runtime/maps.(*groupReference).key (11.05s)">
-<polygon fill="#edebe9" stroke="#b2a896" points="319.5,-1099 159.5,-1099 159.5,-1023 319.5,-1023 319.5,-1099"/>
-<text text-anchor="middle" x="239.5" y="-1083" font-family="Times,serif" font-size="15.00">maps</text>
-<text text-anchor="middle" x="239.5" y="-1066" font-family="Times,serif" font-size="15.00">(*groupReference)</text>
-<text text-anchor="middle" x="239.5" y="-1049" font-family="Times,serif" font-size="15.00">key</text>
-<text text-anchor="middle" x="239.5" y="-1032" font-family="Times,serif" font-size="15.00">11.05s (3.19%)</text>
+<g id="a_node12"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.parseDigitsFromBytes (9.47s)">
+<polygon fill="#edebe9" stroke="#b2a794" points="2122,-1263.5 1767,-1263.5 1767,-1201.5 2122,-1201.5 2122,-1263.5"/>
+<text text-anchor="middle" x="1944.5" y="-1246.7" font-family="Times,serif" font-size="16.00">one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel</text>
+<text text-anchor="middle" x="1944.5" y="-1228.7" font-family="Times,serif" font-size="16.00">parseDigitsFromBytes</text>
+<text text-anchor="middle" x="1944.5" y="-1210.7" font-family="Times,serif" font-size="16.00">9.47s (3.37%)</text>
 </a>
 </g>
 </g>
-<!-- N2&#45;&gt;N12 -->
+<!-- N1&#45;&gt;N12 -->
 <g id="edge21" class="edge">
-<title>N2&#45;&gt;N12</title>
-<g id="a_edge21"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*groupReference).key (11.05s)">
-<path fill="none" stroke="#b2a896" d="M1168.82,-1231.04C962.7,-1221.37 567.91,-1198.82 432.5,-1163 386.66,-1150.88 339.43,-1126.4 303.17,-1104.58"/>
-<polygon fill="#b2a896" stroke="#b2a896" points="304.55,-1101.33 294.19,-1099.1 300.9,-1107.3 304.55,-1101.33"/>
+<title>N1&#45;&gt;N12</title>
+<g id="a_edge21"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.parseDigitsFromBytes (9.47s)">
+<path fill="none" stroke="#b2a794" d="M1523.18,-1390.47C1583.57,-1375.26 1648.55,-1357.14 1707.5,-1337 1764.86,-1317.4 1827.63,-1289.69 1874.15,-1267.88"/>
+<polygon fill="#b2a794" stroke="#b2a794" points="1875.68,-1271.02 1883.23,-1263.59 1872.7,-1264.69 1875.68,-1271.02"/>
 </a>
 </g>
-<g id="a_edge21&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*groupReference).key (11.05s)">
-<text text-anchor="middle" x="460" y="-1151.8" font-family="Times,serif" font-size="14.00"> 11.05s</text>
-<text text-anchor="middle" x="460" y="-1136.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
+<g id="a_edge21&#45;label"><a xlink:title="github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.worker &#45;&gt; github.com/hy144328/one&#45;billion&#45;row&#45;challenge&#45;golang&#45;parallel.parseDigitsFromBytes (9.47s)">
+<text text-anchor="middle" x="1808" y="-1325.8" font-family="Times,serif" font-size="14.00"> 9.47s</text>
+<text text-anchor="middle" x="1808" y="-1310.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
+</a>
+</g>
+</g>
+<!-- N4 -->
+<g id="node4" class="node">
+<title>N4</title>
+<g id="a_node4"><a xlink:title="internal/runtime/maps.ctrlGroup.matchH2 (41.55s)">
+<polygon fill="#ede3db" stroke="#b2682e" points="1206,-1110 995,-1110 995,-1002 1206,-1002 1206,-1110"/>
+<text text-anchor="middle" x="1100.5" y="-1087.6" font-family="Times,serif" font-size="23.00">maps</text>
+<text text-anchor="middle" x="1100.5" y="-1062.6" font-family="Times,serif" font-size="23.00">ctrlGroup</text>
+<text text-anchor="middle" x="1100.5" y="-1037.6" font-family="Times,serif" font-size="23.00">matchH2</text>
+<text text-anchor="middle" x="1100.5" y="-1012.6" font-family="Times,serif" font-size="23.00">41.55s (14.80%)</text>
+</a>
+</g>
+</g>
+<!-- N2&#45;&gt;N4 -->
+<g id="edge3" class="edge">
+<title>N2&#45;&gt;N4</title>
+<g id="a_edge3"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.ctrlGroup.matchH2 (41.55s)">
+<path fill="none" stroke="#b2682e" d="M1237.22,-1176.29C1215.52,-1157.35 1191.13,-1136.08 1169.03,-1116.8"/>
+<polygon fill="#b2682e" stroke="#b2682e" points="1171.16,-1114 1161.32,-1110.07 1166.56,-1119.28 1171.16,-1114"/>
+</a>
+</g>
+<g id="a_edge3&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.ctrlGroup.matchH2 (41.55s)">
+<text text-anchor="middle" x="1240" y="-1146.8" font-family="Times,serif" font-size="14.00"> 41.55s</text>
+<text text-anchor="middle" x="1240" y="-1131.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
+</a>
+</g>
+</g>
+<!-- N8 -->
+<g id="node8" class="node">
+<title>N8</title>
+<g id="a_node8"><a xlink:title="memeqbody (18.71s)">
+<polygon fill="#ede9e5" stroke="#b29877" points="1377,-1080 1224,-1080 1224,-1032 1377,-1032 1377,-1080"/>
+<text text-anchor="middle" x="1300.5" y="-1061.6" font-family="Times,serif" font-size="18.00">memeqbody</text>
+<text text-anchor="middle" x="1300.5" y="-1041.6" font-family="Times,serif" font-size="18.00">18.71s (6.67%)</text>
+</a>
+</g>
+</g>
+<!-- N2&#45;&gt;N8 -->
+<g id="edge15" class="edge">
+<title>N2&#45;&gt;N8</title>
+<g id="a_edge15"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; memeqbody (18.71s)">
+<path fill="none" stroke="#b29877" d="M1300.5,-1176.29C1300.5,-1148.11 1300.5,-1114.75 1300.5,-1090.48"/>
+<polygon fill="#b29877" stroke="#b29877" points="1304,-1090.35 1300.5,-1080.35 1297,-1090.35 1304,-1090.35"/>
+</a>
+</g>
+<g id="a_edge15&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; memeqbody (18.71s)">
+<text text-anchor="middle" x="1327" y="-1139.3" font-family="Times,serif" font-size="14.00"> 18.71s</text>
+</a>
+</g>
+</g>
+<!-- N9 -->
+<g id="node9" class="node">
+<title>N9</title>
+<g id="a_node9"><a xlink:title="aeshashbody (17.34s)">
+<polygon fill="#ede9e5" stroke="#b29a7b" points="1548,-1080 1395,-1080 1395,-1032 1548,-1032 1548,-1080"/>
+<text text-anchor="middle" x="1471.5" y="-1061.6" font-family="Times,serif" font-size="18.00">aeshashbody</text>
+<text text-anchor="middle" x="1471.5" y="-1041.6" font-family="Times,serif" font-size="18.00">17.34s (6.18%)</text>
+</a>
+</g>
+</g>
+<!-- N2&#45;&gt;N9 -->
+<g id="edge16" class="edge">
+<title>N2&#45;&gt;N9</title>
+<g id="a_edge16"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; aeshashbody (17.34s)">
+<path fill="none" stroke="#b29a7b" d="M1354.61,-1176.29C1383.34,-1146.97 1417.56,-1112.05 1441.52,-1087.59"/>
+<polygon fill="#b29a7b" stroke="#b29a7b" points="1444.12,-1089.94 1448.62,-1080.35 1439.12,-1085.05 1444.12,-1089.94"/>
+</a>
+</g>
+<g id="a_edge16&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; aeshashbody (17.34s)">
+<text text-anchor="middle" x="1428" y="-1139.3" font-family="Times,serif" font-size="14.00"> 17.34s</text>
+</a>
+</g>
+</g>
+<!-- N10 -->
+<g id="node10" class="node">
+<title>N10</title>
+<g id="a_node10"><a xlink:title="internal/runtime/maps.(*Map).directoryAt (11.42s)">
+<polygon fill="#edebe8" stroke="#b2a48e" points="141,-1096 0,-1096 0,-1016 141,-1016 141,-1096"/>
+<text text-anchor="middle" x="70.5" y="-1079.2" font-family="Times,serif" font-size="16.00">maps</text>
+<text text-anchor="middle" x="70.5" y="-1061.2" font-family="Times,serif" font-size="16.00">(*Map)</text>
+<text text-anchor="middle" x="70.5" y="-1043.2" font-family="Times,serif" font-size="16.00">directoryAt</text>
+<text text-anchor="middle" x="70.5" y="-1025.2" font-family="Times,serif" font-size="16.00">11.42s (4.07%)</text>
+</a>
+</g>
+</g>
+<!-- N2&#45;&gt;N10 -->
+<g id="edge19" class="edge">
+<title>N2&#45;&gt;N10</title>
+<g id="a_edge19"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*Map).directoryAt (11.42s)">
+<path fill="none" stroke="#b2a48e" d="M1172,-1230.83C982.08,-1227.86 615.98,-1214.47 310.5,-1158 237.49,-1144.51 217.72,-1141.51 150.5,-1110 145.09,-1107.46 139.62,-1104.6 134.22,-1101.54"/>
+<polygon fill="#b2a48e" stroke="#b2a48e" points="135.62,-1098.3 125.22,-1096.25 132.07,-1104.34 135.62,-1098.3"/>
+</a>
+</g>
+<g id="a_edge19&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*Map).directoryAt (11.42s)">
+<text text-anchor="middle" x="338" y="-1146.8" font-family="Times,serif" font-size="14.00"> 11.42s</text>
+<text text-anchor="middle" x="338" y="-1131.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
+</a>
+</g>
+</g>
+<!-- N11 -->
+<g id="node11" class="node">
+<title>N11</title>
+<g id="a_node11"><a xlink:title="internal/runtime/maps.(*groupReference).key (9.60s)">
+<polygon fill="#edebe9" stroke="#b2a793" points="329.5,-1096 159.5,-1096 159.5,-1016 329.5,-1016 329.5,-1096"/>
+<text text-anchor="middle" x="244.5" y="-1079.2" font-family="Times,serif" font-size="16.00">maps</text>
+<text text-anchor="middle" x="244.5" y="-1061.2" font-family="Times,serif" font-size="16.00">(*groupReference)</text>
+<text text-anchor="middle" x="244.5" y="-1043.2" font-family="Times,serif" font-size="16.00">key</text>
+<text text-anchor="middle" x="244.5" y="-1025.2" font-family="Times,serif" font-size="16.00">9.60s (3.42%)</text>
+</a>
+</g>
+</g>
+<!-- N2&#45;&gt;N11 -->
+<g id="edge20" class="edge">
+<title>N2&#45;&gt;N11</title>
+<g id="a_edge20"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*groupReference).key (9.60s)">
+<path fill="none" stroke="#b2a793" d="M1171.79,-1225.86C967.25,-1215.99 577.45,-1193.23 443.5,-1158 397.88,-1146 350.65,-1122.58 313.65,-1101.3"/>
+<polygon fill="#b2a793" stroke="#b2a793" points="315.36,-1098.25 304.96,-1096.23 311.84,-1104.29 315.36,-1098.25"/>
+</a>
+</g>
+<g id="a_edge20&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*groupReference).key (9.60s)">
+<text text-anchor="middle" x="471" y="-1146.8" font-family="Times,serif" font-size="14.00"> 9.60s</text>
+<text text-anchor="middle" x="471" y="-1131.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
 </a>
 </g>
 </g>
 <!-- N13 -->
 <g id="node13" class="node">
 <title>N13</title>
-<g id="a_node13"><a xlink:title="internal/runtime/maps.h2 (6.48s)">
-<polygon fill="#edecea" stroke="#b2ada1" points="453.5,-1087.5 337.5,-1087.5 337.5,-1034.5 453.5,-1034.5 453.5,-1087.5"/>
-<text text-anchor="middle" x="395.5" y="-1072.3" font-family="Times,serif" font-size="14.00">maps</text>
-<text text-anchor="middle" x="395.5" y="-1057.3" font-family="Times,serif" font-size="14.00">h2</text>
-<text text-anchor="middle" x="395.5" y="-1042.3" font-family="Times,serif" font-size="14.00">6.48s (1.87%)</text>
+<g id="a_node13"><a xlink:title="internal/runtime/maps.h2 (5.47s)">
+<polygon fill="#edecea" stroke="#b2ada1" points="463.5,-1082.5 347.5,-1082.5 347.5,-1029.5 463.5,-1029.5 463.5,-1082.5"/>
+<text text-anchor="middle" x="405.5" y="-1067.3" font-family="Times,serif" font-size="14.00">maps</text>
+<text text-anchor="middle" x="405.5" y="-1052.3" font-family="Times,serif" font-size="14.00">h2</text>
+<text text-anchor="middle" x="405.5" y="-1037.3" font-family="Times,serif" font-size="14.00">5.47s (1.95%)</text>
 </a>
 </g>
 </g>
 <!-- N2&#45;&gt;N13 -->
 <g id="edge22" class="edge">
 <title>N2&#45;&gt;N13</title>
-<g id="a_edge22"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.h2 (6.48s)">
-<path fill="none" stroke="#b2ada1" d="M1168.75,-1229.18C988.73,-1217.99 671.42,-1194.59 560.5,-1163 513.85,-1149.72 503.53,-1140.86 462.5,-1115 452.6,-1108.76 442.44,-1101.33 433.12,-1094.04"/>
-<polygon fill="#b2ada1" stroke="#b2ada1" points="435.17,-1091.21 425.17,-1087.71 430.81,-1096.68 435.17,-1091.21"/>
+<g id="a_edge22"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.h2 (5.47s)">
+<path fill="none" stroke="#b2ada1" d="M1171.88,-1232.02C1024.22,-1229.55 776.05,-1215.93 571.5,-1158 524.45,-1144.68 513.92,-1135.99 472.5,-1110 462.59,-1103.78 452.42,-1096.36 443.1,-1089.07"/>
+<polygon fill="#b2ada1" stroke="#b2ada1" points="445.16,-1086.23 435.15,-1082.73 440.79,-1091.71 445.16,-1086.23"/>
 </a>
 </g>
-<g id="a_edge22&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.h2 (6.48s)">
-<text text-anchor="middle" x="588" y="-1151.8" font-family="Times,serif" font-size="14.00"> 6.48s</text>
-<text text-anchor="middle" x="588" y="-1136.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
+<g id="a_edge22&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.h2 (5.47s)">
+<text text-anchor="middle" x="599" y="-1146.8" font-family="Times,serif" font-size="14.00"> 5.47s</text>
+<text text-anchor="middle" x="599" y="-1131.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
 </a>
 </g>
 </g>
 <!-- N15 -->
 <g id="node15" class="node">
 <title>N15</title>
-<g id="a_node15"><a xlink:title="runtime.strhash (4.28s)">
-<polygon fill="#edeceb" stroke="#b2afa7" points="581,-1086 472,-1086 472,-1036 581,-1036 581,-1086"/>
-<text text-anchor="middle" x="526.5" y="-1071.6" font-family="Times,serif" font-size="13.00">runtime</text>
-<text text-anchor="middle" x="526.5" y="-1057.6" font-family="Times,serif" font-size="13.00">strhash</text>
-<text text-anchor="middle" x="526.5" y="-1043.6" font-family="Times,serif" font-size="13.00">4.28s (1.24%)</text>
+<g id="a_node15"><a xlink:title="runtime.strhash (3.59s)">
+<polygon fill="#edeceb" stroke="#b2afa7" points="591,-1081 482,-1081 482,-1031 591,-1031 591,-1081"/>
+<text text-anchor="middle" x="536.5" y="-1066.6" font-family="Times,serif" font-size="13.00">runtime</text>
+<text text-anchor="middle" x="536.5" y="-1052.6" font-family="Times,serif" font-size="13.00">strhash</text>
+<text text-anchor="middle" x="536.5" y="-1038.6" font-family="Times,serif" font-size="13.00">3.59s (1.28%)</text>
 </a>
 </g>
 </g>
 <!-- N2&#45;&gt;N15 -->
 <g id="edge24" class="edge">
 <title>N2&#45;&gt;N15</title>
-<g id="a_edge24"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; runtime.strhash (4.28s)">
-<path fill="none" stroke="#b2afa7" d="M1168.72,-1233.09C1043.96,-1226.97 850.51,-1209.98 689.5,-1163 642.17,-1149.19 630.91,-1141.75 589.5,-1115 579.47,-1108.52 569.28,-1100.63 560.1,-1092.93"/>
-<polygon fill="#b2afa7" stroke="#b2afa7" points="562.19,-1090.12 552.32,-1086.26 557.63,-1095.43 562.19,-1090.12"/>
+<g id="a_edge24"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; runtime.strhash (3.59s)">
+<path fill="none" stroke="#b2afa7" d="M1171.83,-1226.97C1049.58,-1220.03 861.62,-1202.46 704.5,-1158 655.13,-1144.03 642.86,-1137.43 599.5,-1110 589.32,-1103.56 579.01,-1095.61 569.76,-1087.85"/>
+<polygon fill="#b2afa7" stroke="#b2afa7" points="571.8,-1084.99 561.94,-1081.12 567.24,-1090.29 571.8,-1084.99"/>
 </a>
 </g>
-<g id="a_edge24&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; runtime.strhash (4.28s)">
-<text text-anchor="middle" x="711.5" y="-1144.3" font-family="Times,serif" font-size="14.00"> 4.28s</text>
-</a>
-</g>
-</g>
-<!-- N18 -->
-<g id="node18" class="node">
-<title>N18</title>
-<g id="a_node18"><a xlink:title="runtime.memequal (2.71s)">
-<polygon fill="#edecec" stroke="#b2b0ab" points="698,-1084.5 599,-1084.5 599,-1037.5 698,-1037.5 698,-1084.5"/>
-<text text-anchor="middle" x="648.5" y="-1070.9" font-family="Times,serif" font-size="12.00">runtime</text>
-<text text-anchor="middle" x="648.5" y="-1057.9" font-family="Times,serif" font-size="12.00">memequal</text>
-<text text-anchor="middle" x="648.5" y="-1044.9" font-family="Times,serif" font-size="12.00">2.71s (0.78%)</text>
-</a>
-</g>
-</g>
-<!-- N2&#45;&gt;N18 -->
-<g id="edge25" class="edge">
-<title>N2&#45;&gt;N18</title>
-<g id="a_edge25"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; runtime.memequal (2.71s)">
-<path fill="none" stroke="#b2b0ab" d="M1168.75,-1225.82C1070.98,-1215.55 933.97,-1196.5 817.5,-1163 765.85,-1148.14 751.63,-1144.2 706.5,-1115 696.23,-1108.35 686.03,-1099.85 677.12,-1091.62"/>
-<polygon fill="#b2b0ab" stroke="#b2b0ab" points="679.3,-1088.87 669.65,-1084.5 674.47,-1093.94 679.3,-1088.87"/>
-</a>
-</g>
-<g id="a_edge25&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; runtime.memequal (2.71s)">
-<text text-anchor="middle" x="839.5" y="-1144.3" font-family="Times,serif" font-size="14.00"> 2.71s</text>
-</a>
-</g>
-</g>
-<!-- N19 -->
-<g id="node19" class="node">
-<title>N19</title>
-<g id="a_node19"><a xlink:title="internal/runtime/maps.(*Map).directoryIndex (2.63s)">
-<polygon fill="#edecec" stroke="#b2b0ab" points="821,-1091 716,-1091 716,-1031 821,-1031 821,-1091"/>
-<text text-anchor="middle" x="768.5" y="-1077.4" font-family="Times,serif" font-size="12.00">maps</text>
-<text text-anchor="middle" x="768.5" y="-1064.4" font-family="Times,serif" font-size="12.00">(*Map)</text>
-<text text-anchor="middle" x="768.5" y="-1051.4" font-family="Times,serif" font-size="12.00">directoryIndex</text>
-<text text-anchor="middle" x="768.5" y="-1038.4" font-family="Times,serif" font-size="12.00">2.63s (0.76%)</text>
-</a>
-</g>
-</g>
-<!-- N2&#45;&gt;N19 -->
-<g id="edge26" class="edge">
-<title>N2&#45;&gt;N19</title>
-<g id="a_edge26"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*Map).directoryIndex (2.63s)">
-<path fill="none" stroke="#b2b0ab" d="M1168.79,-1221.97C1070.8,-1206.57 935.38,-1175.67 830.5,-1115 822.13,-1110.16 813.81,-1104.13 806.11,-1097.89"/>
-<polygon fill="#b2b0ab" stroke="#b2b0ab" points="807.94,-1094.84 798.03,-1091.08 803.43,-1100.2 807.94,-1094.84"/>
-</a>
-</g>
-<g id="a_edge26&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*Map).directoryIndex (2.63s)">
-<text text-anchor="middle" x="953" y="-1151.8" font-family="Times,serif" font-size="14.00"> 2.63s</text>
-<text text-anchor="middle" x="953" y="-1136.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
-</a>
-</g>
-</g>
-<!-- N20 -->
-<g id="node20" class="node">
-<title>N20</title>
-<g id="a_node20"><a xlink:title="internal/runtime/maps.(*groupsReference).group (2.36s)">
-<polygon fill="#edecec" stroke="#b2b1ac" points="973.5,-1091 839.5,-1091 839.5,-1031 973.5,-1031 973.5,-1091"/>
-<text text-anchor="middle" x="906.5" y="-1077.4" font-family="Times,serif" font-size="12.00">maps</text>
-<text text-anchor="middle" x="906.5" y="-1064.4" font-family="Times,serif" font-size="12.00">(*groupsReference)</text>
-<text text-anchor="middle" x="906.5" y="-1051.4" font-family="Times,serif" font-size="12.00">group</text>
-<text text-anchor="middle" x="906.5" y="-1038.4" font-family="Times,serif" font-size="12.00">2.36s (0.68%)</text>
-</a>
-</g>
-</g>
-<!-- N2&#45;&gt;N20 -->
-<g id="edge27" class="edge">
-<title>N2&#45;&gt;N20</title>
-<g id="a_edge27"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*groupsReference).group (2.36s)">
-<path fill="none" stroke="#b2b1ac" d="M1168.73,-1194.77C1110.42,-1173.89 1041.5,-1146.36 982.5,-1115 972.5,-1109.69 962.26,-1103.29 952.66,-1096.8"/>
-<polygon fill="#b2b1ac" stroke="#b2b1ac" points="954.63,-1093.91 944.41,-1091.11 950.65,-1099.67 954.63,-1093.91"/>
-</a>
-</g>
-<g id="a_edge27&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*groupsReference).group (2.36s)">
-<text text-anchor="middle" x="1111" y="-1151.8" font-family="Times,serif" font-size="14.00"> 2.36s</text>
-<text text-anchor="middle" x="1111" y="-1136.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
-</a>
-</g>
-</g>
-<!-- N3&#45;&gt;N5 -->
-<g id="edge18" class="edge">
-<title>N3&#45;&gt;N5</title>
-<g id="a_edge18"><a xlink:title="bufio.(*Reader).ReadSlice &#45;&gt; bytes.IndexByte (16.15s)">
-<path fill="none" stroke="#b2a188" d="M1584.86,-1180.92C1603.52,-1156.45 1621.33,-1133.13 1621.5,-1133 1640.55,-1119.04 1650.39,-1125.6 1671.5,-1115 1681.08,-1110.19 1690.89,-1104.45 1700.22,-1098.56"/>
-<polygon fill="#b2a188" stroke="#b2a188" points="1702.13,-1101.49 1708.62,-1093.12 1698.33,-1095.61 1702.13,-1101.49"/>
-</a>
-</g>
-<g id="a_edge18&#45;label"><a xlink:title="bufio.(*Reader).ReadSlice &#45;&gt; bytes.IndexByte (16.15s)">
-<text text-anchor="middle" x="1649" y="-1151.8" font-family="Times,serif" font-size="14.00"> 16.15s</text>
-<text text-anchor="middle" x="1649" y="-1136.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
-</a>
-</g>
-</g>
-<!-- N23 -->
-<g id="node23" class="node">
-<title>N23</title>
-<g id="a_node23"><a xlink:title="bufio.(*Reader).fill (33.38s)">
-<polygon fill="#ede7e1" stroke="#b2875c" points="1662,-1090 1563,-1090 1563,-1032 1662,-1032 1662,-1090"/>
-<text text-anchor="middle" x="1612.5" y="-1078.8" font-family="Times,serif" font-size="9.00">bufio</text>
-<text text-anchor="middle" x="1612.5" y="-1068.8" font-family="Times,serif" font-size="9.00">(*Reader)</text>
-<text text-anchor="middle" x="1612.5" y="-1058.8" font-family="Times,serif" font-size="9.00">fill</text>
-<text text-anchor="middle" x="1612.5" y="-1048.8" font-family="Times,serif" font-size="9.00">0.21s (0.061%)</text>
-<text text-anchor="middle" x="1612.5" y="-1038.8" font-family="Times,serif" font-size="9.00">of 33.38s (9.64%)</text>
-</a>
-</g>
-</g>
-<!-- N3&#45;&gt;N23 -->
-<g id="edge4" class="edge">
-<title>N3&#45;&gt;N23</title>
-<g id="a_edge4"><a xlink:title="bufio.(*Reader).ReadSlice &#45;&gt; bufio.(*Reader).fill (33.38s)">
-<path fill="none" stroke="#b2875c" d="M1536.84,-1180.97C1537.12,-1164.99 1539.34,-1147.86 1545.5,-1133 1550.93,-1119.9 1559.97,-1107.77 1569.68,-1097.39"/>
-<polygon fill="#b2875c" stroke="#b2875c" points="1572.29,-1099.72 1576.82,-1090.14 1567.31,-1094.81 1572.29,-1099.72"/>
-</a>
-</g>
-<g id="a_edge4&#45;label"><a xlink:title="bufio.(*Reader).ReadSlice &#45;&gt; bufio.(*Reader).fill (33.38s)">
-<text text-anchor="middle" x="1572" y="-1144.3" font-family="Times,serif" font-size="14.00"> 33.38s</text>
-</a>
-</g>
-</g>
-<!-- N7 -->
-<g id="node7" class="node">
-<title>N7</title>
-<g id="a_node7"><a xlink:title="indexbytebody (24.53s)">
-<polygon fill="#ede9e4" stroke="#b29573" points="1971,-949.5 1810,-949.5 1810,-899.5 1971,-899.5 1971,-949.5"/>
-<text text-anchor="middle" x="1890.5" y="-930.3" font-family="Times,serif" font-size="19.00">indexbytebody</text>
-<text text-anchor="middle" x="1890.5" y="-909.3" font-family="Times,serif" font-size="19.00">24.53s (7.08%)</text>
-</a>
-</g>
-</g>
-<!-- N5&#45;&gt;N7 -->
-<g id="edge14" class="edge">
-<title>N5&#45;&gt;N7</title>
-<g id="a_edge14"><a xlink:title="bytes.IndexByte &#45;&gt; indexbytebody (24.53s)">
-<path fill="none" stroke="#b29573" d="M1783.74,-1028.8C1806.08,-1007.19 1835.7,-978.52 1858.08,-956.87"/>
-<polygon fill="#b29573" stroke="#b29573" points="1860.62,-959.29 1865.37,-949.82 1855.75,-954.26 1860.62,-959.29"/>
-</a>
-</g>
-<g id="a_edge14&#45;label"><a xlink:title="bytes.IndexByte &#45;&gt; indexbytebody (24.53s)">
-<text text-anchor="middle" x="1864" y="-977.8" font-family="Times,serif" font-size="14.00"> 24.53s</text>
-</a>
-</g>
-</g>
-<!-- N14 -->
-<g id="node14" class="node">
-<title>N14</title>
-<g id="a_node14"><a xlink:title="internal/bytealg.IndexByte (5.62s)">
-<polygon fill="#edeceb" stroke="#b2aea4" points="1792,-949.5 1683,-949.5 1683,-899.5 1792,-899.5 1792,-949.5"/>
-<text text-anchor="middle" x="1737.5" y="-935.1" font-family="Times,serif" font-size="13.00">bytealg</text>
-<text text-anchor="middle" x="1737.5" y="-921.1" font-family="Times,serif" font-size="13.00">IndexByte</text>
-<text text-anchor="middle" x="1737.5" y="-907.1" font-family="Times,serif" font-size="13.00">5.62s (1.62%)</text>
-</a>
-</g>
-</g>
-<!-- N5&#45;&gt;N14 -->
-<g id="edge23" class="edge">
-<title>N5&#45;&gt;N14</title>
-<g id="a_edge23"><a xlink:title="bytes.IndexByte &#45;&gt; internal/bytealg.IndexByte (5.62s)">
-<path fill="none" stroke="#b2aea4" d="M1748.25,-1028.8C1746.11,-1008.23 1743.3,-981.25 1741.09,-960.02"/>
-<polygon fill="#b2aea4" stroke="#b2aea4" points="1744.55,-959.4 1740.03,-949.82 1737.59,-960.13 1744.55,-959.4"/>
-</a>
-</g>
-<g id="a_edge23&#45;label"><a xlink:title="bytes.IndexByte &#45;&gt; internal/bytealg.IndexByte (5.62s)">
-<text text-anchor="middle" x="1765.5" y="-977.8" font-family="Times,serif" font-size="14.00"> 5.62s</text>
-</a>
-</g>
-</g>
-<!-- N6 -->
-<g id="node6" class="node">
-<title>N6</title>
-<g id="a_node6"><a xlink:title="internal/runtime/syscall.Syscall6 (27.62s)">
-<polygon fill="#ede8e3" stroke="#b2916b" points="1693,-71 1532,-71 1532,0 1693,0 1693,-71"/>
-<text text-anchor="middle" x="1612.5" y="-51.8" font-family="Times,serif" font-size="19.00">syscall</text>
-<text text-anchor="middle" x="1612.5" y="-30.8" font-family="Times,serif" font-size="19.00">Syscall6</text>
-<text text-anchor="middle" x="1612.5" y="-9.8" font-family="Times,serif" font-size="19.00">27.62s (7.97%)</text>
-</a>
-</g>
-</g>
-<!-- N16 -->
-<g id="node16" class="node">
-<title>N16</title>
-<g id="a_node16"><a xlink:title="os.(*File).pread (32.09s)">
-<polygon fill="#ede7e2" stroke="#b2895f" points="1670,-718 1555,-718 1555,-650 1670,-650 1670,-718"/>
-<text text-anchor="middle" x="1612.5" y="-705.2" font-family="Times,serif" font-size="11.00">os</text>
-<text text-anchor="middle" x="1612.5" y="-693.2" font-family="Times,serif" font-size="11.00">(*File)</text>
-<text text-anchor="middle" x="1612.5" y="-681.2" font-family="Times,serif" font-size="11.00">pread</text>
-<text text-anchor="middle" x="1612.5" y="-669.2" font-family="Times,serif" font-size="11.00">1.08s (0.31%)</text>
-<text text-anchor="middle" x="1612.5" y="-657.2" font-family="Times,serif" font-size="11.00">of 32.09s (9.26%)</text>
-</a>
-</g>
-</g>
-<!-- N27 -->
-<g id="node27" class="node">
-<title>N27</title>
-<g id="a_node27"><a xlink:title="internal/poll.(*FD).Pread (31.01s)">
-<polygon fill="#ede8e2" stroke="#b28b62" points="1662,-599 1563,-599 1563,-541 1662,-541 1662,-599"/>
-<text text-anchor="middle" x="1612.5" y="-587.8" font-family="Times,serif" font-size="9.00">poll</text>
-<text text-anchor="middle" x="1612.5" y="-577.8" font-family="Times,serif" font-size="9.00">(*FD)</text>
-<text text-anchor="middle" x="1612.5" y="-567.8" font-family="Times,serif" font-size="9.00">Pread</text>
-<text text-anchor="middle" x="1612.5" y="-557.8" font-family="Times,serif" font-size="9.00">0.09s (0.026%)</text>
-<text text-anchor="middle" x="1612.5" y="-547.8" font-family="Times,serif" font-size="9.00">of 31.01s (8.95%)</text>
-</a>
-</g>
-</g>
-<!-- N16&#45;&gt;N27 -->
-<g id="edge8" class="edge">
-<title>N16&#45;&gt;N27</title>
-<g id="a_edge8"><a xlink:title="os.(*File).pread &#45;&gt; internal/poll.(*FD).Pread (31.01s)">
-<path fill="none" stroke="#b28b62" d="M1612.5,-649.7C1612.5,-636.98 1612.5,-622.38 1612.5,-609.23"/>
-<polygon fill="#b28b62" stroke="#b28b62" points="1616,-609.07 1612.5,-599.07 1609,-609.07 1616,-609.07"/>
-</a>
-</g>
-<g id="a_edge8&#45;label"><a xlink:title="os.(*File).pread &#45;&gt; internal/poll.(*FD).Pread (31.01s)">
-<text text-anchor="middle" x="1639" y="-620.8" font-family="Times,serif" font-size="14.00"> 31.01s</text>
+<g id="a_edge24&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; runtime.strhash (3.59s)">
+<text text-anchor="middle" x="726.5" y="-1139.3" font-family="Times,serif" font-size="14.00"> 3.59s</text>
 </a>
 </g>
 </g>
 <!-- N17 -->
 <g id="node17" class="node">
 <title>N17</title>
-<g id="a_node17"><a xlink:title="io.(*SectionReader).Read (33.11s)">
-<polygon fill="#ede7e1" stroke="#b2885d" points="1664.5,-956 1560.5,-956 1560.5,-893 1664.5,-893 1664.5,-956"/>
-<text text-anchor="middle" x="1612.5" y="-944" font-family="Times,serif" font-size="10.00">io</text>
-<text text-anchor="middle" x="1612.5" y="-933" font-family="Times,serif" font-size="10.00">(*SectionReader)</text>
-<text text-anchor="middle" x="1612.5" y="-922" font-family="Times,serif" font-size="10.00">Read</text>
-<text text-anchor="middle" x="1612.5" y="-911" font-family="Times,serif" font-size="10.00">0.82s (0.24%)</text>
-<text text-anchor="middle" x="1612.5" y="-900" font-family="Times,serif" font-size="10.00">of 33.11s (9.56%)</text>
+<g id="a_node17"><a xlink:title="internal/runtime/maps.(*Map).directoryIndex (2.56s)">
+<polygon fill="#edecec" stroke="#b2b0aa" points="714,-1086 609,-1086 609,-1026 714,-1026 714,-1086"/>
+<text text-anchor="middle" x="661.5" y="-1072.4" font-family="Times,serif" font-size="12.00">maps</text>
+<text text-anchor="middle" x="661.5" y="-1059.4" font-family="Times,serif" font-size="12.00">(*Map)</text>
+<text text-anchor="middle" x="661.5" y="-1046.4" font-family="Times,serif" font-size="12.00">directoryIndex</text>
+<text text-anchor="middle" x="661.5" y="-1033.4" font-family="Times,serif" font-size="12.00">2.56s (0.91%)</text>
 </a>
 </g>
 </g>
-<!-- N24 -->
-<g id="node24" class="node">
-<title>N24</title>
-<g id="a_node24"><a xlink:title="os.(*File).ReadAt (32.29s)">
-<polygon fill="#ede7e2" stroke="#b2895f" points="1662,-842 1563,-842 1563,-784 1662,-784 1662,-842"/>
-<text text-anchor="middle" x="1612.5" y="-830.8" font-family="Times,serif" font-size="9.00">os</text>
-<text text-anchor="middle" x="1612.5" y="-820.8" font-family="Times,serif" font-size="9.00">(*File)</text>
-<text text-anchor="middle" x="1612.5" y="-810.8" font-family="Times,serif" font-size="9.00">ReadAt</text>
-<text text-anchor="middle" x="1612.5" y="-800.8" font-family="Times,serif" font-size="9.00">0.20s (0.058%)</text>
-<text text-anchor="middle" x="1612.5" y="-790.8" font-family="Times,serif" font-size="9.00">of 32.29s (9.32%)</text>
+<!-- N2&#45;&gt;N17 -->
+<g id="edge25" class="edge">
+<title>N2&#45;&gt;N17</title>
+<g id="a_edge25"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*Map).directoryIndex (2.56s)">
+<path fill="none" stroke="#b2b0aa" d="M1171.89,-1224.92C1071.06,-1216.77 928.4,-1198.57 809.5,-1158 768.9,-1144.15 729.1,-1115.92 701.02,-1092.81"/>
+<polygon fill="#b2b0aa" stroke="#b2b0aa" points="702.97,-1089.88 693.05,-1086.14 698.47,-1095.25 702.97,-1089.88"/>
+</a>
+</g>
+<g id="a_edge25&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*Map).directoryIndex (2.56s)">
+<text text-anchor="middle" x="837" y="-1146.8" font-family="Times,serif" font-size="14.00"> 2.56s</text>
+<text text-anchor="middle" x="837" y="-1131.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
 </a>
 </g>
 </g>
-<!-- N17&#45;&gt;N24 -->
-<g id="edge6" class="edge">
-<title>N17&#45;&gt;N24</title>
-<g id="a_edge6"><a xlink:title="io.(*SectionReader).Read &#45;&gt; os.(*File).ReadAt (32.29s)">
-<path fill="none" stroke="#b2895f" d="M1612.5,-893C1612.5,-880.42 1612.5,-865.69 1612.5,-852.39"/>
-<polygon fill="#b2895f" stroke="#b2895f" points="1616,-852.09 1612.5,-842.09 1609,-852.09 1616,-852.09"/>
-</a>
-</g>
-<g id="a_edge6&#45;label"><a xlink:title="io.(*SectionReader).Read &#45;&gt; os.(*File).ReadAt (32.29s)">
-<text text-anchor="middle" x="1639" y="-863.8" font-family="Times,serif" font-size="14.00"> 32.29s</text>
-</a>
-</g>
-</g>
-<!-- N21 -->
-<g id="node21" class="node">
-<title>N21</title>
-<g id="a_node21"><a xlink:title="syscall.Syscall6 (29.73s)">
-<polygon fill="#ede8e2" stroke="#b28d65" points="1664,-277 1561,-277 1561,-225 1664,-225 1664,-277"/>
-<text text-anchor="middle" x="1612.5" y="-265" font-family="Times,serif" font-size="10.00">syscall</text>
-<text text-anchor="middle" x="1612.5" y="-254" font-family="Times,serif" font-size="10.00">Syscall6</text>
-<text text-anchor="middle" x="1612.5" y="-243" font-family="Times,serif" font-size="10.00">0.41s (0.12%)</text>
-<text text-anchor="middle" x="1612.5" y="-232" font-family="Times,serif" font-size="10.00">of 29.73s (8.58%)</text>
+<!-- N18 -->
+<g id="node18" class="node">
+<title>N18</title>
+<g id="a_node18"><a xlink:title="runtime.memequal (2.53s)">
+<polygon fill="#edecec" stroke="#b2b0aa" points="824.5,-1079.5 732.5,-1079.5 732.5,-1032.5 824.5,-1032.5 824.5,-1079.5"/>
+<text text-anchor="middle" x="778.5" y="-1065.9" font-family="Times,serif" font-size="12.00">runtime</text>
+<text text-anchor="middle" x="778.5" y="-1052.9" font-family="Times,serif" font-size="12.00">memequal</text>
+<text text-anchor="middle" x="778.5" y="-1039.9" font-family="Times,serif" font-size="12.00">2.53s (0.9%)</text>
 </a>
 </g>
 </g>
-<!-- N22 -->
-<g id="node22" class="node">
-<title>N22</title>
-<g id="a_node22"><a xlink:title="syscall.RawSyscall6 (27.91s)">
-<polygon fill="#ede8e3" stroke="#b2906a" points="1664,-174 1561,-174 1561,-122 1664,-122 1664,-174"/>
-<text text-anchor="middle" x="1612.5" y="-162" font-family="Times,serif" font-size="10.00">syscall</text>
-<text text-anchor="middle" x="1612.5" y="-151" font-family="Times,serif" font-size="10.00">RawSyscall6</text>
-<text text-anchor="middle" x="1612.5" y="-140" font-family="Times,serif" font-size="10.00">0.30s (0.087%)</text>
-<text text-anchor="middle" x="1612.5" y="-129" font-family="Times,serif" font-size="10.00">of 27.91s (8.06%)</text>
+<!-- N2&#45;&gt;N18 -->
+<g id="edge26" class="edge">
+<title>N2&#45;&gt;N18</title>
+<g id="a_edge26"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; runtime.memequal (2.53s)">
+<path fill="none" stroke="#b2b0aa" d="M1171.93,-1218.14C1073.55,-1203.34 937.55,-1172.69 833.5,-1110 823.13,-1103.75 813.17,-1095.23 804.64,-1086.84"/>
+<polygon fill="#b2b0aa" stroke="#b2b0aa" points="807.02,-1084.27 797.53,-1079.56 802.01,-1089.16 807.02,-1084.27"/>
+</a>
+</g>
+<g id="a_edge26&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; runtime.memequal (2.53s)">
+<text text-anchor="middle" x="950.5" y="-1139.3" font-family="Times,serif" font-size="14.00"> 2.53s</text>
 </a>
 </g>
 </g>
-<!-- N21&#45;&gt;N22 -->
-<g id="edge12" class="edge">
-<title>N21&#45;&gt;N22</title>
-<g id="a_edge12"><a xlink:title="syscall.Syscall6 &#45;&gt; syscall.RawSyscall6 (27.91s)">
-<path fill="none" stroke="#b2906a" d="M1612.5,-224.77C1612.5,-212.6 1612.5,-197.79 1612.5,-184.5"/>
-<polygon fill="#b2906a" stroke="#b2906a" points="1616,-184.25 1612.5,-174.25 1609,-184.25 1616,-184.25"/>
-</a>
-</g>
-<g id="a_edge12&#45;label"><a xlink:title="syscall.Syscall6 &#45;&gt; syscall.RawSyscall6 (27.91s)">
-<text text-anchor="middle" x="1639" y="-195.8" font-family="Times,serif" font-size="14.00"> 27.91s</text>
-</a>
-</g>
-</g>
-<!-- N22&#45;&gt;N6 -->
-<g id="edge13" class="edge">
-<title>N22&#45;&gt;N6</title>
-<g id="a_edge13"><a xlink:title="syscall.RawSyscall6 &#45;&gt; internal/runtime/syscall.Syscall6 (27.61s)">
-<path fill="none" stroke="#b2916b" d="M1612.5,-121.93C1612.5,-109.95 1612.5,-95.25 1612.5,-81.44"/>
-<polygon fill="#b2916b" stroke="#b2916b" points="1616,-81.11 1612.5,-71.11 1609,-81.11 1616,-81.11"/>
-</a>
-</g>
-<g id="a_edge13&#45;label"><a xlink:title="syscall.RawSyscall6 &#45;&gt; internal/runtime/syscall.Syscall6 (27.61s)">
-<text text-anchor="middle" x="1639" y="-92.8" font-family="Times,serif" font-size="14.00"> 27.61s</text>
+<!-- N20 -->
+<g id="node20" class="node">
+<title>N20</title>
+<g id="a_node20"><a xlink:title="internal/runtime/maps.(*groupsReference).group (1.74s)">
+<polygon fill="#edecec" stroke="#b2b1ac" points="976.5,-1086 842.5,-1086 842.5,-1026 976.5,-1026 976.5,-1086"/>
+<text text-anchor="middle" x="909.5" y="-1072.4" font-family="Times,serif" font-size="12.00">maps</text>
+<text text-anchor="middle" x="909.5" y="-1059.4" font-family="Times,serif" font-size="12.00">(*groupsReference)</text>
+<text text-anchor="middle" x="909.5" y="-1046.4" font-family="Times,serif" font-size="12.00">group</text>
+<text text-anchor="middle" x="909.5" y="-1033.4" font-family="Times,serif" font-size="12.00">1.74s (0.62%)</text>
 </a>
 </g>
 </g>
-<!-- N23&#45;&gt;N17 -->
-<g id="edge5" class="edge">
-<title>N23&#45;&gt;N17</title>
-<g id="a_edge5"><a xlink:title="bufio.(*Reader).fill &#45;&gt; io.(*SectionReader).Read (33.11s)">
-<path fill="none" stroke="#b2885d" d="M1612.5,-1031.8C1612.5,-1012.87 1612.5,-987.62 1612.5,-966.48"/>
-<polygon fill="#b2885d" stroke="#b2885d" points="1616,-966.47 1612.5,-956.47 1609,-966.47 1616,-966.47"/>
+<!-- N2&#45;&gt;N20 -->
+<g id="edge27" class="edge">
+<title>N2&#45;&gt;N20</title>
+<g id="a_edge27"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*groupsReference).group (1.74s)">
+<path fill="none" stroke="#b2b1ac" d="M1171.73,-1189.77C1113.42,-1168.89 1044.5,-1141.36 985.5,-1110 975.5,-1104.69 965.26,-1098.29 955.66,-1091.8"/>
+<polygon fill="#b2b1ac" stroke="#b2b1ac" points="957.63,-1088.91 947.41,-1086.11 953.65,-1094.67 957.63,-1088.91"/>
 </a>
 </g>
-<g id="a_edge5&#45;label"><a xlink:title="bufio.(*Reader).fill &#45;&gt; io.(*SectionReader).Read (33.11s)">
-<text text-anchor="middle" x="1639" y="-977.8" font-family="Times,serif" font-size="14.00"> 33.11s</text>
-</a>
-</g>
-</g>
-<!-- N24&#45;&gt;N16 -->
-<g id="edge7" class="edge">
-<title>N24&#45;&gt;N16</title>
-<g id="a_edge7"><a xlink:title="os.(*File).ReadAt &#45;&gt; os.(*File).pread (32.09s)">
-<path fill="none" stroke="#b2895f" d="M1612.5,-783.81C1612.5,-767.49 1612.5,-746.6 1612.5,-728.23"/>
-<polygon fill="#b2895f" stroke="#b2895f" points="1616,-728.05 1612.5,-718.05 1609,-728.05 1616,-728.05"/>
-</a>
-</g>
-<g id="a_edge7&#45;label"><a xlink:title="os.(*File).ReadAt &#45;&gt; os.(*File).pread (32.09s)">
-<text text-anchor="middle" x="1640" y="-754.8" font-family="Times,serif" font-size="14.00"> 32.09s</text>
-<text text-anchor="middle" x="1640" y="-739.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
+<g id="a_edge27&#45;label"><a xlink:title="runtime.mapaccess2_faststr &#45;&gt; internal/runtime/maps.(*groupsReference).group (1.74s)">
+<text text-anchor="middle" x="1114" y="-1146.8" font-family="Times,serif" font-size="14.00"> 1.74s</text>
+<text text-anchor="middle" x="1114" y="-1131.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
 </a>
 </g>
 </g>
-<!-- N25 -->
-<g id="node25" class="node">
-<title>N25</title>
-<g id="a_node25"><a xlink:title="syscall.Pread (30.12s)">
-<polygon fill="#ede8e2" stroke="#b28d64" points="1662,-475 1563,-475 1563,-427 1662,-427 1662,-475"/>
-<text text-anchor="middle" x="1612.5" y="-463.8" font-family="Times,serif" font-size="9.00">syscall</text>
-<text text-anchor="middle" x="1612.5" y="-453.8" font-family="Times,serif" font-size="9.00">Pread</text>
-<text text-anchor="middle" x="1612.5" y="-443.8" font-family="Times,serif" font-size="9.00">0.20s (0.058%)</text>
-<text text-anchor="middle" x="1612.5" y="-433.8" font-family="Times,serif" font-size="9.00">of 30.12s (8.70%)</text>
+<!-- N3&#45;&gt;N5 -->
+<g id="edge18" class="edge">
+<title>N3&#45;&gt;N5</title>
+<g id="a_edge18"><a xlink:title="bufio.(*Reader).ReadSlice &#45;&gt; bytes.IndexByte (13.86s)">
+<path fill="none" stroke="#b2a086" d="M1587.86,-1175.91C1606.52,-1151.44 1624.33,-1128.12 1624.5,-1128 1645.09,-1113.29 1655.76,-1121.08 1678.5,-1110 1688.25,-1105.25 1698.21,-1099.49 1707.64,-1093.54"/>
+<polygon fill="#b2a086" stroke="#b2a086" points="1709.64,-1096.42 1716.14,-1088.05 1705.84,-1090.54 1709.64,-1096.42"/>
+</a>
+</g>
+<g id="a_edge18&#45;label"><a xlink:title="bufio.(*Reader).ReadSlice &#45;&gt; bytes.IndexByte (13.86s)">
+<text text-anchor="middle" x="1652" y="-1146.8" font-family="Times,serif" font-size="14.00"> 13.86s</text>
+<text text-anchor="middle" x="1652" y="-1131.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
+</a>
+</g>
+</g>
+<!-- N23 -->
+<g id="node23" class="node">
+<title>N23</title>
+<g id="a_node23"><a xlink:title="bufio.(*Reader).fill (27.67s)">
+<polygon fill="#ede7e1" stroke="#b2865a" points="1669,-1087.5 1566,-1087.5 1566,-1024.5 1669,-1024.5 1669,-1087.5"/>
+<text text-anchor="middle" x="1617.5" y="-1075.5" font-family="Times,serif" font-size="10.00">bufio</text>
+<text text-anchor="middle" x="1617.5" y="-1064.5" font-family="Times,serif" font-size="10.00">(*Reader)</text>
+<text text-anchor="middle" x="1617.5" y="-1053.5" font-family="Times,serif" font-size="10.00">fill</text>
+<text text-anchor="middle" x="1617.5" y="-1042.5" font-family="Times,serif" font-size="10.00">0.21s (0.075%)</text>
+<text text-anchor="middle" x="1617.5" y="-1031.5" font-family="Times,serif" font-size="10.00">of 27.67s (9.86%)</text>
+</a>
+</g>
+</g>
+<!-- N3&#45;&gt;N23 -->
+<g id="edge4" class="edge">
+<title>N3&#45;&gt;N23</title>
+<g id="a_edge4"><a xlink:title="bufio.(*Reader).ReadSlice &#45;&gt; bufio.(*Reader).fill (27.67s)">
+<path fill="none" stroke="#b2865a" d="M1539.7,-1175.91C1539.98,-1159.93 1542.23,-1142.82 1548.5,-1128 1553.62,-1115.89 1561.84,-1104.68 1570.86,-1094.91"/>
+<polygon fill="#b2865a" stroke="#b2865a" points="1573.38,-1097.33 1577.86,-1087.73 1568.37,-1092.44 1573.38,-1097.33"/>
+</a>
+</g>
+<g id="a_edge4&#45;label"><a xlink:title="bufio.(*Reader).ReadSlice &#45;&gt; bufio.(*Reader).fill (27.67s)">
+<text text-anchor="middle" x="1575" y="-1139.3" font-family="Times,serif" font-size="14.00"> 27.67s</text>
+</a>
+</g>
+</g>
+<!-- N7 -->
+<g id="node7" class="node">
+<title>N7</title>
+<g id="a_node7"><a xlink:title="indexbytebody (19.98s)">
+<polygon fill="#ede9e4" stroke="#b29572" points="1976,-944.5 1815,-944.5 1815,-894.5 1976,-894.5 1976,-944.5"/>
+<text text-anchor="middle" x="1895.5" y="-925.3" font-family="Times,serif" font-size="19.00">indexbytebody</text>
+<text text-anchor="middle" x="1895.5" y="-904.3" font-family="Times,serif" font-size="19.00">19.98s (7.12%)</text>
+</a>
+</g>
+</g>
+<!-- N5&#45;&gt;N7 -->
+<g id="edge14" class="edge">
+<title>N5&#45;&gt;N7</title>
+<g id="a_edge14"><a xlink:title="bytes.IndexByte &#45;&gt; indexbytebody (19.98s)">
+<path fill="none" stroke="#b29572" d="M1790.27,-1023.8C1812.29,-1002.19 1841.49,-973.52 1863.55,-951.87"/>
+<polygon fill="#b29572" stroke="#b29572" points="1866.05,-954.32 1870.73,-944.82 1861.14,-949.33 1866.05,-954.32"/>
+</a>
+</g>
+<g id="a_edge14&#45;label"><a xlink:title="bytes.IndexByte &#45;&gt; indexbytebody (19.98s)">
+<text text-anchor="middle" x="1869" y="-972.8" font-family="Times,serif" font-size="14.00"> 19.98s</text>
+</a>
+</g>
+</g>
+<!-- N14 -->
+<g id="node14" class="node">
+<title>N14</title>
+<g id="a_node14"><a xlink:title="internal/bytealg.IndexByte (4.35s)">
+<polygon fill="#edeceb" stroke="#b2aea4" points="1797,-944.5 1688,-944.5 1688,-894.5 1797,-894.5 1797,-944.5"/>
+<text text-anchor="middle" x="1742.5" y="-930.1" font-family="Times,serif" font-size="13.00">bytealg</text>
+<text text-anchor="middle" x="1742.5" y="-916.1" font-family="Times,serif" font-size="13.00">IndexByte</text>
+<text text-anchor="middle" x="1742.5" y="-902.1" font-family="Times,serif" font-size="13.00">4.35s (1.55%)</text>
+</a>
+</g>
+</g>
+<!-- N5&#45;&gt;N14 -->
+<g id="edge23" class="edge">
+<title>N5&#45;&gt;N14</title>
+<g id="a_edge23"><a xlink:title="bytes.IndexByte &#45;&gt; internal/bytealg.IndexByte (4.35s)">
+<path fill="none" stroke="#b2aea4" d="M1754.79,-1023.8C1752.34,-1003.23 1749.13,-976.25 1746.61,-955.02"/>
+<polygon fill="#b2aea4" stroke="#b2aea4" points="1750.05,-954.33 1745.39,-944.82 1743.1,-955.16 1750.05,-954.33"/>
+</a>
+</g>
+<g id="a_edge23&#45;label"><a xlink:title="bytes.IndexByte &#45;&gt; internal/bytealg.IndexByte (4.35s)">
+<text text-anchor="middle" x="1771.5" y="-972.8" font-family="Times,serif" font-size="14.00"> 4.35s</text>
+</a>
+</g>
+</g>
+<!-- N6 -->
+<g id="node6" class="node">
+<title>N6</title>
+<g id="a_node6"><a xlink:title="internal/runtime/syscall.Syscall6 (23.35s)">
+<polygon fill="#ede8e3" stroke="#b28f68" points="1698,-71 1537,-71 1537,0 1698,0 1698,-71"/>
+<text text-anchor="middle" x="1617.5" y="-51.8" font-family="Times,serif" font-size="19.00">syscall</text>
+<text text-anchor="middle" x="1617.5" y="-30.8" font-family="Times,serif" font-size="19.00">Syscall6</text>
+<text text-anchor="middle" x="1617.5" y="-9.8" font-family="Times,serif" font-size="19.00">23.35s (8.32%)</text>
+</a>
+</g>
+</g>
+<!-- N16 -->
+<g id="node16" class="node">
+<title>N16</title>
+<g id="a_node16"><a xlink:title="os.(*File).pread (26.74s)">
+<polygon fill="#ede7e1" stroke="#b2885d" points="1669,-713 1566,-713 1566,-650 1669,-650 1669,-713"/>
+<text text-anchor="middle" x="1617.5" y="-701" font-family="Times,serif" font-size="10.00">os</text>
+<text text-anchor="middle" x="1617.5" y="-690" font-family="Times,serif" font-size="10.00">(*File)</text>
+<text text-anchor="middle" x="1617.5" y="-679" font-family="Times,serif" font-size="10.00">pread</text>
+<text text-anchor="middle" x="1617.5" y="-668" font-family="Times,serif" font-size="10.00">0.77s (0.27%)</text>
+<text text-anchor="middle" x="1617.5" y="-657" font-family="Times,serif" font-size="10.00">of 26.74s (9.53%)</text>
 </a>
 </g>
 </g>
 <!-- N26 -->
 <g id="node26" class="node">
 <title>N26</title>
-<g id="a_node26"><a xlink:title="syscall.pread (29.92s)">
-<polygon fill="#ede8e2" stroke="#b28d65" points="1662,-376 1563,-376 1563,-328 1662,-328 1662,-376"/>
-<text text-anchor="middle" x="1612.5" y="-364.8" font-family="Times,serif" font-size="9.00">syscall</text>
-<text text-anchor="middle" x="1612.5" y="-354.8" font-family="Times,serif" font-size="9.00">pread</text>
-<text text-anchor="middle" x="1612.5" y="-344.8" font-family="Times,serif" font-size="9.00">0.19s (0.055%)</text>
-<text text-anchor="middle" x="1612.5" y="-334.8" font-family="Times,serif" font-size="9.00">of 29.92s (8.64%)</text>
+<g id="a_node26"><a xlink:title="internal/poll.(*FD).Pread (25.97s)">
+<polygon fill="#ede7e2" stroke="#b28a5f" points="1667,-599 1568,-599 1568,-541 1667,-541 1667,-599"/>
+<text text-anchor="middle" x="1617.5" y="-587.8" font-family="Times,serif" font-size="9.00">poll</text>
+<text text-anchor="middle" x="1617.5" y="-577.8" font-family="Times,serif" font-size="9.00">(*FD)</text>
+<text text-anchor="middle" x="1617.5" y="-567.8" font-family="Times,serif" font-size="9.00">Pread</text>
+<text text-anchor="middle" x="1617.5" y="-557.8" font-family="Times,serif" font-size="9.00">0.10s (0.036%)</text>
+<text text-anchor="middle" x="1617.5" y="-547.8" font-family="Times,serif" font-size="9.00">of 25.97s (9.25%)</text>
 </a>
 </g>
 </g>
-<!-- N25&#45;&gt;N26 -->
+<!-- N16&#45;&gt;N26 -->
+<g id="edge8" class="edge">
+<title>N16&#45;&gt;N26</title>
+<g id="a_edge8"><a xlink:title="os.(*File).pread &#45;&gt; internal/poll.(*FD).Pread (25.97s)">
+<path fill="none" stroke="#b28a5f" d="M1617.5,-650C1617.5,-637.42 1617.5,-622.69 1617.5,-609.39"/>
+<polygon fill="#b28a5f" stroke="#b28a5f" points="1621,-609.09 1617.5,-599.09 1614,-609.09 1621,-609.09"/>
+</a>
+</g>
+<g id="a_edge8&#45;label"><a xlink:title="os.(*File).pread &#45;&gt; internal/poll.(*FD).Pread (25.97s)">
+<text text-anchor="middle" x="1644" y="-620.8" font-family="Times,serif" font-size="14.00"> 25.97s</text>
+</a>
+</g>
+</g>
+<!-- N19 -->
+<g id="node19" class="node">
+<title>N19</title>
+<g id="a_node19"><a xlink:title="io.(*SectionReader).Read (27.42s)">
+<polygon fill="#ede7e1" stroke="#b2875b" points="1669.5,-951 1565.5,-951 1565.5,-888 1669.5,-888 1669.5,-951"/>
+<text text-anchor="middle" x="1617.5" y="-939" font-family="Times,serif" font-size="10.00">io</text>
+<text text-anchor="middle" x="1617.5" y="-928" font-family="Times,serif" font-size="10.00">(*SectionReader)</text>
+<text text-anchor="middle" x="1617.5" y="-917" font-family="Times,serif" font-size="10.00">Read</text>
+<text text-anchor="middle" x="1617.5" y="-906" font-family="Times,serif" font-size="10.00">0.58s (0.21%)</text>
+<text text-anchor="middle" x="1617.5" y="-895" font-family="Times,serif" font-size="10.00">of 27.42s (9.77%)</text>
+</a>
+</g>
+</g>
+<!-- N27 -->
+<g id="node27" class="node">
+<title>N27</title>
+<g id="a_node27"><a xlink:title="os.(*File).ReadAt (26.84s)">
+<polygon fill="#ede7e1" stroke="#b2885d" points="1667,-837 1568,-837 1568,-779 1667,-779 1667,-837"/>
+<text text-anchor="middle" x="1617.5" y="-825.8" font-family="Times,serif" font-size="9.00">os</text>
+<text text-anchor="middle" x="1617.5" y="-815.8" font-family="Times,serif" font-size="9.00">(*File)</text>
+<text text-anchor="middle" x="1617.5" y="-805.8" font-family="Times,serif" font-size="9.00">ReadAt</text>
+<text text-anchor="middle" x="1617.5" y="-795.8" font-family="Times,serif" font-size="9.00">0.10s (0.036%)</text>
+<text text-anchor="middle" x="1617.5" y="-785.8" font-family="Times,serif" font-size="9.00">of 26.84s (9.56%)</text>
+</a>
+</g>
+</g>
+<!-- N19&#45;&gt;N27 -->
+<g id="edge6" class="edge">
+<title>N19&#45;&gt;N27</title>
+<g id="a_edge6"><a xlink:title="io.(*SectionReader).Read &#45;&gt; os.(*File).ReadAt (26.84s)">
+<path fill="none" stroke="#b2885d" d="M1617.5,-888C1617.5,-875.42 1617.5,-860.69 1617.5,-847.39"/>
+<polygon fill="#b2885d" stroke="#b2885d" points="1621,-847.09 1617.5,-837.09 1614,-847.09 1621,-847.09"/>
+</a>
+</g>
+<g id="a_edge6&#45;label"><a xlink:title="io.(*SectionReader).Read &#45;&gt; os.(*File).ReadAt (26.84s)">
+<text text-anchor="middle" x="1644" y="-858.8" font-family="Times,serif" font-size="14.00"> 26.84s</text>
+</a>
+</g>
+</g>
+<!-- N21 -->
+<g id="node21" class="node">
+<title>N21</title>
+<g id="a_node21"><a xlink:title="syscall.RawSyscall6 (23.69s)">
+<polygon fill="#ede8e3" stroke="#b28e67" points="1669,-174 1566,-174 1566,-122 1669,-122 1669,-174"/>
+<text text-anchor="middle" x="1617.5" y="-162" font-family="Times,serif" font-size="10.00">syscall</text>
+<text text-anchor="middle" x="1617.5" y="-151" font-family="Times,serif" font-size="10.00">RawSyscall6</text>
+<text text-anchor="middle" x="1617.5" y="-140" font-family="Times,serif" font-size="10.00">0.34s (0.12%)</text>
+<text text-anchor="middle" x="1617.5" y="-129" font-family="Times,serif" font-size="10.00">of 23.69s (8.44%)</text>
+</a>
+</g>
+</g>
+<!-- N21&#45;&gt;N6 -->
+<g id="edge13" class="edge">
+<title>N21&#45;&gt;N6</title>
+<g id="a_edge13"><a xlink:title="syscall.RawSyscall6 &#45;&gt; internal/runtime/syscall.Syscall6 (23.35s)">
+<path fill="none" stroke="#b28f68" d="M1617.5,-121.93C1617.5,-109.95 1617.5,-95.25 1617.5,-81.44"/>
+<polygon fill="#b28f68" stroke="#b28f68" points="1621,-81.11 1617.5,-71.11 1614,-81.11 1621,-81.11"/>
+</a>
+</g>
+<g id="a_edge13&#45;label"><a xlink:title="syscall.RawSyscall6 &#45;&gt; internal/runtime/syscall.Syscall6 (23.35s)">
+<text text-anchor="middle" x="1644" y="-92.8" font-family="Times,serif" font-size="14.00"> 23.35s</text>
+</a>
+</g>
+</g>
+<!-- N22 -->
+<g id="node22" class="node">
+<title>N22</title>
+<g id="a_node22"><a xlink:title="syscall.Syscall6 (24.95s)">
+<polygon fill="#ede8e2" stroke="#b28c63" points="1669,-277 1566,-277 1566,-225 1669,-225 1669,-277"/>
+<text text-anchor="middle" x="1617.5" y="-265" font-family="Times,serif" font-size="10.00">syscall</text>
+<text text-anchor="middle" x="1617.5" y="-254" font-family="Times,serif" font-size="10.00">Syscall6</text>
+<text text-anchor="middle" x="1617.5" y="-243" font-family="Times,serif" font-size="10.00">0.27s (0.096%)</text>
+<text text-anchor="middle" x="1617.5" y="-232" font-family="Times,serif" font-size="10.00">of 24.95s (8.89%)</text>
+</a>
+</g>
+</g>
+<!-- N22&#45;&gt;N21 -->
+<g id="edge12" class="edge">
+<title>N22&#45;&gt;N21</title>
+<g id="a_edge12"><a xlink:title="syscall.Syscall6 &#45;&gt; syscall.RawSyscall6 (23.69s)">
+<path fill="none" stroke="#b28e67" d="M1617.5,-224.77C1617.5,-212.6 1617.5,-197.79 1617.5,-184.5"/>
+<polygon fill="#b28e67" stroke="#b28e67" points="1621,-184.25 1617.5,-174.25 1614,-184.25 1621,-184.25"/>
+</a>
+</g>
+<g id="a_edge12&#45;label"><a xlink:title="syscall.Syscall6 &#45;&gt; syscall.RawSyscall6 (23.69s)">
+<text text-anchor="middle" x="1644" y="-195.8" font-family="Times,serif" font-size="14.00"> 23.69s</text>
+</a>
+</g>
+</g>
+<!-- N23&#45;&gt;N19 -->
+<g id="edge5" class="edge">
+<title>N23&#45;&gt;N19</title>
+<g id="a_edge5"><a xlink:title="bufio.(*Reader).fill &#45;&gt; io.(*SectionReader).Read (27.42s)">
+<path fill="none" stroke="#b2875b" d="M1617.5,-1024.48C1617.5,-1005.87 1617.5,-981.84 1617.5,-961.57"/>
+<polygon fill="#b2875b" stroke="#b2875b" points="1621,-961.36 1617.5,-951.36 1614,-961.36 1621,-961.36"/>
+</a>
+</g>
+<g id="a_edge5&#45;label"><a xlink:title="bufio.(*Reader).fill &#45;&gt; io.(*SectionReader).Read (27.42s)">
+<text text-anchor="middle" x="1644" y="-972.8" font-family="Times,serif" font-size="14.00"> 27.42s</text>
+</a>
+</g>
+</g>
+<!-- N24 -->
+<g id="node24" class="node">
+<title>N24</title>
+<g id="a_node24"><a xlink:title="syscall.Pread (25.22s)">
+<polygon fill="#ede7e2" stroke="#b28b62" points="1667,-475 1568,-475 1568,-427 1667,-427 1667,-475"/>
+<text text-anchor="middle" x="1617.5" y="-463.8" font-family="Times,serif" font-size="9.00">syscall</text>
+<text text-anchor="middle" x="1617.5" y="-453.8" font-family="Times,serif" font-size="9.00">Pread</text>
+<text text-anchor="middle" x="1617.5" y="-443.8" font-family="Times,serif" font-size="9.00">0.16s (0.057%)</text>
+<text text-anchor="middle" x="1617.5" y="-433.8" font-family="Times,serif" font-size="9.00">of 25.22s (8.98%)</text>
+</a>
+</g>
+</g>
+<!-- N25 -->
+<g id="node25" class="node">
+<title>N25</title>
+<g id="a_node25"><a xlink:title="syscall.pread (25.06s)">
+<polygon fill="#ede8e2" stroke="#b28b62" points="1667,-376 1568,-376 1568,-328 1667,-328 1667,-376"/>
+<text text-anchor="middle" x="1617.5" y="-364.8" font-family="Times,serif" font-size="9.00">syscall</text>
+<text text-anchor="middle" x="1617.5" y="-354.8" font-family="Times,serif" font-size="9.00">pread</text>
+<text text-anchor="middle" x="1617.5" y="-344.8" font-family="Times,serif" font-size="9.00">0.11s (0.039%)</text>
+<text text-anchor="middle" x="1617.5" y="-334.8" font-family="Times,serif" font-size="9.00">of 25.06s (8.93%)</text>
+</a>
+</g>
+</g>
+<!-- N24&#45;&gt;N25 -->
 <g id="edge10" class="edge">
-<title>N25&#45;&gt;N26</title>
-<g id="a_edge10"><a xlink:title="syscall.Pread &#45;&gt; syscall.pread (29.92s)">
-<path fill="none" stroke="#b28d65" d="M1612.5,-426.52C1612.5,-414.49 1612.5,-399.62 1612.5,-386.42"/>
-<polygon fill="#b28d65" stroke="#b28d65" points="1616,-386.26 1612.5,-376.26 1609,-386.26 1616,-386.26"/>
+<title>N24&#45;&gt;N25</title>
+<g id="a_edge10"><a xlink:title="syscall.Pread &#45;&gt; syscall.pread (25.06s)">
+<path fill="none" stroke="#b28b62" d="M1617.5,-426.52C1617.5,-414.49 1617.5,-399.62 1617.5,-386.42"/>
+<polygon fill="#b28b62" stroke="#b28b62" points="1621,-386.26 1617.5,-376.26 1614,-386.26 1621,-386.26"/>
 </a>
 </g>
-<g id="a_edge10&#45;label"><a xlink:title="syscall.Pread &#45;&gt; syscall.pread (29.92s)">
-<text text-anchor="middle" x="1639" y="-397.8" font-family="Times,serif" font-size="14.00"> 29.92s</text>
+<g id="a_edge10&#45;label"><a xlink:title="syscall.Pread &#45;&gt; syscall.pread (25.06s)">
+<text text-anchor="middle" x="1644" y="-397.8" font-family="Times,serif" font-size="14.00"> 25.06s</text>
 </a>
 </g>
 </g>
-<!-- N26&#45;&gt;N21 -->
+<!-- N25&#45;&gt;N22 -->
 <g id="edge11" class="edge">
-<title>N26&#45;&gt;N21</title>
-<g id="a_edge11"><a xlink:title="syscall.pread &#45;&gt; syscall.Syscall6 (29.73s)">
-<path fill="none" stroke="#b28d65" d="M1612.5,-327.79C1612.5,-315.79 1612.5,-300.9 1612.5,-287.49"/>
-<polygon fill="#b28d65" stroke="#b28d65" points="1616,-287.15 1612.5,-277.15 1609,-287.15 1616,-287.15"/>
+<title>N25&#45;&gt;N22</title>
+<g id="a_edge11"><a xlink:title="syscall.pread &#45;&gt; syscall.Syscall6 (24.95s)">
+<path fill="none" stroke="#b28c63" d="M1617.5,-327.79C1617.5,-315.79 1617.5,-300.9 1617.5,-287.49"/>
+<polygon fill="#b28c63" stroke="#b28c63" points="1621,-287.15 1617.5,-277.15 1614,-287.15 1621,-287.15"/>
 </a>
 </g>
-<g id="a_edge11&#45;label"><a xlink:title="syscall.pread &#45;&gt; syscall.Syscall6 (29.73s)">
-<text text-anchor="middle" x="1639" y="-298.8" font-family="Times,serif" font-size="14.00"> 29.73s</text>
+<g id="a_edge11&#45;label"><a xlink:title="syscall.pread &#45;&gt; syscall.Syscall6 (24.95s)">
+<text text-anchor="middle" x="1644" y="-298.8" font-family="Times,serif" font-size="14.00"> 24.95s</text>
 </a>
 </g>
 </g>
-<!-- N27&#45;&gt;N25 -->
+<!-- N26&#45;&gt;N24 -->
 <g id="edge9" class="edge">
-<title>N27&#45;&gt;N25</title>
-<g id="a_edge9"><a xlink:title="internal/poll.(*FD).Pread &#45;&gt; syscall.Pread (30.12s)">
-<path fill="none" stroke="#b28d64" d="M1612.5,-540.98C1612.5,-524.29 1612.5,-503.02 1612.5,-485.46"/>
-<polygon fill="#b28d64" stroke="#b28d64" points="1616,-485.08 1612.5,-475.08 1609,-485.08 1616,-485.08"/>
+<title>N26&#45;&gt;N24</title>
+<g id="a_edge9"><a xlink:title="internal/poll.(*FD).Pread &#45;&gt; syscall.Pread (25.22s)">
+<path fill="none" stroke="#b28b62" d="M1617.5,-540.98C1617.5,-524.29 1617.5,-503.02 1617.5,-485.46"/>
+<polygon fill="#b28b62" stroke="#b28b62" points="1621,-485.08 1617.5,-475.08 1614,-485.08 1621,-485.08"/>
 </a>
 </g>
-<g id="a_edge9&#45;label"><a xlink:title="internal/poll.(*FD).Pread &#45;&gt; syscall.Pread (30.12s)">
-<text text-anchor="middle" x="1640" y="-511.8" font-family="Times,serif" font-size="14.00"> 30.12s</text>
-<text text-anchor="middle" x="1640" y="-496.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
+<g id="a_edge9&#45;label"><a xlink:title="internal/poll.(*FD).Pread &#45;&gt; syscall.Pread (25.22s)">
+<text text-anchor="middle" x="1645" y="-511.8" font-family="Times,serif" font-size="14.00"> 25.22s</text>
+<text text-anchor="middle" x="1645" y="-496.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
+</a>
+</g>
+</g>
+<!-- N27&#45;&gt;N16 -->
+<g id="edge7" class="edge">
+<title>N27&#45;&gt;N16</title>
+<g id="a_edge7"><a xlink:title="os.(*File).ReadAt &#45;&gt; os.(*File).pread (26.74s)">
+<path fill="none" stroke="#b2885d" d="M1617.5,-778.75C1617.5,-762.36 1617.5,-741.44 1617.5,-723.29"/>
+<polygon fill="#b2885d" stroke="#b2885d" points="1621,-723.26 1617.5,-713.26 1614,-723.26 1621,-723.26"/>
+</a>
+</g>
+<g id="a_edge7&#45;label"><a xlink:title="os.(*File).ReadAt &#45;&gt; os.(*File).pread (26.74s)">
+<text text-anchor="middle" x="1645" y="-749.8" font-family="Times,serif" font-size="14.00"> 26.74s</text>
+<text text-anchor="middle" x="1645" y="-734.8" font-family="Times,serif" font-size="14.00"> (inline)</text>
 </a>
 </g>
 </g>

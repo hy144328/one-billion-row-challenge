@@ -1,36 +1,35 @@
 File: one-billion-row-challenge-golang-parallel.test
 Build ID: 85f5a6cbf23c29d519d0a1abd71ddd215dc7f8ef
 Type: cpu
-Time: 2026-01-21 02:18:35 CET
-Duration: 95.92s, Total samples = 283.21s (295.26%)
-Showing nodes accounting for 281.15s, 99.27% of 283.21s total
-Dropped 62 nodes (cum <= 1.42s)
+Time: 2026-01-22 23:18:15 CET
+Duration: 85.37s, Total samples = 250.51s (293.43%)
+Showing nodes accounting for 247.53s, 98.81% of 250.51s total
+Dropped 102 nodes (cum <= 1.25s)
       flat  flat%   sum%        cum   cum%
-    29.80s 10.52% 10.52%    282.93s 99.90%  github.com/hy144328/one-billion-row-challenge-golang-parallel.worker
-    49.97s 17.64% 28.17%    167.13s 59.01%  runtime.mapaccess2_faststr
-    21.02s  7.42% 35.59%     61.78s 21.81%  bufio.(*Reader).ReadSlice
-    41.52s 14.66% 50.25%     41.52s 14.66%  internal/runtime/maps.ctrlGroup.matchH2 (inline)
-     4.08s  1.44% 51.69%     27.73s  9.79%  bytes.IndexByte (inline)
-     0.32s  0.11% 51.80%     27.39s  9.67%  bufio.(*Reader).fill
-     0.55s  0.19% 52.00%     27.06s  9.55%  io.(*SectionReader).Read
-     0.21s 0.074% 52.07%     26.51s  9.36%  os.(*File).ReadAt
-     0.90s  0.32% 52.39%     26.30s  9.29%  os.(*File).pread (inline)
-     0.09s 0.032% 52.42%     25.40s  8.97%  internal/poll.(*FD).Pread
-     0.19s 0.067% 52.49%     24.84s  8.77%  syscall.Pread (inline)
-     0.18s 0.064% 52.55%     24.65s  8.70%  syscall.pread
-     0.24s 0.085% 52.64%     24.47s  8.64%  syscall.Syscall6
-     0.15s 0.053% 52.69%     23.32s  8.23%  syscall.RawSyscall6
-    23.17s  8.18% 60.87%     23.17s  8.18%  internal/runtime/syscall.Syscall6
-    19.49s  6.88% 67.75%     19.49s  6.88%  indexbytebody
-    18.75s  6.62% 74.37%     18.75s  6.62%  memeqbody
-    18.16s  6.41% 80.78%     18.16s  6.41%  aeshashbody
-    11.56s  4.08% 84.87%     11.56s  4.08%  internal/runtime/maps.(*Map).directoryAt (inline)
-     9.84s  3.47% 88.34%      9.84s  3.47%  github.com/hy144328/one-billion-row-challenge-golang-parallel.parseDigitsFromBytes (inline)
-     9.79s  3.46% 91.80%      9.79s  3.46%  internal/runtime/maps.(*groupReference).key (inline)
-     5.42s  1.91% 93.71%      5.42s  1.91%  internal/runtime/maps.h2 (inline)
-     4.16s  1.47% 95.18%      4.16s  1.47%  internal/bytealg.IndexByte
-     3.69s  1.30% 96.48%      3.69s  1.30%  runtime.strhash
-     2.25s  0.79% 97.28%      2.25s  0.79%  internal/runtime/maps.(*Map).directoryIndex (inline)
-     2.18s  0.77% 98.05%      2.18s  0.77%  runtime.memequal
-     1.98s   0.7% 98.75%      1.98s   0.7%  internal/runtime/maps.(*groupsReference).group (inline)
-     1.49s  0.53% 99.27%      1.49s  0.53%  internal/runtime/maps.makeProbeSeq (inline)
+    26.57s 10.61% 10.61%    250.26s 99.90%  github.com/hy144328/one-billion-row-challenge-golang-parallel.worker
+    45.40s 18.12% 28.73%    147.79s 59.00%  runtime.mapaccess2_faststr
+    18.30s  7.31% 36.03%     54.41s 21.72%  bufio.(*Reader).ReadSlice
+    36.88s 14.72% 50.76%     36.88s 14.72%  internal/runtime/maps.ctrlGroup.matchH2 (inline)
+     3.48s  1.39% 52.15%     24.43s  9.75%  bytes.IndexByte (inline)
+     0.17s 0.068% 52.21%     24.03s  9.59%  bufio.(*Reader).fill
+     0.30s  0.12% 52.33%     23.79s  9.50%  io.(*SectionReader).Read
+     0.20s  0.08% 52.41%     23.49s  9.38%  os.(*File).ReadAt
+     0.66s  0.26% 52.68%     23.28s  9.29%  os.(*File).pread (inline)
+     0.10s  0.04% 52.72%     22.62s  9.03%  internal/poll.(*FD).Pread
+     0.09s 0.036% 52.75%     22.14s  8.84%  syscall.Pread (inline)
+     0.14s 0.056% 52.81%     22.05s  8.80%  syscall.pread
+     0.26s   0.1% 52.91%     21.91s  8.75%  syscall.Syscall6
+     0.18s 0.072% 52.98%     20.75s  8.28%  syscall.RawSyscall6
+    20.57s  8.21% 61.20%     20.57s  8.21%  internal/runtime/syscall.Syscall6
+    17.38s  6.94% 68.13%     17.38s  6.94%  indexbytebody
+    16.13s  6.44% 74.57%     16.13s  6.44%  memeqbody
+    15.95s  6.37% 80.94%     15.95s  6.37%  aeshashbody
+    10.24s  4.09% 85.03%     10.24s  4.09%  internal/runtime/maps.(*Map).directoryAt (inline)
+     9.09s  3.63% 88.66%      9.09s  3.63%  github.com/hy144328/one-billion-row-challenge-golang-parallel.parseDigitsFromBytes (inline)
+     8.25s  3.29% 91.95%      8.25s  3.29%  internal/runtime/maps.(*groupReference).key (inline)
+     4.75s  1.90% 93.84%      4.75s  1.90%  internal/runtime/maps.h2 (inline)
+     3.57s  1.43% 95.27%      3.57s  1.43%  internal/bytealg.IndexByte
+     2.99s  1.19% 96.46%      2.99s  1.19%  runtime.strhash
+     2.13s  0.85% 97.31%      2.13s  0.85%  runtime.memequal
+     2.02s  0.81% 98.12%      2.02s  0.81%  internal/runtime/maps.(*Map).directoryIndex (inline)
+     1.73s  0.69% 98.81%      1.73s  0.69%  internal/runtime/maps.(*groupsReference).group (inline)
